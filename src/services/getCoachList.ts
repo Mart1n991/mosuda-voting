@@ -1,5 +1,5 @@
 export const getCoachList = async () => {
-  const response = await fetch(process.env.NEXT_PUBLIC_MOSUDA_APP_COACH_LIST_URL || "", {
+  const response = await fetch(process.env.MOSUDA_APP_COACH_LIST_URL || "", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
