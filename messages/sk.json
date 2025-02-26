@@ -1,5 +1,10 @@
 {
-  "HomePage": {
-    "hello": "Ahoj, svet!"
+  "coachListPage": {
+    "heading": "Hlasuj za TOP trénera \n <region>Slovenska a Česka</region>",
+    "coachCard": {
+      "numberOfVotes": "Počet hlasov",
+      "voteButton": "Hlasuj",
+      "moreInfoButton": "Viac informácií"
+    }
   }
 }

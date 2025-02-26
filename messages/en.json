@@ -1,5 +1,10 @@
 {
-  "HomePage": {
-    "hello": "Hello, world!"
+  "coachListPage": {
+    "heading": "Vote for TOP coach of \n <region>Slovak and Czech republic</region>",
+    "coachCard": {
+      "numberOfVotes": "Number of votes",
+      "voteButton": "Vote now",
+      "moreInfoButton": "More info"
+    }
   }
 }
