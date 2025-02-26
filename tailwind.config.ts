@@ -11,8 +11,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        "mosuda-green-light": "hsl(var(--mosuda-green-light))",
-        "mosuda-green-dark": "hsl(var(--mosuda-green-dark))",
+        "mosuda-green-light": "var(--mosuda-green-light)",
+        "mosuda-green-dark": "var(--mosuda-green-dark)",
 
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
