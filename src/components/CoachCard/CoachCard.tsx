@@ -1,16 +1,19 @@
+"use client";
+
 import { CoachProfile } from "@/types/CoachProfile";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import React from "react";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { truncate } from "lodash";
+import { truncateText } from "@/utils/truncateText";
 
 type CoachCardProps = {
   coachProfile: CoachProfile;
+  isVotingDialogOpen: boolean;
+  setIsVotingDialogOpen: (open: boolean) => void;
 };
 
-export const CoachCard = ({ coachProfile }: CoachCardProps) => {
+export const CoachCard = ({ coachProfile, setIsVotingDialogOpen }: CoachCardProps) => {
   const t = useTranslations("coachListPage.coachCard");
 
   const renderImage = () => {
@@ -35,11 +38,11 @@ export const CoachCard = ({ coachProfile }: CoachCardProps) => {
             <p>{t("numberOfVotes")}</p>
             <Badge>{coachProfile.voteCount}</Badge>
           </div>
-          <h2 className="text-xl font-bold">{truncate(coachProfile.name, { length: 40 })}</h2>
+          <h2 className="text-xl font-bold">{truncateText(coachProfile.name, 40)}</h2>
         </div>
 
         <div className="flex justify-between items-center mt-auto">
-          <Button>{t("voteButton")}</Button>
+          <Button onClick={() => setIsVotingDialogOpen(true)}>{t("voteButton")}</Button>
           <Button variant="link">{t("moreInfoButton")}</Button>
         </div>
       </div>

@@ -5,6 +5,28 @@
       "numberOfVotes": "Počet hlasov",
       "voteButton": "Hlasuj",
       "moreInfoButton": "Viac informácií"
+    },
+    "coachList": {
+      "noCoachesFound": "Žiadni tréneri nenájdení"
+    },
+    "votingDialog": {
+      "votingFor": "Hlasuješ za"
+    },
+    "votingForm": {
+      "name": "Meno",
+      "surname": "Priezvisko",
+      "email": "Email",
+      "phone": "Telefón",
+      "message": "Správa",
+      "submit": "Hlasovať",
+      "errors": {
+        "required": "{field} je povinné pole."
+      }
+    }
+  },
+  "common": {
+    "errors": {
+      "required": "Povinné pole."
     }
   }
 }
