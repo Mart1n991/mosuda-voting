@@ -25,7 +25,7 @@ export const VotingDialog = ({ open, onOpenChange, coachProfile }: VotingDialogP
           </div>
           <DialogDescription />
         </DialogHeader>
-        <VotingForm />
+        <VotingForm coachId={coachProfile.id} />
       </DialogContent>
     </Dialog>
   );

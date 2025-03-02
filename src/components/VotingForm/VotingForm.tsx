@@ -9,6 +9,7 @@ import { Button } from "../ui/button";
 import { czechSlovakPhoneRegex } from "@/utils/phoneNumberRegex";
 import { useReCaptcha } from "next-recaptcha-v3";
 import { validateEmail } from "@/utils/emailValidation";
+import { VerificationLinkSend } from "./VerificationLinkSend";
 
 // TODO: Translate error messages
 const votingFormSchema = z.object({
@@ -30,9 +31,12 @@ type VotingFormProps = {
 export const VotingForm = ({ coachId }: VotingFormProps) => {
   const t = useTranslations("coachListPage");
 
+  console.log("coachID: ", coachId);
+
   const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
   const [customEmailError, setCustomEmailError] = useState<string | null>(null);
   const [isSubmittingLoading, setIsSubmittingLoading] = useState(false);
+  const [verificationSent, setVerificationSent] = useState(false);
 
   const { executeRecaptcha } = useReCaptcha();
 
@@ -63,37 +67,42 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
 
   const onSubmit = async (data: FormValues) => {
     console.log(data);
+    // 1. Reset errors state
     setRecaptchaError(null);
+    setCustomEmailError(null);
 
     try {
+      // 2. Set loading state
       setIsSubmittingLoading(true);
-      // Validujeme email manuálne (alias check, atď.)
+
+      // 3. Validate email - temporary email, alias
       const emailValidationError = validateEmail(data.email);
       if (emailValidationError) {
         setCustomEmailError(emailValidationError);
         throw new Error(emailValidationError);
       }
 
-      // Získame token z reCAPTCHA
+      // 4. Get token from reCAPTCHA
       const token = await executeRecaptcha("vote_form");
 
-      // Pošleme dáta na server
-      const response = await fetch(`${process.env.MOSUDA_APP_ENDPOINT}/coachProfileChallenge/vote`, {
+      // 5. Send data to my nextJS endpoint to register vote
+      const response = await fetch(`/api/vote/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...data, recaptchaToken: token, coachId }),
       });
 
+      // 6. Get response from my nextJS endpoint
       const result = await response.json();
 
+      // 7. If response is not ok, throw error
       if (!response.ok) {
-        throw new Error(result.message || "Hlasovanie zlyhalo");
+        throw new Error(result.message || "Registrácia hlasu zlyhala");
       }
 
-      // Úspešné hlasovanie
+      // 8. Set verification sent state
       setIsSubmittingLoading(false);
-      console.log("Úspešné hlasovanie:", result);
-      // TODO: Zobraz úspešnú správu alebo presmeruj
+      setVerificationSent(true);
     } catch (error) {
       console.error("Chyba:", error);
       setRecaptchaError(error instanceof Error ? error.message : "Neočakávaná chyba");
@@ -101,6 +110,10 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
       setIsSubmittingLoading(false);
     }
   };
+
+  if (verificationSent) {
+    return <VerificationLinkSend />;
+  }
 
   return (
     <Form {...form}>
