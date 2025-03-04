@@ -55,9 +55,6 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Skontroluj, či sa coachId dostáva z body a zahrňuje do payloadu
-    console.log("Dostané dáta z formulára:", { name, surname, email, phone, coachId });
-
     // Vytvorím payload s dátami a časovou pečiatkou
     const payload = {
       name,
@@ -74,28 +71,24 @@ export async function POST(request: NextRequest) {
     const token = encrypt(JSON.stringify(payload));
 
     // Vytvorím odkaz na verifikáciu
-    const verificationLink = `${process.env.NEXT_PUBLIC_APP_URL}/${request.nextUrl.locale}/verify-vote?token=${encodeURIComponent(
-      token
-    )}`;
+    const verificationLink = `${process.env.NEXT_PUBLIC_APP_URL}/verify-vote?token=${encodeURIComponent(token)}`;
 
-    // Vo vývoji môžeme preskočiť odoslanie emailu, ak nemáme nastavené emailové premenné
-    if (process.env.EMAIL_SERVER_HOST && process.env.EMAIL_SERVER_USER && process.env.EMAIL_SERVER_PASSWORD) {
-      // Odošlem email s verifikačným linkom
-      const transporter = createTransport({
-        host: process.env.EMAIL_SERVER_HOST,
-        port: Number(process.env.EMAIL_SERVER_PORT || 587),
-        auth: {
-          user: process.env.EMAIL_SERVER_USER,
-          pass: process.env.EMAIL_SERVER_PASSWORD,
-        },
-        secure: process.env.EMAIL_SERVER_PORT === "465",
-      });
+    // Odošlem email s verifikačným linkom
+    const transporter = createTransport({
+      host: process.env.EMAIL_SERVER_HOST,
+      port: Number(process.env.EMAIL_SERVER_PORT || 587),
+      auth: {
+        user: process.env.EMAIL_SERVER_USER,
+        pass: process.env.EMAIL_SERVER_PASSWORD,
+      },
+      secure: process.env.EMAIL_SERVER_PORT === "465",
+    });
 
-      await transporter.sendMail({
-        from: process.env.EMAIL_FROM || "noreply@example.com",
-        to: email,
-        subject: "Potvrďte svoj hlas v súťaži o najlepšieho trénera",
-        html: `
+    await transporter.sendMail({
+      from: process.env.EMAIL_FROM || "noreply@example.com",
+      to: email,
+      subject: "Potvrďte svoj hlas v súťaži o najlepšieho trénera",
+      html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <h1 style="color: #333;">Potvrďte svoj hlas</h1>
             <p>Ďakujeme za váš hlas v súťaži o najlepšieho trénera.</p>
@@ -111,10 +104,7 @@ export async function POST(request: NextRequest) {
             </p>
           </div>
         `,
-      });
-    } else {
-      console.log("Email konfigurácia chýba, preskakujem odoslanie emailu v dev móde");
-    }
+    });
 
     return NextResponse.json({
       success: true,

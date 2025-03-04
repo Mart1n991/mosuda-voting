@@ -1,15 +1,18 @@
-import disposableDomains from "disposable-email-domains";
-
-const isTemporaryEmail = (email: string) => {
+const isTemporaryEmail = async (email: string) => {
   if (!email) return false;
 
-  const domain = email.split("@")[1]?.toLowerCase();
+  try {
+    // Api service to check if email is temporary
+    const response = await fetch(`https://api.mailcheck.ai/email/${encodeURIComponent(email)}`);
+    const result = await response.json();
 
-  if (disposableDomains.includes(domain)) {
-    return true;
+    // Return true if email is disposable
+    return result.disposable === true;
+  } catch (error) {
+    console.error("Error checking email:", error);
+    // Allow email even if there is an error (to avoid app from crashing)
+    return false;
   }
-
-  return false;
 };
 
 // Check if email contains aliases
@@ -40,8 +43,8 @@ const hasEmailAlias = (email: string): boolean => {
   return false;
 };
 
-export const validateEmail = (email: string) => {
-  if (isTemporaryEmail(email)) {
+export const validateEmail = async (email: string) => {
+  if (await isTemporaryEmail(email)) {
     return "Prosím, nepoužívajte dočasnú emailovú adresu";
   }
 

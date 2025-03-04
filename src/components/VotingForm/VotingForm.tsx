@@ -10,6 +10,7 @@ import { czechSlovakPhoneRegex } from "@/utils/phoneNumberRegex";
 import { useReCaptcha } from "next-recaptcha-v3";
 import { validateEmail } from "@/utils/emailValidation";
 import { VerificationLinkSend } from "./VerificationLinkSend";
+import { CustomEmailErrorMessage } from "./CustomEmailErrorMessage";
 
 // TODO: Translate error messages
 const votingFormSchema = z.object({
@@ -31,8 +32,6 @@ type VotingFormProps = {
 export const VotingForm = ({ coachId }: VotingFormProps) => {
   const t = useTranslations("coachListPage");
 
-  console.log("coachID: ", coachId);
-
   const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
   const [customEmailError, setCustomEmailError] = useState<string | null>(null);
   const [isSubmittingLoading, setIsSubmittingLoading] = useState(false);
@@ -52,21 +51,20 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
 
   const {
     control,
-    formState: { errors, isSubmitting, isValidating },
+    formState: { isSubmitting, isValidating },
   } = form;
 
   /**
    * TODO:
-   * - [ ] Finish recaptcha setup ( I think is is done now Šimon has to do it )
+   * - [ ] Test recaptcha
    * - [ ] Add more email verifications - buying votes
-   * - [ ] display correct error message on email form field
-   * - [ ] display message about voting success / unsuccessful
-   * - [ ] display message about recaptcha error
-   * - [ ] display message from Šimon server when is 400 user already voted
+   * - [x] display correct error message on email form field
+   * - [x] display message about voting success / unsuccessful
+   * - [x] display message about recaptcha error
+   * - [x] display message from Šimon server when is 400 user already voted
    */
 
   const onSubmit = async (data: FormValues) => {
-    console.log(data);
     // 1. Reset errors state
     setRecaptchaError(null);
     setCustomEmailError(null);
@@ -76,10 +74,10 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
       setIsSubmittingLoading(true);
 
       // 3. Validate email - temporary email, alias
-      const emailValidationError = validateEmail(data.email);
+      const emailValidationError = await validateEmail(data.email);
       if (emailValidationError) {
         setCustomEmailError(emailValidationError);
-        throw new Error(emailValidationError);
+        return;
       }
 
       // 4. Get token from reCAPTCHA
@@ -104,7 +102,6 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
       setIsSubmittingLoading(false);
       setVerificationSent(true);
     } catch (error) {
-      console.error("Chyba:", error);
       setRecaptchaError(error instanceof Error ? error.message : "Neočakávaná chyba");
     } finally {
       setIsSubmittingLoading(false);
@@ -169,10 +166,12 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
                 <Input {...field} value={field.value ?? ""} />
               </FormControl>
               <FormMessage />
+              {customEmailError && <CustomEmailErrorMessage message={customEmailError} />}
+              {recaptchaError && <CustomEmailErrorMessage message={recaptchaError} />}
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
+        <Button type="submit" className="w-full" disabled={isSubmittingLoading || isSubmitting || isValidating}>
           {t("votingForm.submit")}
         </Button>
       </form>
