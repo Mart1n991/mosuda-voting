@@ -7,7 +7,13 @@ const isTemporaryEmail = async (email: string) => {
 
   try {
     // Api service to check if email is temporary
-    const response = await fetch(`https://api.mailcheck.ai/email/${encodeURIComponent(email)}`);
+    const response = await fetch(`https://api.usercheck.com/email/${email}`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_USER_CHECK_API}`,
+      },
+    });
+
     const result = await response.json();
 
     // Return true if email is disposable
