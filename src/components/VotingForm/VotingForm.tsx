@@ -54,16 +54,6 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
     formState: { isSubmitting, isValidating },
   } = form;
 
-  /**
-   * TODO:
-   * - [ ] Test recaptcha
-   * - [ ] Add more email verifications - buying votes
-   * - [x] display correct error message on email form field
-   * - [x] display message about voting success / unsuccessful
-   * - [x] display message about recaptcha error
-   * - [x] display message from Šimon server when is 400 user already voted
-   */
-
   const onSubmit = async (data: FormValues) => {
     // 1. Reset errors state
     setRecaptchaError(null);

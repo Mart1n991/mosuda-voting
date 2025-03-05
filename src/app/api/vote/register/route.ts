@@ -7,46 +7,46 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     const { name, surname, email, phone, recaptchaToken, coachId } = body;
+
     // Verifikácia reCAPTCHA Enterprise
-    if (process.env.NODE_ENV === "production" || process.env.RECAPTCHA_API_KEY) {
-      try {
-        const recaptchaResponse = await fetch(
-          `https://recaptchaenterprise.googleapis.com/v1/projects/mosuda-452422/assessments?key=${process.env.RECAPTCHA_API_KEY}`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              event: {
-                token: recaptchaToken,
-                expectedAction: "vote_form",
-                siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
-              },
-            }),
-          }
-        );
-
-        const recaptchaResult = await recaptchaResponse.json();
-
-        if (!recaptchaResult.tokenProperties?.valid) {
-          console.error("reCAPTCHA verifikácia zlyhala:", recaptchaResult);
-          return NextResponse.json({ message: "reCAPTCHA verification failed" }, { status: 400 });
+    try {
+      const recaptchaResponse = await fetch(
+        `https://recaptchaenterprise.googleapis.com/v1/projects/mosuda-452422/assessments?key=${process.env.RECAPTCHA_API_KEY}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Referer: "http://localhost:3000",
+          },
+          body: JSON.stringify({
+            event: {
+              token: recaptchaToken,
+              expectedAction: "vote_form",
+              siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+            },
+          }),
         }
+      );
 
-        // Môžeš pridať aj kontrolu skóre (nepovinné)
-        if (recaptchaResult.riskAnalysis?.score < 0.5) {
-          console.error("reCAPTCHA skóre je príliš nízke:", recaptchaResult);
-          return NextResponse.json({ message: "reCAPTCHA verification failed - suspicious activity" }, { status: 400 });
-        }
-      } catch (error) {
-        console.error("Chyba pri volaní reCAPTCHA API:", error);
-        if (process.env.NODE_ENV === "production") {
-          return NextResponse.json({ message: "Error verifying reCAPTCHA" }, { status: 500 });
-        }
-        // V development móde pokračujeme aj pri chybe
-        console.warn("Preskakujem reCAPTCHA overenie v dev móde kvôli chybe");
+      const recaptchaResult = await recaptchaResponse.json();
+
+      if (!recaptchaResult.tokenProperties?.valid) {
+        console.error("reCAPTCHA verifikácia zlyhala:", recaptchaResult);
+        return NextResponse.json({ message: "reCAPTCHA verification failed" }, { status: 400 });
       }
-    } else {
-      console.warn("RECAPTCHA_API_KEY nie je nastavený, preskakujem overenie v development móde");
+
+      // Môžeš pridať aj kontrolu skóre (nepovinné)
+      if (recaptchaResult.riskAnalysis?.score < 0.5) {
+        console.error("reCAPTCHA skóre je príliš nízke:", recaptchaResult);
+        return NextResponse.json({ message: "reCAPTCHA verification failed - suspicious activity" }, { status: 400 });
+      }
+    } catch (error) {
+      console.error("Chyba pri volaní reCAPTCHA API:", error);
+      if (process.env.NODE_ENV === "production") {
+        return NextResponse.json({ message: "Error verifying reCAPTCHA" }, { status: 500 });
+      }
+      // V development móde pokračujeme aj pri chybe
+      console.warn("Preskakujem reCAPTCHA overenie v dev móde kvôli chybe");
     }
 
     // Vytvorím payload s dátami a časovou pečiatkou

@@ -24,17 +24,35 @@ export default function VerifyVotePage() {
       try {
         // Generate recaptcha token
         const recaptchaToken = await executeRecaptcha("vote_verification");
-        // Redirect user to API endpoint that processes verification
-        window.location.href = `/api/vote/verify?token=${encodeURIComponent(token)}&recaptcha=${encodeURIComponent(
-          recaptchaToken
-        )}`;
+
+        // This replaces the current page in the browser history and prevents multiple redirects
+        window.location.replace(
+          `/api/vote/verify?token=${encodeURIComponent(token)}&recaptcha=${encodeURIComponent(recaptchaToken)}`
+        );
       } catch (error) {
         console.error("Chyba pri presmerovaní na verifikáciu:", error);
-        router.push("/vote-confirmation?status=error&message=Nastala neočakávaná chyba");
+
+        // Also use the same approach for consistency
+        window.location.replace("/vote-confirmation?status=error&message=Nastala neočakávaná chyba");
       }
     };
 
-    verifyToken();
+    // Start verification, only if reCAPTCHA is loaded
+    if (loaded) {
+      verifyToken();
+    } else {
+      // Wait 2 seconds for reCAPTCHA to load
+      const timeoutId = setTimeout(() => {
+        if (loaded) {
+          verifyToken();
+        } else {
+          // If it still didn't load, redirect without it
+          // (backend should have fallback for missing token)
+          window.location.replace(`/api/vote/verify?token=${encodeURIComponent(token)}`);
+        }
+      }, 2000);
+      return () => clearTimeout(timeoutId);
+    }
 
     // Timeout for case where redirect takes too long
     const timeoutId = setTimeout(() => {

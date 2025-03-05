@@ -37,9 +37,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={`${lexend.variable} antialiased`}>
-        <NextIntlClientProvider messages={messages}>
-          <RecaptchaProvider>{children}</RecaptchaProvider>
-        </NextIntlClientProvider>
+        <RecaptchaProvider>
+          <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        </RecaptchaProvider>
       </body>
     </html>
   );

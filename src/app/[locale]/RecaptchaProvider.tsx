@@ -9,7 +9,7 @@ interface RecaptchaProviderProps {
 
 export const RecaptchaProvider = ({ children }: RecaptchaProviderProps) => {
   return (
-    <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} language="sk" useEnterprise={true}>
+    <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} useEnterprise>
       {children}
     </ReCaptchaProvider>
   );

@@ -1,3 +1,7 @@
+// Importovanie knižnice s dočasnými emailovými doménami
+import disposableDomains from "disposable-email-domains";
+
+// Kontrola cez MailCheck.ai (existujúci kód)
 const isTemporaryEmail = async (email: string) => {
   if (!email) return false;
 
@@ -15,7 +19,15 @@ const isTemporaryEmail = async (email: string) => {
   }
 };
 
-// Check if email contains aliases
+// Kontrola pomocou knižnice
+const isKnownDisposableDomain = (email: string): boolean => {
+  if (!email || !email.includes("@")) return false;
+
+  const domain = email.split("@")[1].toLowerCase();
+  return disposableDomains.includes(domain);
+};
+
+// Check if email contains aliases (existujúci kód)
 const hasEmailAlias = (email: string): boolean => {
   if (!email) {
     return false;
@@ -44,13 +56,19 @@ const hasEmailAlias = (email: string): boolean => {
 };
 
 export const validateEmail = async (email: string) => {
-  if (await isTemporaryEmail(email)) {
+  // 1. Najprv rýchla kontrola pomocou knižnice (bez API volania)
+  if (isKnownDisposableDomain(email)) {
     return "Prosím, nepoužívajte dočasnú emailovú adresu";
   }
 
-  // Kontrola aliasov
+  // 2. Kontrola aliasov
   if (hasEmailAlias(email)) {
     return "Prosím, nepoužívajte emailové aliasy (napr. meno+alias@gmail.com)";
+  }
+
+  // 3. Kontrola cez API (len ak prešla lokálnou kontrolou)
+  if (await isTemporaryEmail(email)) {
+    return "Prosím, nepoužívajte dočasnú emailovú adresu";
   }
 
   return null;
