@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -7,6 +7,10 @@ import { Input } from "../ui/input";
 import { useTranslations } from "next-intl";
 import { Button } from "../ui/button";
 import { czechSlovakPhoneRegex } from "@/utils/phoneNumberRegex";
+import { useReCaptcha } from "next-recaptcha-v3";
+import { validateEmail } from "@/utils/emailValidation";
+import { VerificationLinkSend } from "./VerificationLinkSend";
+import { CustomEmailErrorMessage } from "./CustomEmailErrorMessage";
 
 // TODO: Translate error messages
 const votingFormSchema = z.object({
@@ -21,8 +25,20 @@ const votingFormSchema = z.object({
 
 type FormValues = z.infer<typeof votingFormSchema>;
 
-export const VotingForm = () => {
+type VotingFormProps = {
+  coachId: string;
+};
+
+export const VotingForm = ({ coachId }: VotingFormProps) => {
   const t = useTranslations("coachListPage");
+
+  const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
+  const [customEmailError, setCustomEmailError] = useState<string | null>(null);
+  const [isSubmittingLoading, setIsSubmittingLoading] = useState(false);
+  const [verificationSent, setVerificationSent] = useState(false);
+
+  const { executeRecaptcha } = useReCaptcha();
+
   const form = useForm<FormValues>({
     resolver: zodResolver(votingFormSchema),
     defaultValues: {
@@ -33,11 +49,58 @@ export const VotingForm = () => {
     },
   });
 
-  const { control } = form;
+  const {
+    control,
+    formState: { isSubmitting, isValidating },
+  } = form;
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
+  const onSubmit = async (data: FormValues) => {
+    // 1. Reset errors state
+    setRecaptchaError(null);
+    setCustomEmailError(null);
+
+    try {
+      // 2. Set loading state
+      setIsSubmittingLoading(true);
+
+      // 3. Validate email - temporary email, alias
+      const emailValidationError = await validateEmail(data.email);
+      if (emailValidationError) {
+        setCustomEmailError(emailValidationError);
+        return;
+      }
+
+      // 4. Get token from reCAPTCHA
+      const token = await executeRecaptcha("vote_form");
+
+      // 5. Send data to my nextJS endpoint to register vote
+      const response = await fetch(`/api/vote/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, recaptchaToken: token, coachId }),
+      });
+
+      // 6. Get response from my nextJS endpoint
+      const result = await response.json();
+
+      // 7. If response is not ok, throw error
+      if (!response.ok) {
+        throw new Error(result.message || "Registrácia hlasu zlyhala");
+      }
+
+      // 8. Set verification sent state
+      setIsSubmittingLoading(false);
+      setVerificationSent(true);
+    } catch (error) {
+      setRecaptchaError(error instanceof Error ? error.message : "Neočakávaná chyba");
+    } finally {
+      setIsSubmittingLoading(false);
+    }
   };
+
+  if (verificationSent) {
+    return <VerificationLinkSend />;
+  }
 
   return (
     <Form {...form}>
@@ -93,10 +156,12 @@ export const VotingForm = () => {
                 <Input {...field} value={field.value ?? ""} />
               </FormControl>
               <FormMessage />
+              {customEmailError && <CustomEmailErrorMessage message={customEmailError} />}
+              {recaptchaError && <CustomEmailErrorMessage message={recaptchaError} />}
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
+        <Button type="submit" className="w-full" disabled={isSubmittingLoading || isSubmitting || isValidating}>
           {t("votingForm.submit")}
         </Button>
       </form>

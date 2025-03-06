@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 
 import "../globals.css";
 import { lexend } from "../fonts";
+import { RecaptchaProvider } from "./RecaptchaProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -36,7 +37,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={`${lexend.variable} antialiased`}>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <RecaptchaProvider>
+          <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        </RecaptchaProvider>
       </body>
     </html>
   );
