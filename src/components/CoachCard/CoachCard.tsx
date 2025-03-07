@@ -6,6 +6,8 @@ import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { truncateText } from "@/utils/truncateText";
+import Link from "next/link";
+import { routes } from "@/constants/routes";
 
 type CoachCardProps = {
   coachProfile: CoachProfile;
@@ -31,7 +33,9 @@ export const CoachCard = ({ coachProfile, setIsVotingDialogOpen }: CoachCardProp
 
   return (
     <div className="flex flex-col gap-4 rounded-xl shadow-lg max-w-[350px] h-full transition-transform duration-300 ease-in-out transform hover:-translate-y-1">
-      <div className="relative w-full h-[250px] cursor-pointer">{renderImage()}</div>
+      <Link href={routes.coachDetail(coachProfile.id)}>
+        <div className="relative w-full h-[250px] cursor-pointer">{renderImage()}</div>
+      </Link>
       <div className="p-4 sm:p-6 flex flex-col gap-4 flex-grow">
         <div className="flex flex-col gap-1">
           <div className="flex gap-4 items-center">
@@ -43,7 +47,9 @@ export const CoachCard = ({ coachProfile, setIsVotingDialogOpen }: CoachCardProp
 
         <div className="flex justify-between items-center mt-auto">
           <Button onClick={() => setIsVotingDialogOpen(true)}>{t("voteButton")}</Button>
-          <Button variant="link">{t("moreInfoButton")}</Button>
+          <Link href={routes.coachDetail(coachProfile.id)}>
+            <Button variant="link">{t("moreInfoButton")}</Button>
+          </Link>
         </div>
       </div>
     </div>

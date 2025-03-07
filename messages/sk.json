@@ -24,6 +24,14 @@
       }
     }
   },
+  "coachDetailPage": {
+    "showLess": "Zobraziť menej",
+    "showMore": "Zobraziť viac",
+    "count_one": "{count} hlas",
+    "count_two": "{count} hlasy",
+    "count_other": "{count} hlasov",
+    "votes": "{count, selectordinal, one {# hlas} two {# hlasy} other {# hlasov}}"
+  },
   "common": {
     "errors": {
       "required": "Povinné pole."
