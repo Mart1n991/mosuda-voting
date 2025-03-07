@@ -13,11 +13,8 @@
       "votingFor": "Hlasuješ za"
     },
     "votingForm": {
-      "name": "Meno",
-      "surname": "Priezvisko",
+      "name": "Krstné meno",
       "email": "Email",
-      "phone": "Telefón",
-      "message": "Správa",
       "submit": "Hlasovať",
       "errors": {
         "required": "{field} je povinné pole."

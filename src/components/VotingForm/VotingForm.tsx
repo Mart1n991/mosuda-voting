@@ -11,6 +11,7 @@ import { useReCaptcha } from "next-recaptcha-v3";
 import { validateEmail } from "@/utils/emailValidation";
 import { VerificationLinkSend } from "./VerificationLinkSend";
 import { CustomEmailErrorMessage } from "./CustomEmailErrorMessage";
+import { storeEmailInMailchimp } from "@/utils/storeEmailIInMailchimp";
 
 // TODO: Translate error messages
 const votingFormSchema = z.object({
@@ -43,9 +44,7 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
     resolver: zodResolver(votingFormSchema),
     defaultValues: {
       name: "",
-      surname: "",
       email: "",
-      phone: "",
     },
   });
 
@@ -83,6 +82,8 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
       // 6. Get response from my nextJS endpoint
       const result = await response.json();
 
+      storeEmailInMailchimp(data.email, data.name);
+
       // 7. If response is not ok, throw error
       if (!response.ok) {
         throw new Error(result.message || "Registrácia hlasu zlyhala");
@@ -105,40 +106,12 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <div className="flex flex-col items-start gap-4 md:flex-row">
-          <FormField
-            control={control}
-            name="name"
-            render={({ field }) => (
-              <FormItem className="w-full">
-                <FormLabel>{t("votingForm.name")}</FormLabel>
-                <FormControl>
-                  <Input {...field} value={field.value ?? ""} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={control}
-            name="surname"
-            render={({ field }) => (
-              <FormItem className="w-full">
-                <FormLabel>{t("votingForm.surname")}</FormLabel>
-                <FormControl>
-                  <Input {...field} value={field.value ?? ""} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
         <FormField
           control={control}
-          name="phone"
+          name="name"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>{t("votingForm.phone")}</FormLabel>
+            <FormItem className="w-full">
+              <FormLabel>{t("votingForm.name")}</FormLabel>
               <FormControl>
                 <Input {...field} value={field.value ?? ""} />
               </FormControl>
