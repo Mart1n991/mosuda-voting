@@ -6,7 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "../ui/input";
 import { useTranslations } from "next-intl";
 import { Button } from "../ui/button";
-import { czechSlovakPhoneRegex } from "@/utils/phoneNumberRegex";
 import { useReCaptcha } from "next-recaptcha-v3";
 import { validateEmail } from "@/utils/emailValidation";
 import { VerificationLinkSend } from "./VerificationLinkSend";
@@ -16,12 +15,8 @@ import { storeEmailInMailchimp } from "@/utils/storeEmailIInMailchimp";
 // TODO: Translate error messages
 const votingFormSchema = z.object({
   name: z.string().min(1, { message: "Meno je povinné pole" }),
-  surname: z.string().min(1, { message: "Priezvisko je povinné pole" }),
+
   email: z.string().email({ message: "Nesprávny formát emailu" }),
-  phone: z
-    .string()
-    .min(1, { message: "Telefón je povinné pole" })
-    .regex(czechSlovakPhoneRegex, { message: "Nesprávny formát telefónneho čísla" }),
 });
 
 type FormValues = z.infer<typeof votingFormSchema>;
