@@ -1,4 +1,13 @@
 {
+  "navbar": {
+    "coaches": "Tréneri",
+    "sponsors": "Sponsori",
+    "about": "O súťaži",
+    "contact": "Kontakt",
+    "voter": "Hlasujúci",
+    "coach": "Tréner",
+    "closeMenu": "Zavrieť menu"
+  },
   "coachListPage": {
     "heading": "Hlasuj za TOP trénera \n <region>Slovenska a Česka</region>",
     "coachCard": {
