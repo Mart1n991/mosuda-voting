@@ -2,7 +2,7 @@ import { getCoachList } from "@/services/getCoachList";
 import { CoachProfile } from "@/types/CoachProfile";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { CoachList } from "./CoachList";
+import { Coaches } from "./coaches";
 
 export default async function CoachListPage() {
   const t = await getTranslations("coachListPage");
@@ -17,7 +17,7 @@ export default async function CoachListPage() {
           {t.rich("heading", { region: (chunks) => <span className="underline decoration-mosuda-green-light">{chunks}</span> })}
         </h1>
       </section>
-      <CoachList coachList={coachList} />
+      <Coaches coachList={coachList} />
     </main>
   );
 }
