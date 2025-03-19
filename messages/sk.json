@@ -10,6 +10,7 @@
   },
   "coachListPage": {
     "heading": "Hlasuj za TOP trénera \n <region>Slovenska a Česka</region>",
+    "votes": "{count, plural, one {# hlas} few {# hlasy} other {# hlasov}}",
     "coachCard": {
       "numberOfVotes": "Počet hlasov",
       "voteButton": "Hlasuj",

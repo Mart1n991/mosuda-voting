@@ -21,7 +21,7 @@ export const VotingDialog = ({ open, onOpenChange, coachProfile }: VotingDialogP
           <p className="text-xs text-stone-500">{t("votingDialog.votingFor")}</p>
           <div className="flex gap-10 items-center">
             <DialogTitle className="text-2xl font-bold">{truncateText(coachProfile.name, 40)}</DialogTitle>
-            <Badge>{coachProfile.voteCount}</Badge>
+            <Badge size="lg">{t("votes", { count: coachProfile.voteCount })}</Badge>
           </div>
           <DialogDescription />
         </DialogHeader>

@@ -11,6 +11,7 @@ import { validateEmail } from "@/utils/emailValidation";
 import { VerificationLinkSend } from "./VerificationLinkSend";
 import { CustomEmailErrorMessage } from "./CustomEmailErrorMessage";
 import { storeEmailInMailchimp } from "@/utils/storeEmailIInMailchimp";
+import { cn } from "@/lib/utils";
 
 // TODO: Translate error messages
 const votingFormSchema = z.object({
@@ -23,9 +24,10 @@ type FormValues = z.infer<typeof votingFormSchema>;
 
 type VotingFormProps = {
   coachId: string;
+  className?: string;
 };
 
-export const VotingForm = ({ coachId }: VotingFormProps) => {
+export const VotingForm = ({ coachId, className }: VotingFormProps) => {
   const t = useTranslations("coachListPage");
 
   const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
@@ -100,7 +102,7 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className={cn("space-y-4", className)}>
         <FormField
           control={control}
           name="name"
@@ -129,7 +131,7 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full" disabled={isSubmittingLoading || isSubmitting || isValidating}>
+        <Button type="submit" size="lg" className="w-full" disabled={isSubmittingLoading || isSubmitting || isValidating}>
           {t("votingForm.submit")}
         </Button>
       </form>
