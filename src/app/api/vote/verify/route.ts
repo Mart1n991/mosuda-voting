@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { decrypt } from "@/utils/encryption";
+import { storeEmailInMailchimp } from "@/utils/storeEmailIInMailchimp";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -45,6 +46,8 @@ export async function GET(request: NextRequest) {
         verified: true,
       }),
     });
+
+    await storeEmailInMailchimp(payload.email, payload.name);
 
     // When we find out that it's because of an already existing vote (check by message)
     if (response.status === 400) {
