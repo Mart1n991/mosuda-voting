@@ -5,11 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, XCircle } from "lucide-react";
 import Link from "next/link";
+import { routes } from "@/constants/routes";
 
 export default function VoteConfirmationPage() {
   const searchParams = useSearchParams();
-  const status = searchParams.get("status");
-  const message = searchParams.get("message");
+  const status = searchParams?.get("status");
+  const message = searchParams?.get("message");
 
   if (status === "success") {
     return (
@@ -44,7 +45,7 @@ export default function VoteConfirmationPage() {
         <CardContent className="text-center">
           <p className="mb-4">{message || "Váš hlas nemohol byť potvrdený."}</p>
           <Button asChild>
-            <Link href="/">Späť na hlavnú stránku</Link>
+            <Link href={routes.home}>Späť na hlavnú stránku</Link>
           </Button>
         </CardContent>
       </Card>

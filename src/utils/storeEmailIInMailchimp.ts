@@ -16,7 +16,6 @@ export async function storeEmailInMailchimp(email: string, name: string) {
         FNAME: name,
       },
     });
-    console.log("RESPONSE: ", response);
     return response;
   } catch (error) {
     console.log("ERROR: ", error);
