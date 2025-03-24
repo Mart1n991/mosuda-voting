@@ -35,6 +35,7 @@ export async function GET(request: NextRequest) {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
   try {
+    // First, send the vote to the API
     const response = await fetch(`${process.env.MOSUDA_APP_ENDPOINT}/coachProfileChallenge/vote`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -47,8 +48,6 @@ export async function GET(request: NextRequest) {
       }),
     });
 
-    await storeEmailInMailchimp(payload.email, payload.name);
-
     // When we find out that it's because of an already existing vote (check by message)
     if (response.status === 400) {
       return NextResponse.redirect(
@@ -60,11 +59,19 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    // If vote was successful, try to subscribe to Mailchimp
+    // This is now non-blocking - if it fails, we still consider the vote successful
+    try {
+      await storeEmailInMailchimp(payload.email, payload.name);
+    } catch (mailchimpError) {
+      console.error("Failed to subscribe to Mailchimp:", mailchimpError);
+      // Continue with the success flow even if Mailchimp fails
+    }
+
     // Redirect user to confirmation page
     return NextResponse.redirect(new URL(`${baseUrl}/${request.nextUrl.locale}/vote-confirmation?status=success`));
   } catch (error) {
     console.error("Error sending vote to API:", error);
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
     return NextResponse.redirect(
       new URL(`${baseUrl}/${request.nextUrl.locale}/vote-confirmation?status=error&message=API communication error`)
     );

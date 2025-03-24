@@ -62,17 +62,17 @@ const hasEmailAlias = (email: string): boolean => {
 };
 
 export const validateEmail = async (email: string) => {
-  // 1. Najprv rýchla kontrola pomocou knižnice (bez API volania)
+  // 1. Quick check using library (without API call)
   if (isKnownDisposableDomain(email)) {
     return "Prosím, nepoužívajte dočasnú emailovú adresu";
   }
 
-  // 2. Kontrola aliasov
+  // 2. Aliases check
   if (hasEmailAlias(email)) {
     return "Prosím, nepoužívajte emailové aliasy (napr. meno+alias@gmail.com)";
   }
 
-  // 3. Kontrola cez API (len ak prešla lokálnou kontrolou)
+  // 3. API check (only if local check passed)
   if (await isTemporaryEmail(email)) {
     return "Prosím, nepoužívajte dočasnú emailovú adresu";
   }
