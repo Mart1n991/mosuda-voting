@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const { name, surname, email, phone, recaptchaToken, coachId } = body;
+    const { name, email, recaptchaToken, coachId } = body;
 
     // Verifikácia reCAPTCHA Enterprise
     try {
@@ -45,16 +45,12 @@ export async function POST(request: NextRequest) {
       if (process.env.NODE_ENV === "production") {
         return NextResponse.json({ message: "Error verifying reCAPTCHA" }, { status: 500 });
       }
-      // V development móde pokračujeme aj pri chybe
-      console.warn("Preskakujem reCAPTCHA overenie v dev móde kvôli chybe");
     }
 
     // Vytvorím payload s dátami a časovou pečiatkou
     const payload = {
       name,
-      surname,
       email,
-      phone,
       coachId,
       timestamp: Date.now(),
     };

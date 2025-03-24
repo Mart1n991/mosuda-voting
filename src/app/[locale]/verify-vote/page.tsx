@@ -8,7 +8,7 @@ import { useReCaptcha } from "next-recaptcha-v3";
 
 export default function VerifyVotePage() {
   const searchParams = useSearchParams();
-  const token = searchParams.get("token");
+  const token = searchParams?.get("token");
   const [isVerifying, setIsVerifying] = useState(true);
   const router = useRouter();
   const { executeRecaptcha, loaded } = useReCaptcha();

@@ -1,6 +1,16 @@
 {
+  "navbar": {
+    "coaches": "Tréneri",
+    "sponsors": "Sponsori",
+    "about": "O súťaži",
+    "contact": "Kontakt",
+    "voter": "Hlasujúci",
+    "coach": "Tréner",
+    "closeMenu": "Zavrieť menu"
+  },
   "coachListPage": {
     "heading": "Hlasuj za TOP trénera \n <region>Slovenska a Česka</region>",
+    "votes": "{count, plural, one {# hlas} few {# hlasy} other {# hlasov}}",
     "coachCard": {
       "numberOfVotes": "Počet hlasov",
       "voteButton": "Hlasuj",
@@ -13,11 +23,8 @@
       "votingFor": "Hlasuješ za"
     },
     "votingForm": {
-      "name": "Meno",
-      "surname": "Priezvisko",
+      "name": "Krstné meno",
       "email": "Email",
-      "phone": "Telefón",
-      "message": "Správa",
       "submit": "Hlasovať",
       "errors": {
         "required": "{field} je povinné pole."

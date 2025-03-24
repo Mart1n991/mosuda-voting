@@ -6,11 +6,11 @@ import { CoachProfile } from "@/types/CoachProfile";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
-type CoachListProps = {
+type CoachesProps = {
   coachList: CoachProfile[];
 };
 
-export const CoachList = ({ coachList }: CoachListProps) => {
+export const Coaches = ({ coachList }: CoachesProps) => {
   const t = useTranslations("coachListPage");
   const [isVotingDialogOpen, setIsVotingDialogOpen] = useState(false);
   const [selectedCoach, setSelectedCoach] = useState<CoachProfile | null>(null);

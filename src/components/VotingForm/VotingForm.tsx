@@ -6,30 +6,28 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "../ui/input";
 import { useTranslations } from "next-intl";
 import { Button } from "../ui/button";
-import { czechSlovakPhoneRegex } from "@/utils/phoneNumberRegex";
 import { useReCaptcha } from "next-recaptcha-v3";
 import { validateEmail } from "@/utils/emailValidation";
 import { VerificationLinkSend } from "./VerificationLinkSend";
 import { CustomEmailErrorMessage } from "./CustomEmailErrorMessage";
+import { storeEmailInMailchimp } from "@/utils/storeEmailIInMailchimp";
+import { cn } from "@/lib/utils";
 
 // TODO: Translate error messages
 const votingFormSchema = z.object({
   name: z.string().min(1, { message: "Meno je povinné pole" }),
-  surname: z.string().min(1, { message: "Priezvisko je povinné pole" }),
+
   email: z.string().email({ message: "Nesprávny formát emailu" }),
-  phone: z
-    .string()
-    .min(1, { message: "Telefón je povinné pole" })
-    .regex(czechSlovakPhoneRegex, { message: "Nesprávny formát telefónneho čísla" }),
 });
 
 type FormValues = z.infer<typeof votingFormSchema>;
 
 type VotingFormProps = {
   coachId: string;
+  className?: string;
 };
 
-export const VotingForm = ({ coachId }: VotingFormProps) => {
+export const VotingForm = ({ coachId, className }: VotingFormProps) => {
   const t = useTranslations("coachListPage");
 
   const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
@@ -43,9 +41,7 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
     resolver: zodResolver(votingFormSchema),
     defaultValues: {
       name: "",
-      surname: "",
       email: "",
-      phone: "",
     },
   });
 
@@ -83,6 +79,8 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
       // 6. Get response from my nextJS endpoint
       const result = await response.json();
 
+      storeEmailInMailchimp(data.email, data.name);
+
       // 7. If response is not ok, throw error
       if (!response.ok) {
         throw new Error(result.message || "Registrácia hlasu zlyhala");
@@ -104,41 +102,13 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <div className="flex flex-col items-start gap-4 md:flex-row">
-          <FormField
-            control={control}
-            name="name"
-            render={({ field }) => (
-              <FormItem className="w-full">
-                <FormLabel>{t("votingForm.name")}</FormLabel>
-                <FormControl>
-                  <Input {...field} value={field.value ?? ""} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={control}
-            name="surname"
-            render={({ field }) => (
-              <FormItem className="w-full">
-                <FormLabel>{t("votingForm.surname")}</FormLabel>
-                <FormControl>
-                  <Input {...field} value={field.value ?? ""} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
+      <form onSubmit={form.handleSubmit(onSubmit)} className={cn("space-y-4", className)}>
         <FormField
           control={control}
-          name="phone"
+          name="name"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>{t("votingForm.phone")}</FormLabel>
+            <FormItem className="w-full">
+              <FormLabel>{t("votingForm.name")}</FormLabel>
               <FormControl>
                 <Input {...field} value={field.value ?? ""} />
               </FormControl>
@@ -161,7 +131,7 @@ export const VotingForm = ({ coachId }: VotingFormProps) => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full" disabled={isSubmittingLoading || isSubmitting || isValidating}>
+        <Button type="submit" size="lg" className="w-full" disabled={isSubmittingLoading || isSubmitting || isValidating}>
           {t("votingForm.submit")}
         </Button>
       </form>

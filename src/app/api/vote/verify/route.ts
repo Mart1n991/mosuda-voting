@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { decrypt } from "@/utils/encryption";
+import { storeEmailInMailchimp } from "@/utils/storeEmailIInMailchimp";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -39,16 +40,16 @@ export async function GET(request: NextRequest) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: payload.name,
-        surname: payload.surname,
         email: payload.email,
-        phone: payload.phone,
         coachId: payload.coachId,
         recaptchaToken: recaptchaToken,
         verified: true,
       }),
     });
 
-    // Keď zistíme, že je to kvôli už existujúcemu hlasu (kontrola podľa správy)
+    await storeEmailInMailchimp(payload.email, payload.name);
+
+    // When we find out that it's because of an already existing vote (check by message)
     if (response.status === 400) {
       return NextResponse.redirect(
         new URL(
