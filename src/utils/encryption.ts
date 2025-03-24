@@ -27,7 +27,7 @@ const IV_LENGTH = 16; // For AES-256
 export function encrypt(text: string): string {
   // Generate random initialization vector
   const iv = crypto.randomBytes(IV_LENGTH);
-  const cipher = crypto.createCipheriv("aes-256-cbc", Buffer.from(SECRET_KEY), iv);
+  const cipher = crypto.createCipheriv("aes-256-cbc", Buffer.from(SECRET_KEY, "utf8"), iv);
 
   // Encrypt the text
   let encrypted = cipher.update(text);
@@ -50,7 +50,7 @@ export function decrypt(text: string): string | null {
     const encryptedText = Buffer.from(textParts.join(":"), "hex");
 
     // Decrypt the text
-    const decipher = crypto.createDecipheriv("aes-256-cbc", Buffer.from(SECRET_KEY), iv);
+    const decipher = crypto.createDecipheriv("aes-256-cbc", Buffer.from(SECRET_KEY, "utf8"), iv);
     let decrypted = decipher.update(encryptedText);
     decrypted = Buffer.concat([decrypted, decipher.final()]);
 
