@@ -6,7 +6,27 @@
     "contact": "Kontakt",
     "voter": "Hlasujúci",
     "coach": "Tréner",
-    "closeMenu": "Zavrieť menu"
+    "closeMenu": "Zavrieť menu",
+    "competitors": "Súťažiaci"
+  },
+  "homePage": {
+    "heading": "Staň sa TOP trénerom \n <region>Slovenska a Česka</region>",
+    "description": "Zapoj sa do súťaže o najobľúbenejšieho trénera alebo trénerku a získaj nielen prestíž, ale aj odmeny ktoré tvoju kariéru posunú na nový level.",
+    "firstPlace": "1. miesto",
+    "secondPlace": "2. miesto",
+    "thirdPlace": "3. miesto",
+    "whyParticipate": "Prečo by si sa teda mal/a zapojiť?",
+    "howToParticipate": "Ako sa vieš zapojiť?",
+    "whatYouCanWin": "Čo môžeš vyhrať?",
+    "prize1": "Mediálna pozornosť",
+    "prize2": "Kolobežka",
+    "prize3": "Wellness  v dubaji",
+    "prize1Description": "Výhra pre víťaza súťaže o najlepšieho trénera",
+    "prize2Description": "Výhra pre víťaza súťaže o najlepšieho trénera",
+    "prize3Description": "Výhra pre víťaza súťaže o najlepšieho trénera",
+    "whyParticipateDescription": "Pridaj sa do súťaže a získaj možnosť rapídneho rastu tvojej kariéry, zvýš si popularitu a takisto aj počet klientov! V neposlednom rade si vybuduješ silnú osobnú značku, ktorá je na nezaplatenie.",
+    "howToParticipateDescription": "Stiahni si aplikáciu Mosuda, zaregistruj sa, vyplň svoj profil a pridaj sa do hlasovania. Je to naozaj takto jednoduché! Potom už len musíš zbierať hlasy.",
+    "whatYouCanWinDescription": "V prvom rade môžeš vyhrať mediálnu pozornosť, ako napríklad rozhovor s refresherom, xxx. Ďalej si môžeš oddýchnnuť v jednom z najluxusnejších miest na svete, pretože na teba čaká dovolenka v Dubaji. Chceme, aby si tvoje telo po všetkej tej tvrdej práci oddýchlo. V neposlednom rade ti vytvoríme profesionálnu vizitku, najmä vlastný web a marketingovú stratégiu, ktorá ti zaručene prinesie kopec nových klientov. Toto všetko je hlavná výhra."
   },
   "coachListPage": {
     "heading": "Hlasuj za TOP trénera \n <region>Slovenska a Česka</region>",

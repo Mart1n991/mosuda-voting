@@ -16,17 +16,25 @@ export const DesktopNavbar = ({ className }: DesktopNavbarProps) => {
   const pathname = usePathname();
   const t = useTranslations("navbar");
 
+  const pathWithoutLocale = pathname.split("/").slice(2).join("/");
+
+  const isRouteActive = (href: string) => {
+    const normalizedHref = href.startsWith("/") ? href.slice(1) : href;
+    return pathWithoutLocale === normalizedHref;
+  };
+
   return (
     <div className={cn("max-w-screen-xl xl:mx-auto flex items-center justify-between px-10 xl:px-0 py-4", className)}>
       <Link href={routes.home}>
         <Image src="/images/logo.png" alt="logo" width={150} height={100} priority />
       </Link>
       <div className="flex items-center gap-4">
-        <NavItem href={routes.coach} label={t("coach")} isActive={pathname === routes.coach} />
-        <NavItem href={routes.voter} label={t("voter")} isActive={pathname === routes.voter} />
-        <NavItem href={routes.sponsors} label={t("sponsors")} isActive={pathname === routes.sponsors} />
-        <NavItem href={routes.about} label={t("about")} isActive={pathname === routes.about} />
-        <NavItem href={routes.contact} label={t("contact")} isActive={pathname === routes.contact} />
+        <NavItem href={routes.coach} label={t("coach")} isActive={isRouteActive(routes.coach) || isRouteActive(routes.home)} />
+        <NavItem href={routes.coaches} label={t("competitors")} isActive={isRouteActive(routes.coaches)} />
+        <NavItem href={routes.voter} label={t("voter")} isActive={isRouteActive(routes.voter)} />
+        <NavItem href={routes.sponsors} label={t("sponsors")} isActive={isRouteActive(routes.sponsors)} />
+        <NavItem href={routes.about} label={t("about")} isActive={isRouteActive(routes.about)} />
+        <NavItem href={routes.contact} label={t("contact")} isActive={isRouteActive(routes.contact)} />
       </div>
     </div>
   );
