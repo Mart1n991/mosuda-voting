@@ -29,11 +29,10 @@ export const DesktopNavbar = ({ className }: DesktopNavbarProps) => {
         <Image src="/images/logo.png" alt="logo" width={150} height={100} priority />
       </Link>
       <div className="flex items-center gap-4">
-        <NavItem href={routes.coach} label={t("coach")} isActive={isRouteActive(routes.coach) || isRouteActive(routes.home)} />
+        <NavItem href={routes.home} label={t("coach")} isActive={isRouteActive(routes.coach) || isRouteActive(routes.home)} />
         <NavItem href={routes.coaches} label={t("competitors")} isActive={isRouteActive(routes.coaches)} />
         <NavItem href={routes.voter} label={t("voter")} isActive={isRouteActive(routes.voter)} />
         <NavItem href={routes.sponsors} label={t("sponsors")} isActive={isRouteActive(routes.sponsors)} />
-        <NavItem href={routes.about} label={t("about")} isActive={isRouteActive(routes.about)} />
         <NavItem href={routes.contact} label={t("contact")} isActive={isRouteActive(routes.contact)} />
       </div>
     </div>
