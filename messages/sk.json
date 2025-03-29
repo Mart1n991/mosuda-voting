@@ -80,5 +80,14 @@
     "errors": {
       "required": "Povinné pole."
     }
+  },
+  "footer": {
+    "copyright": "Všetky práva vyhradené.",
+    "createdBy": "S radosťou vytvoril <creator>Martin Javorský</creator>",
+    "contactUs": "Kontaktujte nás",
+    "company": "Spoločnosť",
+    "privacyPolicy": "Ochrana osobných údajov",
+    "termsOfService": "Všeobecné obchodné podmienky",
+    "mosudaDescription": "Vznikla na to, aby pomáhala trénerom byť lepšími a prostredníctvom lepších trénerov zlepšovala životy bežných ľudí."
   }
 }

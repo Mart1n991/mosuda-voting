@@ -1,5 +1,6 @@
 import { Accordion } from "@/components/Accordion.tsx/Accordion";
 import { AppStoreButton } from "@/components/AppStoreButton";
+import { Footer } from "@/components/Footer/Footer";
 import { GooglePlayButton } from "@/components/GooglePlayButton";
 import { Navbar } from "@/components/Navbar";
 import { PrizeCarousel } from "@/components/PrizeCarousel";
@@ -69,6 +70,7 @@ export default async function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
