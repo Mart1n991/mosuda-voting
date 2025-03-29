@@ -9,8 +9,8 @@ export function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer>
-      <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:justify-between lg:items-start lg:px-10 bg-stone-200 py-4">
+    <footer className="bg-stone-200">
+      <div className="max-w-screen-xl xl:mx-auto flex flex-col items-center justify-center gap-4 lg:flex-row lg:justify-between lg:items-start px-0 lg:px-10 xl:px-0  py-4">
         <div className="flex flex-col items-center lg:items-start">
           <Image src="/images/logo.png" alt="logo" width={150} height={100} priority />
           <p className="text-sm text-center font-light px-4 mt-2 max-w-md lg:text-left lg:px-0 lg:max-w-xs">
