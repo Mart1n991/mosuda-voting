@@ -16,11 +16,11 @@ export function PrizeCard({ title, description, image, className, place }: Prize
         <div>
           <Badge size="lg">{place}</Badge>
         </div>
-        <CardTitle className="text-3xl font-bold">{title}</CardTitle>
+        <CardTitle className="text-xl md:text-3xl font-bold">{title}</CardTitle>
         <CardDescription />
       </CardHeader>
       <CardContent className="flex-1">
-        <p className="text-black">{description}</p>
+        <p className="text-black text-sm md:text-base">{description}</p>
       </CardContent>
     </Card>
   );

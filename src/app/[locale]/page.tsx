@@ -32,20 +32,20 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <main className="max-w-screen-xl xl:mx-auto my-20 flex flex-col items-center">
-        <section className="flex w-full px-10 mb-10">
-          <div className="flex-1 flex flex-col items-start">
-            <h1 className="whitespace-pre-line text-2xl md:text-5xl font-bold">
+      <main className="max-w-screen-xl xl:mx-auto my-5 xl:my-20 flex flex-col items-center">
+        <section className="flex flex-col xl:flex-row items-center xl:items-start w-full px-4 sm:px-10 mb-10">
+          <div className="flex-1 flex flex-col items-center xl:items-start">
+            <h1 className="whitespace-pre-line text-2xl md:text-5xl font-bold text-center xl:text-left">
               {t.rich("heading", {
                 region: (chunks) => <span className="underline decoration-mosuda-green-light">{chunks}</span>,
               })}
             </h1>
-            <p className="max-w-[500px] mt-6">{t("description")}</p>
+            <p className="max-w-[500px] mt-6 text-center xl:text-left text-sm md:text-base">{t("description")}</p>
             <div className="flex gap-4 mt-10">
               <AppStoreButton href="https://apps.apple.com/sk/app/mosuda/id1662260317?l=sk" />
               <GooglePlayButton href="https://play.google.com/store/apps/details?id=com.no_creativity_coach_of_people" />
             </div>
-            <div className="mt-10 w-[80%]">
+            <div className="mt-10 w-[80%] hidden xl:block">
               <Accordion
                 items={[
                   { title: t("whyParticipate"), content: t("whyParticipateDescription") },
@@ -55,8 +55,17 @@ export default async function Home() {
               />
             </div>
           </div>
-          <div>
-            <PrizeCarousel prizes={prizes} />
+
+          <PrizeCarousel prizes={prizes} className="mt-10 xl:mt-0" />
+
+          <div className="mt-10 block w-full max-w-[500px] xl:hidden">
+            <Accordion
+              items={[
+                { title: t("whyParticipate"), content: t("whyParticipateDescription") },
+                { title: t("howToParticipate"), content: t("howToParticipateDescription") },
+                { title: t("whatYouCanWin"), content: t("whatYouCanWinDescription") },
+              ]}
+            />
           </div>
         </section>
       </main>
