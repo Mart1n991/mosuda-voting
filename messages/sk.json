@@ -26,7 +26,24 @@
     "prize3Description": "Výhra pre víťaza súťaže o najlepšieho trénera",
     "whyParticipateDescription": "Pridaj sa do súťaže a získaj možnosť rapídneho rastu tvojej kariéry, zvýš si popularitu a takisto aj počet klientov! V neposlednom rade si vybuduješ silnú osobnú značku, ktorá je na nezaplatenie.",
     "howToParticipateDescription": "Stiahni si aplikáciu Mosuda, zaregistruj sa, vyplň svoj profil a pridaj sa do hlasovania. Je to naozaj takto jednoduché! Potom už len musíš zbierať hlasy.",
-    "whatYouCanWinDescription": "V prvom rade môžeš vyhrať mediálnu pozornosť, ako napríklad rozhovor s refresherom, xxx. Ďalej si môžeš oddýchnnuť v jednom z najluxusnejších miest na svete, pretože na teba čaká dovolenka v Dubaji. Chceme, aby si tvoje telo po všetkej tej tvrdej práci oddýchlo. V neposlednom rade ti vytvoríme profesionálnu vizitku, najmä vlastný web a marketingovú stratégiu, ktorá ti zaručene prinesie kopec nových klientov. Toto všetko je hlavná výhra."
+    "whatYouCanWinDescription": "V prvom rade môžeš vyhrať mediálnu pozornosť, ako napríklad rozhovor s refresherom, xxx. Ďalej si môžeš oddýchnnuť v jednom z najluxusnejších miest na svete, pretože na teba čaká dovolenka v Dubaji. Chceme, aby si tvoje telo po všetkej tej tvrdej práci oddýchlo. V neposlednom rade ti vytvoríme profesionálnu vizitku, najmä vlastný web a marketingovú stratégiu, ktorá ti zaručene prinesie kopec nových klientov. Toto všetko je hlavná výhra.",
+    "prizes": {
+      "firstPlace": {
+        "title": "Dovolenka v dubaji",
+        "description": "All-inclusive dovolenka na 14dní",
+        "place": "1. miesto"
+      },
+      "secondPlace": {
+        "title": "Kolobežka",
+        "description": "Xiami kolobežka",
+        "place": "2. miesto"
+      },
+      "thirdPlace": {
+        "title": "Doplnky výživy",
+        "description": "Doplnky výživy v hodnote 500EUR",
+        "place": "3. miesto"
+      }
+    }
   },
   "coachListPage": {
     "heading": "Hlasuj za TOP trénera \n <region>Slovenska a Česka</region>",

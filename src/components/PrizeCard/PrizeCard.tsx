@@ -1,43 +1,26 @@
 import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { cn } from "@/lib/utils";
+import { Prize } from "./types";
+import { Badge } from "../ui/badge";
 
-interface PrizeCardProps {
-  title: string;
-  description: string;
-  image: string;
-  price: string;
-  className?: string;
-  isFirstPlace?: boolean;
-}
+type PrizeCardProps = Prize;
 
-export function PrizeCard({ title, description, image, price, className, isFirstPlace }: PrizeCardProps) {
+export function PrizeCard({ title, description, image, className, place }: PrizeCardProps) {
   return (
-    <Card
-      className={cn(
-        "flex flex-col overflow-hidden transition-all hover:shadow-lg",
-        isFirstPlace && "bg-mosuda-green-light",
-        !className && (isFirstPlace ? "h-[500px]" : "h-[400px]"),
-        className
-      )}
-    >
-      <div className={cn("relative w-full overflow-hidden", isFirstPlace ? "h-72" : "h-48")}>
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-300 hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+    <Card className={cn("flex flex-col border-none shadow-lg", className)}>
+      <div className="relative w-full h-[300px] border-b-4 border-mosuda-green-light">
+        <Image src={image} alt={title} fill className="object-cover rounded-t-lg" />
       </div>
-      <CardHeader className={cn("flex-1", isFirstPlace ? "py-8" : "py-6")}>
-        <CardTitle className={cn("font-bold", isFirstPlace ? "text-3xl" : "text-xl")}>{title}</CardTitle>
-        <CardDescription className={cn("font-semibold", isFirstPlace ? "text-3xl text-primary" : "text-lg text-primary")}>
-          {price}
-        </CardDescription>
+      <CardHeader className="flex-1">
+        <div>
+          <Badge size="lg">{place}</Badge>
+        </div>
+        <CardTitle className="text-3xl font-bold">{title}</CardTitle>
+        <CardDescription />
       </CardHeader>
-      <CardContent className={cn("flex-1", isFirstPlace ? "py-8" : "py-6")}>
-        <p className={cn("text-black", isFirstPlace ? "text-lg" : "text-base")}>{description}</p>
+      <CardContent className="flex-1">
+        <p className="text-black">{description}</p>
       </CardContent>
     </Card>
   );
