@@ -2,7 +2,7 @@ import { Accordion } from "@/components/Accordion.tsx/Accordion";
 import { AppStoreButton } from "@/components/AppStoreButton";
 import { GooglePlayButton } from "@/components/GooglePlayButton";
 import { Navbar } from "@/components/Navbar";
-import { PrizeCarousel } from "@/components/PrizeCard/PrizeCarousel";
+import { PrizeCarousel } from "@/components/PrizeCarousel";
 import { getTranslations } from "next-intl/server";
 
 export default async function Home() {
