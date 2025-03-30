@@ -89,5 +89,29 @@
     "privacyPolicy": "Ochrana osobných údajov",
     "termsOfService": "Všeobecné obchodné podmienky",
     "mosudaDescription": "Vznikla na to, aby pomáhala trénerom byť lepšími a prostredníctvom lepších trénerov zlepšovala životy bežných ľudí."
+  },
+  "voter": {
+    "heading": "Hlasuj za TOP trénera \n <region>Slovenska a Česka</region>",
+    "description": "Zahlasuj za svojho obľúbeného osobného trénera a zapoj sa do losovanie o skvelé ceny. \n Nájdi si svojho obľúbeného trénera a zahlasuj za neho alebo ňu. Akonáhle zaregistrujeme tvoj hlas, si automaticky pridaný/á do súťaže o mega ceny.",
+    "howToVote": "Ako hlasovať?",
+    "howToVoteDescription": "Klikni na tlačidlo <vote>Hlasovať</vote> a dostaneš sa do zoznamu trénerov. Vyber si toho svojho a zahlasuj. Hlasovanie je jednoduché, stačí iba vyplniť pár údajov a tvoj hlas bude započítaný. Automaticky si aj zaregistrovaný/á do súťaže o ceny vyššie.",
+    "vote": "Hlasovať",
+    "prizes": {
+      "firstPlace": {
+        "title": "Dovolenka v dubaji",
+        "description": "All-inclusive dovolenka na 14dní",
+        "place": "1. miesto"
+      },
+      "secondPlace": {
+        "title": "Kolobežka",
+        "description": "Xiami kolobežka",
+        "place": "2. miesto"
+      },
+      "thirdPlace": {
+        "title": "Doplnky výživy",
+        "description": "Doplnky výživy v hodnote 500EUR",
+        "place": "3. miesto"
+      }
+    }
   }
 }
