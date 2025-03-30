@@ -3,6 +3,7 @@ import { AppStoreButton } from "@/components/AppStoreButton";
 import { Footer } from "@/components/Footer/Footer";
 import { GooglePlayButton } from "@/components/GooglePlayButton";
 import { Navbar } from "@/components/Navbar";
+import PartnersLogos from "@/components/PartnersLogos/PartnersLogos";
 import { PrizeCarousel } from "@/components/PrizeCarousel";
 import { getTranslations } from "next-intl/server";
 
@@ -68,6 +69,10 @@ export default async function Home() {
               ]}
             />
           </div>
+        </section>
+        <section className="flex flex-col w-full px-4 sm:px-10">
+          <h2 className="text-2xl md:text-5xl font-bold mb-5 text-center xl:text-left">{t("partners.title")}</h2>
+          <PartnersLogos />
         </section>
       </main>
       <Footer />

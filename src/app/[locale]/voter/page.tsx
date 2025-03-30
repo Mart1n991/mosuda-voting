@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer/Footer";
 import { Navbar } from "@/components/Navbar";
+import PartnersLogos from "@/components/PartnersLogos/PartnersLogos";
 import { PrizeCarousel } from "@/components/PrizeCarousel";
 import { buttonVariants } from "@/components/ui/button";
 import { routes } from "@/constants/routes";
@@ -81,6 +82,12 @@ export default async function Voter() {
             </div>
           </section>
         </div>
+        <section className="bg-white">
+          <div className="max-w-screen-xl xl:mx-auto flex flex-col w-full px-4 sm:px-10 py-10">
+            <h2 className="text-2xl md:text-5xl font-bold mb-5 text-center xl:text-left">{t("partners.title")}</h2>
+            <PartnersLogos />
+          </div>
+        </section>
       </main>
       <Footer />
     </>

@@ -47,6 +47,9 @@
         "description": "Doplnky výživy v hodnote 500EUR",
         "place": "3. miesto"
       }
+    },
+    "partners": {
+      "title": "Partneri"
     }
   },
   "coachListPage": {
@@ -116,6 +119,9 @@
         "description": "Doplnky výživy v hodnote 500EUR",
         "place": "3. miesto"
       }
+    },
+    "partners": {
+      "title": "Partneri"
     }
   }
 }
