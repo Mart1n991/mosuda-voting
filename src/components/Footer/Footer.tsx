@@ -53,7 +53,7 @@ export function Footer() {
         <p className="text-center text-sm">
           {t.rich("createdBy", {
             creator: (chunks) => (
-              <a className="underline text-blue-500" href="https://no-creativity.com">
+              <a className="underline text-blue-500" href="https://www.linkedin.com/in/javorsky-martin/" target="_blank">
                 {chunks}
               </a>
             ),
