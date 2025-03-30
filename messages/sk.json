@@ -69,6 +69,8 @@
     "votingForm": {
       "name": "Krstné meno",
       "email": "Email",
+      "consentOne": "Súhlasím s podmienkami súťaže",
+      "consentTwo": "Súhlasím s podmienkami súťaže",
       "submit": "Hlasovať",
       "errors": {
         "required": "{field} je povinné pole."

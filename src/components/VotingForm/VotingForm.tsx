@@ -12,12 +12,14 @@ import { VerificationLinkSend } from "./VerificationLinkSend";
 import { CustomEmailErrorMessage } from "./CustomEmailErrorMessage";
 import { storeEmailInMailchimp } from "@/utils/storeEmailIInMailchimp";
 import { cn } from "@/lib/utils";
+import { Checkbox } from "../ui/checkbox";
 
 // TODO: Translate error messages
 const votingFormSchema = z.object({
   name: z.string().min(1, { message: "Meno je povinné pole" }),
-
   email: z.string().email({ message: "Nesprávny formát emailu" }),
+  consentOne: z.boolean().refine((data) => data, { message: "Musíte súhlasiť s podmienkami" }),
+  consentTwo: z.boolean().refine((data) => data, { message: "Musíte súhlasiť s podmienkami" }),
 });
 
 type FormValues = z.infer<typeof votingFormSchema>;
@@ -42,6 +44,8 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
     defaultValues: {
       name: "",
       email: "",
+      consentOne: false,
+      consentTwo: false,
     },
   });
 
@@ -129,6 +133,36 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
               {customEmailError && <CustomEmailErrorMessage message={customEmailError} />}
               {recaptchaError && <CustomEmailErrorMessage message={recaptchaError} />}
             </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="consentOne"
+          render={({ field }) => (
+            <>
+              <FormItem className="flex flex-row items-center space-x-2 space-y-0">
+                <FormControl>
+                  <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                </FormControl>
+                <FormLabel className="font-normal">{t("votingForm.consentOne")}</FormLabel>
+              </FormItem>
+              <FormMessage />
+            </>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="consentTwo"
+          render={({ field }) => (
+            <>
+              <FormItem className="flex flex-row items-center space-x-2 space-y-0">
+                <FormControl>
+                  <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                </FormControl>
+                <FormLabel className="font-normal">{t("votingForm.consentTwo")}</FormLabel>
+              </FormItem>
+              <FormMessage />
+            </>
           )}
         />
         <Button type="submit" size="lg" className="w-full" disabled={isSubmittingLoading || isSubmitting || isValidating}>
