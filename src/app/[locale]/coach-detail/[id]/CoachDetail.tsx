@@ -43,7 +43,7 @@ export const CoachDetail = ({ coachDetail }: CoachDetailProps) => {
           <VotingForm coachId={coachDetail.id} className="w-full" />
         </div>
       </div>
-      <div className="flex flex-col px-4 md:px-0 md:flex-row gap-10 lg:gap-20 mt-10">
+      <div className="flex flex-col px-4 md:px-0 md:flex-row gap-10 lg:gap-20 mt-10 md:w-1/2">
         {/* Description */}
         {coachDetail.description.length > 0 && (
           <div className="flex-1 mb-10">
@@ -56,7 +56,7 @@ export const CoachDetail = ({ coachDetail }: CoachDetailProps) => {
           </div>
         )}
         {/* Video */}
-        {coachDetail.youtubeLink.length > 0 && (
+        {/* {coachDetail.youtubeLink.length > 0 && (
           <div className="flex-1">
             <iframe
               src={coachDetail.youtubeLink}
@@ -66,7 +66,7 @@ export const CoachDetail = ({ coachDetail }: CoachDetailProps) => {
               allowFullScreen
             />
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

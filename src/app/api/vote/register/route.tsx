@@ -1,12 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createTransport } from "nodemailer";
 import { encrypt } from "@/utils/encryption";
-
+import { getTranslations } from "next-intl/server";
+import { render } from "@react-email/components";
+import VoteVerificationEmail from "./VoteVerificationEmail";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+    const { name, email, recaptchaToken, coachId, locale } = body;
 
-    const { name, email, recaptchaToken, coachId } = body;
+    // Get translations for the email
+    const t = await getTranslations({ locale, namespace: "email.verification" });
 
     // Verifikácia reCAPTCHA Enterprise
     try {
@@ -72,32 +76,27 @@ export async function POST(request: NextRequest) {
       secure: process.env.EMAIL_SERVER_PORT === "465",
     });
 
+    const translations = {
+      title: t("title"),
+      thankYou: t("thankYou"),
+      instructions: t("instructions"),
+      button: t("button"),
+      validity: t("validity"),
+      ignore: t("ignore"),
+    };
+
+    const emailHtml = await render(<VoteVerificationEmail verificationLink={verificationLink} translations={translations} />);
+
     await transporter.sendMail({
       from: process.env.EMAIL_FROM,
       to: email,
-      subject: "Potvrďte svoj hlas v súťaži o najlepšieho trénera",
-      html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h1 style="color: #333;">Potvrďte svoj hlas</h1>
-            <p>Ďakujeme za váš hlas v súťaži o najlepšieho trénera.</p>
-            <p>Pre dokončenie hlasovania, prosím kliknite na nasledujúci odkaz:</p>
-            <div style="margin: 30px 0;">
-              <a href="${verificationLink}" style="background-color: #0070f3; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; display: inline-block;">
-                Potvrdiť hlas
-              </a>
-            </div>
-            <p>Odkaz je platný 24 hodín.</p>
-            <p style="color: #666; margin-top: 30px; font-size: 12px;">
-              Ak ste nežiadali o hlasovanie, tento email môžete ignorovať.
-            </p>
-          </div>
-        `,
+      subject: t("subject"),
+      html: emailHtml,
     });
 
     return NextResponse.json({
       success: true,
       message: "Verifikačný email bol odoslaný",
-      // Vo vývoji môžeme pridať token do odpovede pre jednoduché testovanie
       ...(process.env.NODE_ENV !== "production" && { devToken: token }),
     });
   } catch (error) {

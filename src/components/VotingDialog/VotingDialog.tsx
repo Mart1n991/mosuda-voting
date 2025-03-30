@@ -16,11 +16,13 @@ export const VotingDialog = ({ open, onOpenChange, coachProfile }: VotingDialogP
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="p-6 md:p-10 md:max-w-[600px]">
+      <DialogContent className="p-4 md:p-10 md:max-w-[600px]">
         <DialogHeader className="items-start">
           <p className="text-xs text-stone-500">{t("votingDialog.votingFor")}</p>
-          <div className="flex gap-10 items-center">
-            <DialogTitle className="text-2xl font-bold">{truncateText(coachProfile.name, 40)}</DialogTitle>
+          <div className="flex gap-4 sm:gap-10 items-start sm:items-center justify-between sm:justify-start w-full sm:w-auto">
+            <DialogTitle className="text-xl sm:text-2xl font-bold text-left flex-1">
+              {truncateText(coachProfile.name, 35)}
+            </DialogTitle>
             <Badge size="lg">{t("votes", { count: coachProfile.voteCount })}</Badge>
           </div>
           <DialogDescription />

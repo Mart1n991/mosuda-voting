@@ -42,6 +42,7 @@ export async function GET(request: NextRequest) {
       body: JSON.stringify({
         name: payload.name,
         email: payload.email,
+        consentAt: new Date().toISOString(),
         coachId: payload.coachId,
         recaptchaToken: recaptchaToken,
         verified: true,
