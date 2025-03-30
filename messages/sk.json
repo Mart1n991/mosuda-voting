@@ -141,5 +141,14 @@
       "validity": "Odkaz je platný 24 hodín.",
       "ignore": "Ak si nežiadal o hlasovanie, tento email môžeš ignorovať."
     }
+  },
+  "verifyVote": {
+    "checkingVote": "Overujem váš hlas...",
+    "verificationSuccess": "Hlas bol Potvrdený!",
+    "verificationSuccessMessage": "Ďakujeme za tvoj hlas v súťaži o TOP trénera.",
+    "verificationFailed": "Overenie hlasu zlyhalo",
+    "verificationFailedMessage": "Váš hlas nemohol byť potvrdený.",
+    "backToVoting": "Späť na zoznam súťažiacich",
+    "automaticRedirect": "Ak nie ste automaticky presmerovaní, kliknite <a>sem</a>."
   }
 }

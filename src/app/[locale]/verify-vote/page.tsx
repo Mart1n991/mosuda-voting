@@ -5,8 +5,11 @@ import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 import { useReCaptcha } from "next-recaptcha-v3";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function VerifyVotePage() {
+  const t = useTranslations("verifyVote");
   const searchParams = useSearchParams();
   const token = searchParams?.get("token");
   const [isVerifying, setIsVerifying] = useState(true);
@@ -63,21 +66,25 @@ export default function VerifyVotePage() {
   }, [token, router, loaded, executeRecaptcha]);
 
   return (
-    <div className="container mx-auto max-w-md py-10">
+    <div className="container mx-auto max-w-md h-screen flex flex-col gap-4 items-center justify-center">
+      <Image src="/images/logo.png" alt="Mosuda Logo" width={150} height={100} />
       <Card>
         <CardContent className="pt-6 text-center">
           {isVerifying ? (
             <div className="flex flex-col items-center gap-4 py-8">
               <Loader2 className="h-8 w-8 animate-spin text-primary" />
-              <p>Overujem váš hlas...</p>
+              <p>{t("checkingVote")}</p>
             </div>
           ) : (
             <div className="py-4">
               <p>
-                Ak nie ste automaticky presmerovaní, kliknite{" "}
-                <a className="text-primary underline" href={`/api/vote/verify?token=${encodeURIComponent(token || "")}`}>
-                  sem
-                </a>
+                {t.rich("automaticRedirect", {
+                  a: (chunks) => (
+                    <a className="text-primary underline" href={`/api/vote/verify?token=${encodeURIComponent(token || "")}`}>
+                      {chunks}
+                    </a>
+                  ),
+                })}
                 .
               </p>
             </div>
