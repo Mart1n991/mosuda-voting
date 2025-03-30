@@ -3,6 +3,7 @@ import { CoachProfile } from "@/types/CoachProfile";
 import { getTranslations } from "next-intl/server";
 import { Coaches } from "./coaches";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer/Footer";
 
 export default async function CoachListPage() {
   const t = await getTranslations("coachListPage");
@@ -20,6 +21,7 @@ export default async function CoachListPage() {
         </section>
         <Coaches coachList={coachList} />
       </main>
+      <Footer />
     </>
   );
 }
