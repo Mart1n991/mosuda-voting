@@ -13,6 +13,7 @@ import { CustomEmailErrorMessage } from "./CustomEmailErrorMessage";
 import { storeEmailInMailchimp } from "@/utils/storeEmailIInMailchimp";
 import { cn } from "@/lib/utils";
 import { Checkbox } from "../ui/checkbox";
+import { useLocale } from "use-intl";
 
 // TODO: Translate error messages
 const votingFormSchema = z.object({
@@ -38,6 +39,7 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
   const [verificationSent, setVerificationSent] = useState(false);
 
   const { executeRecaptcha } = useReCaptcha();
+  const locale = useLocale();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(votingFormSchema),
@@ -77,7 +79,12 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
       const response = await fetch(`/api/vote/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, recaptchaToken: token, coachId }),
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken: token,
+          coachId,
+          locale: locale,
+        }),
       });
 
       // 6. Get response from my nextJS endpoint

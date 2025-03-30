@@ -74,6 +74,11 @@
       "submit": "Hlasovať",
       "errors": {
         "required": "{field} je povinné pole."
+      },
+      "verificationLinkSend": {
+        "title": "Ďakujeme za registráciu hlasu!",
+        "description": "Na tvoju emailovú adresu bol odoslaný verifikačný link. Prosím, klikni naň pre potvrdenie tvojho hlasu.",
+        "checkSpam": "Nezabudni skontrolovať aj priečinok so spamom"
       }
     }
   },
@@ -124,6 +129,17 @@
     },
     "partners": {
       "title": "Partneri"
+    }
+  },
+  "email": {
+    "verification": {
+      "subject": "Potvrď svoj hlas v súťaži o TOP trénera",
+      "title": "Potvrď svoj hlas",
+      "thankYou": "Ďakujeme za tvoj hlas v súťaži o TOP trénera.",
+      "instructions": "Pre dokončenie hlasovania, prosím klikni na nasledujúci odkaz:",
+      "button": "Potvrdiť hlas",
+      "validity": "Odkaz je platný 24 hodín.",
+      "ignore": "Ak si nežiadal o hlasovanie, tento email môžeš ignorovať."
     }
   }
 }
