@@ -44,10 +44,8 @@ export const MobileNavbar = ({ className }: MobileNavbarProps) => {
 
           <div className="flex flex-col gap-6">
             <NavItem href={routes.home} label={t("coach")} isActive={isRouteActive(routes.coach) || isRouteActive(routes.home)} />
-            <NavItem href={routes.coaches} label={t("competitors")} isActive={isRouteActive(routes.coaches)} />
             <NavItem href={routes.voter} label={t("voter")} isActive={isRouteActive(routes.voter)} />
-            <NavItem href={routes.sponsors} label={t("sponsors")} isActive={isRouteActive(routes.sponsors)} />
-            <NavItem href={routes.contact} label={t("contact")} isActive={isRouteActive(routes.contact)} />
+            <NavItem href={routes.coaches} label={t("competitors")} isActive={isRouteActive(routes.coaches)} />
           </div>
           <SheetClose asChild>
             <Button variant="secondary" className="mt-10 w-full">

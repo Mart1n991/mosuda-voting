@@ -30,10 +30,8 @@ export const DesktopNavbar = ({ className }: DesktopNavbarProps) => {
       </Link>
       <div className="flex items-center gap-4">
         <NavItem href={routes.home} label={t("coach")} isActive={isRouteActive(routes.coach) || isRouteActive(routes.home)} />
-        <NavItem href={routes.coaches} label={t("competitors")} isActive={isRouteActive(routes.coaches)} />
         <NavItem href={routes.voter} label={t("voter")} isActive={isRouteActive(routes.voter)} />
-        <NavItem href={routes.sponsors} label={t("sponsors")} isActive={isRouteActive(routes.sponsors)} />
-        <NavItem href={routes.contact} label={t("contact")} isActive={isRouteActive(routes.contact)} />
+        <NavItem href={routes.coaches} label={t("competitors")} isActive={isRouteActive(routes.coaches)} />
       </div>
     </div>
   );
