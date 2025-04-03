@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https" as const,
         hostname: "firebasestorage.googleapis.com",
       },
+      {
+        protocol: "http" as const,
+        hostname: "toptrener.mosuda.sk",
+      },
     ],
   },
   modularizeImports: {

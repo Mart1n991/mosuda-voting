@@ -6,7 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 import { useReCaptcha } from "next-recaptcha-v3";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+
+import { CdnImage } from "@/components/CdnImage";
 
 export default function VerifyVotePage() {
   const t = useTranslations("verifyVote");
@@ -67,7 +68,7 @@ export default function VerifyVotePage() {
 
   return (
     <div className="container mx-auto max-w-md h-screen flex flex-col gap-4 items-center justify-center">
-      <Image src="/images/logo.png" alt="Mosuda Logo" width={150} height={100} />
+      <CdnImage src="/logo.png" alt="Mosuda Logo" width={150} height={100} />
       <Card>
         <CardContent className="pt-6 text-center">
           {isVerifying ? (
