@@ -1,10 +1,9 @@
 import { useTranslations } from "next-intl";
-import React from "react";
-import Image from "next/image";
 import { AppStoreButton } from "../AppStoreButton";
 import { GooglePlayButton } from "../GooglePlayButton";
 import { IconBrandFacebook, IconBrandInstagram } from "@tabler/icons-react";
 import Link from "next/link";
+import { CdnImage } from "../CdnImage";
 export function Footer() {
   const t = useTranslations("footer");
 
@@ -12,7 +11,7 @@ export function Footer() {
     <footer className="bg-stone-200">
       <div className="max-w-screen-xl xl:mx-auto flex flex-col items-center justify-center gap-4 lg:flex-row lg:justify-between lg:items-start px-0 lg:px-10 xl:px-0  py-4">
         <div className="flex flex-col items-center lg:items-start">
-          <Image src="/images/logo.png" alt="logo" width={150} height={100} priority />
+          <CdnImage src="/logo.png" alt="logo" width={150} height={100} priority />
           <p className="text-sm text-center font-light px-4 mt-2 max-w-md lg:text-left lg:px-0 lg:max-w-xs">
             {t("mosudaDescription")}
           </p>

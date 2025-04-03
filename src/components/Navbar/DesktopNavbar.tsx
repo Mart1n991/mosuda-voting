@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { NavItem } from "./NavItem";
 import { routes } from "@/constants/routes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
+import { CdnImage } from "../CdnImage/CdnImage";
 
 type DesktopNavbarProps = {
   className?: string;
@@ -26,7 +26,7 @@ export const DesktopNavbar = ({ className }: DesktopNavbarProps) => {
   return (
     <div className={cn("max-w-screen-xl xl:mx-auto flex items-center justify-between px-10 xl:px-0 py-4", className)}>
       <Link href={routes.home}>
-        <Image src="/images/logo.png" alt="logo" width={150} height={100} priority />
+        <CdnImage src="/logo.png" alt="logo" width={150} height={100} priority />
       </Link>
       <div className="flex items-center gap-4">
         <NavItem href={routes.home} label={t("coach")} isActive={isRouteActive(routes.coach) || isRouteActive(routes.home)} />
