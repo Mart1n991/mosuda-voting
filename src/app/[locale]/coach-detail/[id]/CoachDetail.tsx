@@ -23,7 +23,9 @@ export const CoachDetail = ({ coachDetail }: CoachDetailProps) => {
         {/* Image */}
         <div className="h-[350px] sm:h-[500px] w-full md:w-auto md:flex-1 row-span-2 relative">
           <Image
-            src={coachDetail.imageUrl === "" ? "/images/icon_man.png" : coachDetail.imageUrl}
+            src={
+              coachDetail.imageUrl === "" || coachDetail.imageUrl === "undefined" ? "/images/icon_man.png" : coachDetail.imageUrl
+            }
             alt={coachDetail.name}
             fill
             className="object-cover object-top rounded-md shadow-lg"
