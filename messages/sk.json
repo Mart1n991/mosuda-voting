@@ -86,6 +86,9 @@
       "loading": "Načítavam...",
       "previousPage": "Predchádzajúca stránka",
       "nextPage": "Ďalšia stránka"
+    },
+    "searchbar": {
+      "placeholder": "Hľadaj trénera"
     }
   },
   "coachDetailPage": {
