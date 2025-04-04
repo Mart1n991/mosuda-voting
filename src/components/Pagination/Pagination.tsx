@@ -13,12 +13,12 @@ type PaginationProps = {
   currentPage: number;
   onPageChange: (page: number) => void;
   isLoading: boolean;
+  totalPages: number;
 };
 
-export function Pagination({ currentPage, onPageChange, isLoading }: PaginationProps) {
+export function Pagination({ currentPage, onPageChange, isLoading, totalPages }: PaginationProps) {
   const t = useTranslations("coachListPage.pagination");
   const maxVisiblePages = 5;
-  const totalPages = 10; // You should get this from your API or state management
 
   const handlePageClick = (page: number) => {
     if (page < 1 || page > totalPages || isLoading) return;

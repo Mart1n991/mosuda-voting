@@ -1,5 +1,4 @@
 import { getCoachList } from "@/services/getCoachList";
-import { CoachProfile } from "@/types/CoachProfile";
 import { getTranslations } from "next-intl/server";
 import { Coaches } from "./coaches";
 import { Navbar } from "@/components/Navbar";
@@ -10,7 +9,7 @@ export default async function CoachListPage() {
   const pageSize = 12; // Number of coaches per page
   const initialPage = 1;
 
-  const coachList: CoachProfile[] = await getCoachList({
+  const { profiles: coachList, totalCount } = await getCoachList({
     pageSize,
     pageNumber: initialPage,
   });
@@ -24,7 +23,7 @@ export default async function CoachListPage() {
             {t.rich("heading", { region: (chunks) => <span className="underline decoration-mosuda-green-light">{chunks}</span> })}
           </h1>
         </section>
-        <Coaches initialCoachList={coachList} pageSize={pageSize} initialPage={initialPage} />
+        <Coaches initialCoachList={coachList} pageSize={pageSize} initialPage={initialPage} totalCount={totalCount} />
       </main>
       <Footer />
     </>

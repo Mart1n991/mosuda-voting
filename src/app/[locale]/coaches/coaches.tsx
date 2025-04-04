@@ -6,15 +6,17 @@ import { CoachProfile } from "@/types/CoachProfile";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Pagination } from "@/components/Pagination";
 import { fetchCoaches } from "./actions";
 
 type CoachesProps = {
   initialCoachList: CoachProfile[];
   pageSize: number;
   initialPage: number;
+  totalCount: number;
 };
 
-export const Coaches = ({ initialCoachList, pageSize, initialPage }: CoachesProps) => {
+export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }: CoachesProps) => {
   const t = useTranslations("coachListPage");
   const [isVotingDialogOpen, setIsVotingDialogOpen] = useState(false);
   const [selectedCoach, setSelectedCoach] = useState<CoachProfile | null>(null);
@@ -34,13 +36,14 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage }: CoachesProp
     setIsLoading(true);
     const nextPage = currentPage + 1;
     try {
-      const { data: newCoaches, error } = await fetchCoaches(pageSize, nextPage);
+      const { data: response, error } = await fetchCoaches(pageSize, nextPage);
       if (error) throw new Error(error);
+      if (!response) throw new Error("No response from server");
 
-      if (newCoaches && newCoaches.length < pageSize) {
+      if (response.profiles.length < pageSize) {
         setHasMore(false);
       }
-      setCoachList((prev) => [...prev, ...newCoaches]);
+      setCoachList((prev) => [...prev, ...response.profiles]);
       setCurrentPage(nextPage);
     } catch (error) {
       console.error("Error loading more coaches:", error);
@@ -49,24 +52,24 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage }: CoachesProp
     }
   };
 
-  // Function to handle page change in pagination
-  // const handlePageChange = async (page: number) => {
-  //   if (isLoading) return;
+  const handlePageChange = async (page: number) => {
+    if (isLoading) return;
 
-  //   setIsLoading(true);
-  //   try {
-  //     const { data: newCoaches, error } = await fetchCoaches(pageSize, page);
-  //     if (error) throw new Error(error);
+    setIsLoading(true);
+    try {
+      const { data: response, error } = await fetchCoaches(pageSize, page);
+      if (error) throw new Error(error);
+      if (!response) throw new Error("No response from server");
 
-  //     setCoachList(newCoaches);
-  //     setCurrentPage(page);
-  //     setHasMore(newCoaches.length === pageSize);
-  //   } catch (error) {
-  //     console.error("Error changing page:", error);
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // };
+      setCoachList(response.profiles);
+      setCurrentPage(page);
+      setHasMore(response.profiles.length === pageSize);
+    } catch (error) {
+      console.error("Error changing page:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
@@ -95,7 +98,12 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage }: CoachesProp
           </Button>
         )}
 
-        {/* <Pagination currentPage={currentPage} onPageChange={handlePageChange} isLoading={isLoading} /> */}
+        <Pagination
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+          isLoading={isLoading}
+          totalPages={Math.ceil(totalCount / pageSize)}
+        />
       </div>
     </>
   );
