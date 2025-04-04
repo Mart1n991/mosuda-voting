@@ -80,6 +80,12 @@
         "description": "Na tvoju emailovú adresu bol odoslaný verifikačný link. Prosím, klikni naň pre potvrdenie tvojho hlasu.",
         "checkSpam": "Nezabudni skontrolovať aj priečinok so spamom"
       }
+    },
+    "pagination": {
+      "loadMore": "Načítať ďalších",
+      "loading": "Načítavam...",
+      "previousPage": "Predchádzajúca stránka",
+      "nextPage": "Ďalšia stránka"
     }
   },
   "coachDetailPage": {

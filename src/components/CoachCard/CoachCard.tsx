@@ -18,23 +18,21 @@ type CoachCardProps = {
 export const CoachCard = ({ coachProfile, setIsVotingDialogOpen }: CoachCardProps) => {
   const t = useTranslations("coachListPage.coachCard");
 
-  const renderImage = () => {
-    const imageStyle = "object-cover rounded-t-xl";
-
-    if (!coachProfile.imageUrl) {
-      if (coachProfile.gender === 0) {
-        return <Image src="/images/icon_woman.png" alt={coachProfile.name} fill className={imageStyle} />;
-      }
-      return <Image src="/images/icon_man.png" alt={coachProfile.name} fill className={imageStyle} />;
-    }
-
-    return <Image src={coachProfile.imageUrl} alt={coachProfile.name} fill className={imageStyle} />;
-  };
-
   return (
     <div className="flex flex-col gap-4 rounded-xl shadow-lg max-w-[350px] h-full transition-transform duration-300 ease-in-out transform hover:-translate-y-1">
       <Link href={routes.coachDetail(coachProfile.id)}>
-        <div className="relative w-full h-[250px] cursor-pointer">{renderImage()}</div>
+        <div className="relative w-full h-[250px] cursor-pointer">
+          <Image
+            src={
+              coachProfile.imageUrl === "" || coachProfile.imageUrl === "undefined"
+                ? "/images/icon_man.png"
+                : coachProfile.imageUrl
+            }
+            alt={coachProfile.name}
+            fill
+            className="object-cover rounded-t-xl"
+          />
+        </div>
       </Link>
       <div className="p-4 sm:p-6 flex flex-col gap-4 flex-grow">
         <div className="flex flex-col gap-1">

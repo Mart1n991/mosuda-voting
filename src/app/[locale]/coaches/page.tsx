@@ -7,8 +7,13 @@ import { Footer } from "@/components/Footer/Footer";
 
 export default async function CoachListPage() {
   const t = await getTranslations("coachListPage");
+  const pageSize = 12; // Number of coaches per page
+  const initialPage = 1;
 
-  const coachList: CoachProfile[] = await getCoachList({ pageSize: 10, pageNumber: 1 });
+  const coachList: CoachProfile[] = await getCoachList({
+    pageSize,
+    pageNumber: initialPage,
+  });
 
   return (
     <>
@@ -19,7 +24,7 @@ export default async function CoachListPage() {
             {t.rich("heading", { region: (chunks) => <span className="underline decoration-mosuda-green-light">{chunks}</span> })}
           </h1>
         </section>
-        <Coaches coachList={coachList} />
+        <Coaches initialCoachList={coachList} pageSize={pageSize} initialPage={initialPage} />
       </main>
       <Footer />
     </>

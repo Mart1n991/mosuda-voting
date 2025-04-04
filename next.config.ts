@@ -11,8 +11,8 @@ const nextConfig = {
         hostname: "firebasestorage.googleapis.com",
       },
       {
-        protocol: "http" as const,
-        hostname: "toptrener.mosuda.sk",
+        protocol: "https" as const,
+        hostname: "toptrener-mosuda.b-cdn.net",
       },
     ],
   },
