@@ -152,7 +152,7 @@
     }
   },
   "verifyVote": {
-    "checkingVote": "Overujem váš hlas...",
+    "checkingVote": "Overujem tvoj hlas...",
     "verificationSuccess": "Hlas bol Potvrdený!",
     "verificationSuccessMessage": "Ďakujeme za tvoj hlas v súťaži o TOP trénera.",
     "verificationFailed": "Overenie hlasu zlyhalo",
