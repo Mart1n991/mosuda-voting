@@ -1,4 +1,4 @@
-import { Accordion } from "@/components/Accordion.tsx/Accordion";
+import { Accordion } from "@/components/Accordion";
 import { AppStoreButton } from "@/components/AppStoreButton";
 import { Footer } from "@/components/Footer/Footer";
 import { GooglePlayButton } from "@/components/GooglePlayButton";
