@@ -10,7 +10,6 @@ import { useReCaptcha } from "next-recaptcha-v3";
 import { validateEmail } from "@/utils/emailValidation";
 import { VerificationLinkSend } from "./VerificationLinkSend";
 import { CustomEmailErrorMessage } from "./CustomEmailErrorMessage";
-import { storeEmailInMailchimp } from "@/utils/storeEmailIInMailchimp";
 import { cn } from "@/lib/utils";
 import { Checkbox } from "../ui/checkbox";
 import { useLocale } from "use-intl";
@@ -90,7 +89,7 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
       // 6. Get response from my nextJS endpoint
       const result = await response.json();
 
-      storeEmailInMailchimp(data.email, data.name);
+      // storeEmailInMailchimp(data.email, data.name);
 
       // 7. If response is not ok, throw error
       if (!response.ok) {
