@@ -6,7 +6,6 @@ import { CoachProfile } from "@/types/CoachProfile";
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Pagination } from "@/components/Pagination";
 import { fetchCoaches } from "./actions";
 import { SearchBar } from "@/components/Searchbar";
 import { useDebounce } from "@/hooks/useDebounce";
@@ -28,6 +27,7 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }:
   const [isLoading, setIsLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [searchTotalCount, setSearchTotalCount] = useState(totalCount);
   const debouncedSearch = useDebounce(searchQuery, 1000);
 
@@ -59,25 +59,25 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }:
     }
   };
 
-  const handlePageChange = async (page: number) => {
-    if (isLoading) return;
+  // const handlePageChange = async (page: number) => {
+  //   if (isLoading) return;
 
-    setIsLoading(true);
-    try {
-      const { data: response, error } = await fetchCoaches(pageSize, page, debouncedSearch);
-      if (error) throw new Error(error);
-      if (!response) throw new Error("No response from server");
+  //   setIsLoading(true);
+  //   try {
+  //     const { data: response, error } = await fetchCoaches(pageSize, page, debouncedSearch);
+  //     if (error) throw new Error(error);
+  //     if (!response) throw new Error("No response from server");
 
-      setCoachList(response.profiles);
-      setCurrentPage(page);
-      setHasMore(response.profiles.length === pageSize);
-      setSearchTotalCount(response.totalCount);
-    } catch (error) {
-      console.error("Error changing page:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  //     setCoachList(response.profiles);
+  //     setCurrentPage(page);
+  //     setHasMore(response.profiles.length === pageSize);
+  //     setSearchTotalCount(response.totalCount);
+  //   } catch (error) {
+  //     console.error("Error changing page:", error);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
   // Effect to handle search
   useEffect(() => {
@@ -129,17 +129,18 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }:
 
       <div className="mt-10 flex flex-col items-center gap-4">
         {hasMore && (
-          <Button onClick={loadMore} disabled={isLoading} variant="outline" className="w-full max-w-xs">
+          <Button onClick={loadMore} disabled={isLoading} className="" variant="outline">
             {isLoading ? t("pagination.loading") : t("pagination.loadMore")}
           </Button>
         )}
-
-        <Pagination
-          currentPage={currentPage}
-          onPageChange={handlePageChange}
-          isLoading={isLoading}
-          totalPages={Math.ceil(searchTotalCount / pageSize)}
-        />
+        {/* {!searchQuery.length && (
+          <Pagination
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+            isLoading={isLoading}
+            totalPages={Math.ceil(searchTotalCount / pageSize)}
+          />
+        )} */}
       </div>
     </>
   );

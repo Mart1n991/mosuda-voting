@@ -39,6 +39,13 @@ export default function PartnersLogos() {
       >
         <CdnImage src="/partners/logo_divique.png" alt="divique" fill className="object-contain" />
       </Link>
+      <Link
+        href="https://www.spirkomatus.cz/"
+        className="relative w-full aspect-[2/1] max-w-[200px] cursor-pointer hover:opacity-80 transition-opacity"
+        target="_blank"
+      >
+        <CdnImage src="/partners/enspire-logo.png" alt="enspire" fill className="object-contain" />
+      </Link>
     </div>
   );
 }

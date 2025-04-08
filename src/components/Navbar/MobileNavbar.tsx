@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { CdnImage } from "../CdnImage";
+import PartnersLogos from "../PartnersLogos/PartnersLogos";
 
 type MobileNavbarProps = {
   className?: string;
@@ -52,6 +53,10 @@ export const MobileNavbar = ({ className }: MobileNavbarProps) => {
               {t("closeMenu")}
             </Button>
           </SheetClose>
+          <div className="mt-10">
+            <h2 className="text-2xl md:text-5xl font-bold mb-2 text-center xl:text-left">{t("partners")}</h2>
+            <PartnersLogos />
+          </div>
         </SheetContent>
       </Sheet>
     </div>

@@ -8,6 +8,7 @@ import {
   PaginationPrevious,
   PaginationEllipsis,
 } from "@/components/ui/pagination";
+import { cn } from "@/lib/utils";
 
 type PaginationProps = {
   currentPage: number;
@@ -18,7 +19,7 @@ type PaginationProps = {
 
 export function Pagination({ currentPage, onPageChange, isLoading, totalPages }: PaginationProps) {
   const t = useTranslations("coachListPage.pagination");
-  const maxVisiblePages = 5;
+  const maxVisiblePages = 3;
 
   const handlePageClick = (page: number) => {
     if (page < 1 || page > totalPages || isLoading) return;
@@ -62,8 +63,8 @@ export function Pagination({ currentPage, onPageChange, isLoading, totalPages }:
     // Add ellipsis after first page if needed
     if (startPage > 2) {
       pages.push(
-        <PaginationItem key="ellipsis1">
-          <PaginationEllipsis />
+        <PaginationItem key="ellipsis1" className="min-w-[32px]">
+          <PaginationEllipsis className="px-0" />
         </PaginationItem>
       );
     }
@@ -91,7 +92,7 @@ export function Pagination({ currentPage, onPageChange, isLoading, totalPages }:
     if (endPage < totalPages - 1) {
       pages.push(
         <PaginationItem key="ellipsis2">
-          <PaginationEllipsis />
+          <PaginationEllipsis className="px-0" />
         </PaginationItem>
       );
     }
@@ -128,13 +129,12 @@ export function Pagination({ currentPage, onPageChange, isLoading, totalPages }:
               e.preventDefault();
               handlePageClick(currentPage - 1);
             }}
-            className={isLoading ? "pointer-events-none opacity-50" : ""}
+            className={cn("pr-0", isLoading ? "pointer-events-none opacity-50" : "")}
             aria-label={t("previousPage")}
             label=""
           />
         </PaginationItem>
-
-        {renderPageNumbers()}
+        <div className="flex gap-0">{renderPageNumbers()}</div>
 
         <PaginationItem>
           <PaginationNext
@@ -143,7 +143,7 @@ export function Pagination({ currentPage, onPageChange, isLoading, totalPages }:
               e.preventDefault();
               handlePageClick(currentPage + 1);
             }}
-            className={isLoading ? "pointer-events-none opacity-50" : ""}
+            className={cn("pl-0", isLoading ? "pointer-events-none opacity-50" : "")}
             aria-label={t("nextPage")}
             label=""
           />

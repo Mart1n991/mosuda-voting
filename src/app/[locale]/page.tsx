@@ -70,7 +70,7 @@ export default async function Home() {
             />
           </div>
         </section>
-        <section className="flex flex-col w-full px-4 sm:px-10">
+        <section className="flex flex-col w-full px-4 sm:px-10 mb-10">
           <h2 className="text-2xl md:text-5xl font-bold mb-5 text-center xl:text-left">{t("partners.title")}</h2>
           <PartnersLogos />
         </section>
