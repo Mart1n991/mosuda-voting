@@ -11,7 +11,8 @@
     "voter": "Si hlasujúci?",
     "coach": "Si tréner?",
     "closeMenu": "Zavrieť menu",
-    "competitors": "Súťažiaci"
+    "competitors": "Súťažiaci",
+    "partners": "Partneri"
   },
   "homePage": {
     "heading": "Staň sa TOP trénerom \n <region>Slovenska a Česka</region>",
@@ -152,7 +153,7 @@
     }
   },
   "verifyVote": {
-    "checkingVote": "Overujem váš hlas...",
+    "checkingVote": "Overujem tvoj hlas...",
     "verificationSuccess": "Hlas bol Potvrdený!",
     "verificationSuccessMessage": "Ďakujeme za tvoj hlas v súťaži o TOP trénera.",
     "verificationFailed": "Overenie hlasu zlyhalo",

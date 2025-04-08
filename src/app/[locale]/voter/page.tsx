@@ -83,7 +83,7 @@ export default async function Voter() {
           </section>
         </div>
         <section className="bg-white">
-          <div className="max-w-screen-xl xl:mx-auto flex flex-col w-full px-4 sm:px-10 py-10">
+          <div className="max-w-screen-xl xl:mx-auto flex flex-col w-full px-4 sm:px-10 py-10 mb-10">
             <h2 className="text-2xl md:text-5xl font-bold mb-5 text-center xl:text-left">{t("partners.title")}</h2>
             <PartnersLogos />
           </div>

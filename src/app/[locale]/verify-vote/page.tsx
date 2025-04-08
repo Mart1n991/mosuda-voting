@@ -69,7 +69,7 @@ export default function VerifyVotePage() {
   return (
     <div className="container mx-auto max-w-md h-screen flex flex-col gap-4 items-center justify-center">
       <CdnImage src="/logo.png" alt="Mosuda Logo" width={150} height={100} />
-      <Card>
+      <Card className="w-[280px] sm:w-[400px] md:w-[500px]">
         <CardContent className="pt-6 text-center">
           {isVerifying ? (
             <div className="flex flex-col items-center gap-4 py-8">
