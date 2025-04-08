@@ -13,13 +13,15 @@ import { CustomEmailErrorMessage } from "./CustomEmailErrorMessage";
 import { cn } from "@/lib/utils";
 import { Checkbox } from "../ui/checkbox";
 import { useLocale } from "use-intl";
-
+import Link from "next/link";
+import { routes } from "@/constants/routes";
 // TODO: Translate error messages
 const votingFormSchema = z.object({
   name: z.string().min(1, { message: "Meno je povinné pole" }),
   email: z.string().email({ message: "Nesprávny formát emailu" }),
   consentOne: z.boolean().refine((data) => data, { message: "Musíte súhlasiť s podmienkami" }),
   consentTwo: z.boolean().refine((data) => data, { message: "Musíte súhlasiť s podmienkami" }),
+  consentThree: z.boolean(),
 });
 
 type FormValues = z.infer<typeof votingFormSchema>;
@@ -47,6 +49,7 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
       email: "",
       consentOne: false,
       consentTwo: false,
+      consentThree: false,
     },
   });
 
@@ -88,8 +91,6 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
 
       // 6. Get response from my nextJS endpoint
       const result = await response.json();
-
-      // storeEmailInMailchimp(data.email, data.name);
 
       // 7. If response is not ok, throw error
       if (!response.ok) {
@@ -150,7 +151,20 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
                 <FormControl>
                   <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                 </FormControl>
-                <FormLabel className="font-normal">{t("votingForm.consentOne")}</FormLabel>
+                <FormLabel className="font-normal">
+                  {t.rich("votingForm.consentOne", {
+                    link: (chunks) => (
+                      <Link
+                        href={routes.privacyPolicy}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-blue-500"
+                      >
+                        {chunks}
+                      </Link>
+                    ),
+                  })}
+                </FormLabel>
               </FormItem>
               <FormMessage />
             </>
@@ -165,7 +179,35 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
                 <FormControl>
                   <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                 </FormControl>
-                <FormLabel className="font-normal">{t("votingForm.consentTwo")}</FormLabel>
+                <FormLabel className="font-normal">
+                  {t.rich("votingForm.consentTwo", {
+                    link: (chunks) => (
+                      <Link
+                        href={routes.termsAndConditions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-blue-500"
+                      >
+                        {chunks}
+                      </Link>
+                    ),
+                  })}
+                </FormLabel>
+              </FormItem>
+              <FormMessage />
+            </>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="consentThree"
+          render={({ field }) => (
+            <>
+              <FormItem className="flex flex-row items-center space-x-2 space-y-0">
+                <FormControl>
+                  <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                </FormControl>
+                <FormLabel className="font-normal">{t("votingForm.consentThree")}</FormLabel>
               </FormItem>
               <FormMessage />
             </>

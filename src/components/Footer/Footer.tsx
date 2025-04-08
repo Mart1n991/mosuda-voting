@@ -4,6 +4,7 @@ import { GooglePlayButton } from "../GooglePlayButton";
 import { IconBrandFacebook, IconBrandInstagram } from "@tabler/icons-react";
 import Link from "next/link";
 import { CdnImage } from "../CdnImage";
+import { routes } from "@/constants/routes";
 export function Footer() {
   const t = useTranslations("footer");
 
@@ -36,10 +37,10 @@ export function Footer() {
         </div>
         <div className="flex flex-col items-center lg:items-start gap-2">
           <p className="font-bold lg:text-lg">{t("company")}</p>
-          <Link href="/privacy-policy" className="underline text-sm font-light">
+          <Link href={routes.privacyPolicy} target="_blank" className="underline text-sm font-light">
             {t("privacyPolicy")}
           </Link>
-          <Link href="/terms-of-service" className="underline text-sm font-light">
+          <Link href={routes.termsAndConditions} className="underline text-sm font-light">
             {t("termsOfService")}
           </Link>
         </div>
