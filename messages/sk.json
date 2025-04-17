@@ -70,8 +70,8 @@
     "votingForm": {
       "name": "Krstné meno",
       "email": "Email",
-      "consentOne": "Súhlasím s <link1>podmienkami hlasovania v súťaži</link1> a som oboznámený so <link2>Zásadami a pravidlami spracovania osobných údajov</link2>",
-      "consentTwo": "Súhlasím so zasielaním marketingových informácií od spoločnosti Mosuda s.r.o. na moju e-mailovú adresu a som oboznámený so <link>Zásadami a pravidlami spracovania osobných údajov</link>",
+      "termsAndConditionsAgreement": "Súhlasím s <link1>podmienkami hlasovania v súťaži</link1> a som oboznámený so <link2>Zásadami a pravidlami spracovania osobných údajov</link2>",
+      "marketingAgreement": "Súhlasím so zasielaním marketingových informácií od spoločnosti Mosuda s.r.o. na moju e-mailovú adresu a som oboznámený so <link>Zásadami a pravidlami spracovania osobných údajov</link>",
       "submit": "Hlasovať",
       "errors": {
         "required": "{field} je povinné pole."

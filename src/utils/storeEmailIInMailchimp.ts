@@ -5,9 +5,11 @@ mailchimp.setConfig({
   server: process.env.MAILCHIMP_SERVER,
 });
 
-export async function storeEmailInMailchimp(email: string, name: string) {
+export async function storeEmailInMailchimp(email: string, name: string, hasMarketingAgreement: boolean) {
   const listId = process.env.MAILCHIMP_LIST_ID || "";
-  const tagName = process.env.MAILCHIMP_TAG_NAME || ""; // Default tag name if not specified
+  const tagName = hasMarketingAgreement
+    ? process.env.MAILCHIMP_TAG_NAME_MARKETING_AGREEMENT || ""
+    : process.env.MAILCHIMP_TAG_NAME || "";
 
   if (!listId) {
     console.error("Mailchimp List ID is not configured");

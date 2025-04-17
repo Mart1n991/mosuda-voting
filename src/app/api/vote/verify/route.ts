@@ -42,7 +42,8 @@ export async function GET(request: NextRequest) {
       body: JSON.stringify({
         name: payload.name,
         email: payload.email,
-        consentAt: new Date().toISOString(),
+        termsAndConditionsAgreementAt: new Date().toISOString(),
+        marketingAgreementAt: payload.marketingAgreement ? new Date().toISOString() : null,
         coachId: payload.coachId,
         recaptchaToken: recaptchaToken,
         verified: true,
@@ -63,7 +64,7 @@ export async function GET(request: NextRequest) {
     // If vote was successful, try to subscribe to Mailchimp
     // This is now non-blocking - if it fails, we still consider the vote successful
     try {
-      await storeEmailInMailchimp(payload.email, payload.name);
+      await storeEmailInMailchimp(payload.email, payload.name, payload.marketingAgreement);
     } catch (mailchimpError) {
       console.error("Failed to subscribe to Mailchimp:", mailchimpError);
       // Continue with the success flow even if Mailchimp fails

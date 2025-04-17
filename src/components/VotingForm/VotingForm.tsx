@@ -19,8 +19,8 @@ import { routes } from "@/constants/routes";
 const votingFormSchema = z.object({
   name: z.string().min(1, { message: "Meno je povinné pole" }),
   email: z.string().email({ message: "Nesprávny formát emailu" }),
-  consentOne: z.boolean().refine((data) => data, { message: "Musíte súhlasiť s podmienkami" }),
-  consentTwo: z.boolean(),
+  termsAndConditionsAgreement: z.boolean().refine((data) => data, { message: "Musíte súhlasiť s podmienkami" }),
+  marketingAgreement: z.boolean(),
 });
 
 type FormValues = z.infer<typeof votingFormSchema>;
@@ -46,8 +46,8 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
     defaultValues: {
       name: "",
       email: "",
-      consentOne: false,
-      consentTwo: false,
+      termsAndConditionsAgreement: false,
+      marketingAgreement: false,
     },
   });
 
@@ -142,7 +142,7 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
         />
         <FormField
           control={form.control}
-          name="consentOne"
+          name="termsAndConditionsAgreement"
           render={({ field }) => (
             <>
               <FormItem className="flex flex-row items-center space-x-2 space-y-0">
@@ -150,7 +150,7 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
                   <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                 </FormControl>
                 <FormLabel className="font-normal">
-                  {t.rich("votingForm.consentOne", {
+                  {t.rich("votingForm.termsAndConditionsAgreement", {
                     link1: (chunks) => (
                       <Link
                         href={routes.termsAndConditions}
@@ -180,7 +180,7 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
         />
         <FormField
           control={form.control}
-          name="consentTwo"
+          name="marketingAgreement"
           render={({ field }) => (
             <>
               <FormItem className="flex flex-row items-center space-x-2 space-y-0">
@@ -188,7 +188,7 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
                   <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                 </FormControl>
                 <FormLabel className="font-normal">
-                  {t.rich("votingForm.consentTwo", {
+                  {t.rich("votingForm.marketingAgreement", {
                     link: (chunks) => (
                       <Link
                         href={routes.privacyPolicy}
