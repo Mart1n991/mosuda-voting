@@ -7,7 +7,7 @@ import VoteVerificationEmail from "./VoteVerificationEmail";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, recaptchaToken, coachId, locale } = body;
+    const { name, email, recaptchaToken, coachId, locale, marketingAgreement, termsAndConditionsAgreement } = body;
 
     // Get translations for the email
     const t = await getTranslations({ locale, namespace: "email.verification" });
@@ -57,6 +57,8 @@ export async function POST(request: NextRequest) {
       email,
       coachId,
       timestamp: Date.now(),
+      marketingAgreement,
+      termsAndConditionsAgreement,
     };
 
     // Zašifrujem payload ako token

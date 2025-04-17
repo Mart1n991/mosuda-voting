@@ -15,19 +15,19 @@ export default async function Voter() {
     {
       title: t("prizes.firstPlace.title"),
       description: t("prizes.firstPlace.description"),
-      image: "/placeholder-price-1.avif",
+      image: "/images/placeholder-price-1.avif",
       place: t("prizes.firstPlace.place"),
     },
     {
       title: t("prizes.secondPlace.title"),
       description: t("prizes.secondPlace.description"),
-      image: "/placeholder-price-2.jpeg",
+      image: "/images/placeholder-price-2.jpeg",
       place: t("prizes.secondPlace.place"),
     },
     {
       title: t("prizes.thirdPlace.title"),
       description: t("prizes.thirdPlace.description"),
-      image: "/placeholder-price-3.webp",
+      image: "/images/placeholder-price-3.webp",
       place: t("prizes.thirdPlace.place"),
     },
   ];

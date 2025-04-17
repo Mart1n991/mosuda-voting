@@ -70,9 +70,8 @@
     "votingForm": {
       "name": "Krstné meno",
       "email": "Email",
-      "consentOne": "Oboznámil som sa so <link>Zásadami a pravidlami ochrany osobných údajov Mosuda s.r.o.</link>",
-      "consentTwo": "Súhlasím so <link>Všeobecnými podmienkami hlasovania.</link>",
-      "consentThree": "Súhlasím so zasielaním marketingových informácií od spoločnosti Mosuda s.r.o. na moju e-mailovú adresu.",
+      "termsAndConditionsAgreement": "Súhlasím s <link1>podmienkami hlasovania v súťaži</link1> a som oboznámený so <link2>Zásadami a pravidlami spracovania osobných údajov</link2>",
+      "marketingAgreement": "Súhlasím so zasielaním marketingových informácií od spoločnosti Mosuda s.r.o. na moju e-mailovú adresu a som oboznámený so <link>Zásadami a pravidlami spracovania osobných údajov</link>",
       "submit": "Hlasovať",
       "errors": {
         "required": "{field} je povinné pole."
@@ -112,7 +111,7 @@
     "contactUs": "Kontaktujte nás",
     "company": "Spoločnosť",
     "privacyPolicy": "Ochrana osobných údajov",
-    "termsOfService": "Všeobecné obchodné podmienky",
+    "termsOfService": "Všeobecné podmienky hlasovania",
     "mosudaDescription": "Vznikla na to, aby pomáhala trénerom byť lepšími a prostredníctvom lepších trénerov zlepšovala životy bežných ľudí."
   },
   "voter": {
@@ -177,5 +176,10 @@
     "list11": "V prípade, že dôjde medzi Mosudou a spotrebiteľom k vzniku spotrebiteľského sporu vyplývajúceho zo spotrebiteľskej zmluvy alebo súvisiaceho so spotrebiteľskou zmluvou, ktorý sa nepodarí vyriešiť vzájomnou dohodou, môže spotrebiteľ podať návrh na začatie alternatívneho riešenia sporu subjektu alternatívneho riešenia sporov (ďalej len subjekt ARS) podľa zákona 391/2015 Z.z. o alternatívnom riešení spotrebiteľských sporov a o zmene a doplnení niektorých zákonov (ďalej len „zákon o ARS”). Alternatívnym riešením sporu je postup subjektu alternatívneho riešenia sporov podľa zákona o ARS, ktorého cieľom je dosiahnutie zmierlivého vyriešenia sporu medzi stranami sporu. ARS subjektami sú orgány a oprávnené právnické osoby podľa §3 zákona 391/2015 Z.z., ktorých aktualizovaný zoznam je dostupný <web>tu</web>. ",
     "list12": "Účasťou v Súťaži účastník vyhlasuje, že sa oboznámil so <web>Zásadami a pravidlami ochrany osobných údajov Mosuda s.r.o.</web>, porozumel im a vyjadruje súhlas s týmito VPHS.",
     "list13": "Tieto VPHS sa riadia platným právnym poriadkom Slovenskej republiky a v písomnej podobe sú uložené v sídle usporiadateľa."
+  },
+  "notFoundPage": {
+    "title": "Stránka nenájdená",
+    "description": "Ajajaj trochu sme sa zatúlali",
+    "backHome": "Späť na hlavnú stránku"
   }
 }

@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "title": "Mosuda - TOP trenér Slovenska a Česka",
+    "description": "Hlasuj za TOP trenéra Slovenska a Česka a vyhraj skvělé ceny."
+  },
+  "navbar": {
+    "coaches": "Trenéři",
+    "sponsors": "Sponzoři",
+    "about": "O soutěži",
+    "contact": "Kontakt",
+    "voter": "Jsi hlasující?",
+    "coach": "Jsi trenér?",
+    "closeMenu": "Zavřít menu",
+    "competitors": "Soutěžící",
+    "partners": "Partneři"
+  },
+  "homePage": {
+    "heading": "Staň se TOP trenérem \n <region>Slovenska a Česka</region>",
+    "description": "Zapoj se do soutěže o nejoblíbenějšího trenéra nebo trenérku a získej nejen prestiž, ale i odměny, které posunou tvou kariéru na vyšší úroveň.",
+    "firstPlace": "1. místo",
+    "secondPlace": "2. místo",
+    "thirdPlace": "3. místo",
+    "whyParticipate": "Proč by ses měl/a zapojit?",
+    "howToParticipate": "Jak se můžeš zapojit?",
+    "whatYouCanWin": "Co můžeš vyhrát?",
+    "prize1": "Mediální pozornost",
+    "prize2": "Koloběžka",
+    "prize3": "Wellness v Dubaji",
+    "prize1Description": "Výhra pro vítěze soutěže o nejlepšího trenéra",
+    "prize2Description": "Výhra pro vítěze soutěže o nejlepšího trenéra",
+    "prize3Description": "Výhra pro vítěze soutěže o nejlepšího trenéra",
+    "whyParticipateDescription": "Připoj se k soutěži a získej šanci na rychlý růst kariéry, zvýš svou popularitu a počet klientů! A navíc si vybuduješ silnou osobní značku, která je k nezaplacení.",
+    "howToParticipateDescription": "Stáhni si aplikaci Mosuda, zaregistruj se, vyplň svůj profil a přidej se k hlasování. Je to opravdu tak jednoduché! Pak už jen sbírej hlasy.",
+    "whatYouCanWinDescription": "Můžeš získat mediální pozornost, například rozhovor s Refresherem, xxx. Dále tě čeká dovolená v jednom z nejluxusnějších míst na světě – Dubaji. Chceme, aby si tvé tělo po tvrdé práci odpočinulo. A navíc ti vytvoříme profesionální vizitku – web a marketingovou strategii, která ti zaručeně přivede nové klienty. To vše je hlavní výhra.",
+    "prizes": {
+      "firstPlace": {
+        "title": "Dovolená v Dubaji",
+        "description": "All-inclusive dovolená na 14 dní",
+        "place": "1. místo"
+      },
+      "secondPlace": {
+        "title": "Koloběžka",
+        "description": "Xiami koloběžka",
+        "place": "2. místo"
+      },
+      "thirdPlace": {
+        "title": "Doplňky výživy",
+        "description": "Doplňky výživy v hodnotě 500 EUR",
+        "place": "3. místo"
+      }
+    },
+    "partners": {
+      "title": "Partneři"
+    }
+  },
+  "coachListPage": {
+    "heading": "Hlasuj za TOP trenéra \n <region>Slovenska a Česka</region>",
+    "votes": "{count, plural, one {# hlas} few {# hlasy} other {# hlasů}}",
+    "coachCard": {
+      "numberOfVotes": "Počet hlasů",
+      "voteButton": "Hlasuj",
+      "moreInfoButton": "Více informací"
+    },
+    "coachList": {
+      "noCoachesFound": "Žádní trenéři nenalezeni"
+    },
+    "votingDialog": {
+      "votingFor": "Hlasuješ pro"
+    },
+    "votingForm": {
+      "name": "Křestní jméno",
+      "email": "Email",
+      "termsAndConditionsAgreement": "Souhlasím s <link1>podmínkami hlasování v soutěži</link1> a jsem seznámen se <link2>Zásadami a pravidly zpracování osobních údajů</link2>",
+      "marketingAgreement": "Souhlasím se zasíláním marketingových informací od společnosti Mosuda s.r.o. na mou e-mailovou adresu a jsem seznámen se <link>Zásadami a pravidly zpracování osobních údajů</link>",
+      "consentThree": "Souhlasím se zasíláním marketingových informací od společnosti Mosuda s.r.o. na mou e-mailovou adresu.",
+      "submit": "Hlasovat",
+      "errors": {
+        "required": "{field} je povinné pole."
+      },
+      "verificationLinkSend": {
+        "title": "Děkujeme za registraci hlasu!",
+        "description": "Na tvoji e-mailovou adresu byl odeslán ověřovací odkaz. Klikni na něj pro potvrzení svého hlasu.",
+        "checkSpam": "Nezapomeň zkontrolovat i složku se spamem"
+      }
+    },
+    "pagination": {
+      "loadMore": "Načíst další",
+      "loading": "Načítám...",
+      "previousPage": "Předchozí stránka",
+      "nextPage": "Další stránka"
+    },
+    "searchbar": {
+      "placeholder": "Hledej trenéra"
+    }
+  },
+  "coachDetailPage": {
+    "showLess": "Zobrazit méně",
+    "showMore": "Zobrazit více",
+    "count_one": "{count} hlas",
+    "count_two": "{count} hlasy",
+    "count_other": "{count} hlasů",
+    "votes": "{count, selectordinal, one {# hlas} two {# hlasy} other {# hlasů}}"
+  },
+  "common": {
+    "errors": {
+      "required": "Povinné pole."
+    }
+  },
+  "footer": {
+    "copyright": "Všechna práva vyhrazena.",
+    "createdBy": "S radostí vytvořil <creator>Martin Javorský</creator>",
+    "contactUs": "Kontaktujte nás",
+    "company": "Společnost",
+    "privacyPolicy": "Ochrana osobních údajů",
+    "termsOfService": "Všeobecné podmínky hlasování",
+    "mosudaDescription": "Vznikla proto, aby pomáhala trenérům být lepšími a prostřednictvím lepších trenérů zlepšovala životy běžných lidí."
+  },
+  "voter": {
+    "heading": "Hlasuj za TOP trenéra \n <region>Slovenska a Česka</region>",
+    "description": "Hlasuj pro svého oblíbeného osobního trenéra a zapoj se do losování o skvělé ceny. \n Najdi si svého oblíbeného trenéra a hlasuj pro něj nebo pro ni. Jakmile zaregistrujeme tvůj hlas, jsi automaticky zařazen/a do soutěže o mega ceny.",
+    "howToVote": "Jak hlasovat?",
+    "howToVoteDescription": "Klikni na tlačítko <vote>Hlasovat</vote> a dostaneš se do seznamu trenérů. Vyber si toho svého a hlasuj. Hlasování je jednoduché – stačí vyplnit pár údajů a tvůj hlas bude započítán. Automaticky jsi také zařazen/a do soutěže o výše uvedené ceny.",
+    "vote": "Hlasovat",
+    "prizes": {
+      "firstPlace": {
+        "title": "Dovolená v Dubaji",
+        "description": "All-inclusive dovolená na 14 dní",
+        "place": "1. místo"
+      },
+      "secondPlace": {
+        "title": "Koloběžka",
+        "description": "Xiami koloběžka",
+        "place": "2. místo"
+      },
+      "thirdPlace": {
+        "title": "Doplňky výživy",
+        "description": "Doplňky výživy v hodnotě 500 EUR",
+        "place": "3. místo"
+      }
+    },
+    "partners": {
+      "title": "Partneři"
+    }
+  },
+  "email": {
+    "verification": {
+      "subject": "Potvrď svůj hlas v soutěži o TOP trenéra",
+      "title": "Potvrď svůj hlas",
+      "thankYou": "Děkujeme za tvůj hlas v soutěži o TOP trenéra.",
+      "instructions": "Pro dokončení hlasování prosím klikni na následující odkaz:",
+      "button": "Potvrdit hlas",
+      "validity": "Odkaz je platný 24 hodin.",
+      "ignore": "Pokud jsi o hlasování nežádal, tento e-mail můžeš ignorovat."
+    }
+  },
+  "verifyVote": {
+    "checkingVote": "Ověřuji tvůj hlas...",
+    "verificationSuccess": "Hlas byl potvrzen!",
+    "verificationSuccessMessage": "Děkujeme za tvůj hlas v soutěži o TOP trenéra.",
+    "verificationFailed": "Ověření hlasu selhalo",
+    "verificationFailedMessage": "Váš hlas nemohl být potvrzen.",
+    "backToVoting": "Zpět na seznam soutěžících",
+    "automaticRedirect": "Pokud nejste automaticky přesměrováni, klikněte <a>sem</a>."
+  },
+  "termsAndConditions": {
+    "title": "Všeobecné podmínky hlasování v soutěži „Trenér roku“ (dále jen „VPHS“)",
+    "list1": "Společnost Mosuda s.r.o., sídlo: Kruhová 416/65, Ľubica 059 71, IČO: 55 605 044, zapsaná v Obchodním rejstříku Okresního soudu Prešov, Oddíl: Sro, vložka č. 46269/P, provozovatel portálu <web>www.mosuda.sk</web> a aplikace Mosuda (dále jen „pořadatel“) organizuje v termínu ……………………….. soutěž s názvem <heading>Trenér roku</heading> (dále jen „Soutěž“). Podmínky zapojení do této Soutěže jsou dostupné zde. VPHS upravují oprávnění veřejnosti hlasovat v soutěži, způsob hlasování, vyhodnocení a výběr výherců věcných cen mezi hlasujícími.",
+    "list2": "Hlasujícím může být pouze fyzická osoba starší 18 let, plně způsobilá k právním úkonům. Osoba mladší 18 let nebo osoba, jejíž způsobilost k právním úkonům byla omezena či odebrána, může hlasovat pouze prostřednictvím svého zákonného zástupce nebo jiného oprávněného zástupce. Hlasující musí mít doručovací adresu na území Slovenské nebo České republiky a během trvání hlasování splňovat podmínky účasti v Soutěži.",
+    "list3": "Z hlasování v Soutěži jsou vyloučeni: \n<section>- účastníci Soutěže</section>\n Pokud se výhercem věcné ceny stane taková osoba, výhra jí nebude předána. Osoby, které nesplňují podmínky hlasování nebo jednají v rozporu s VPHS, nebudou zařazeny do soutěže o ceny. Pokud se taková osoba přesto stane výhercem (např. na základě nepravdivých údajů), nárok na výhru zaniká. Pokud výhercem bude osoba mladší 18 let, musí po oznámení výhry doložit písemný souhlas zákonného zástupce, jinak o výhru přichází.",
+    "list4": "Do hlasování bude zařazen každý, kdo během trvání Soutěže vyplní hlasovací formulář na webu <web>www.mosuda.sk</web>, udělí aktivně hlas soutěžícímu trenérovi, uvede své jméno, příjmení a e-mail, a bezvýhradně souhlasí s VPHS a zavazuje se je dodržovat. Každý účastník může hlasovat pouze jednou.",
+    "list5": "Účastí v hlasování bere hlasující na vědomí, že pořadatel bude zpracovávat jeho osobní údaje (jméno, příjmení, e-mail) za účelem hlasování, ověření hlasu, účasti v soutěži a kontaktování v případě výhry. Také souhlasí se zveřejněním svého jména a příjmení na sociálních sítích pořadatele v případě výhry. Pokud se přihlásí k odběru newsletteru, budou tyto údaje zpracovány i za účelem zasílání obchodních sdělení od společnosti Mosuda s.r.o.",
+    "list6": "Výhrami v Soutěži jsou následující ceny: hlavní výhrou je plně hrazená a vytvořená mediální kampaň pro výherce na 3 měsíce. Tuto kampaň navrhne, vytvoří a zaplatí společnost Mosuda. Hlavním cílem je zvýšit povědomí o výherci a získat pro něj novou klientelu. Zároveň výherce získá i zájezd do Dubaje a balíček doplňků značky ENSPIRE na měsíc zdarma. Každý výherce může vyhrát pouze jednu výhru.",
+    "list7": "Výherce Hlasovací soutěže bude vylosován náhodným výběrem pořadatele po skončení hlasování ze všech hlasujících zapojených do Soutěže. Výherce bude informován na e-mail, který uvedl ve formuláři. Jeho jméno a příjmení bude také zveřejněno na sociálních sítích pořadatele. Výherce může výhru převést na třetí osobu. Způsob převzetí nebo doručení výhry dohodne pořadatel individuálně s výhercem. Výherce není povinen výhru přijmout. Pokud výhru odmítne, nereaguje do 48 hodin nebo neuvede pravdivé údaje, výhra propadá a pořadatel si vyhrazuje právo vylosovat nového výherce.",
+    "list8": "Pořadatel nenese odpovědnost za rizika a závazky spojené s používáním výhry, které nebyly způsobeny jeho zaviněním. Nebezpečí škody na výhře přechází na výherce okamžikem doručení. Soutěžící nemá nárok požadovat jinou výhru. Pořadatel nenese odpovědnost za škody způsobené nesprávně poskytnutými údaji, ani za nedoručení výhry z důvodů na straně pošty nebo kurýra. Výhru nelze vymáhat soudní cestou ani ji nahradit peněžní částkou.",
+    "list9": "Pořadatel si vyhrazuje právo soutěž kdykoli zrušit bez předchozího upozornění a bez udání důvodu. Tuto možnost uplatní zejména při technických nebo právních problémech (např. viry, manipulace, chyby systému). Pokud zrušení způsobí hlasující, může být požadována náhrada škody. Pořadatel je oprávněn změnit VPHS bez náhrady. Zkrácené verze mohou být uvedeny v propagačních materiálech, ale úplná verze pravidel je závazná. Pořadatel neručí za škody způsobené účastí nebo nedostupností serveru, kromě případů úmyslného nebo hrubého pochybení. Není odpovědný za technické poruchy (např. výpadky sítě, elektroniky).",
+    "list10": "V případě pochybností o splnění VPHS rozhoduje pořadatel. Pořadatel si vyhrazuje právo posoudit sporné situace během i po skončení soutěže. Jeho rozhodnutí je konečné a právně závazné. Účastníci, kteří nesplní podmínky, budou vyloučeni.",
+    "list11": "Pokud mezi Mosudou a spotřebitelem vznikne spor, který se nepodaří vyřešit dohodou, může spotřebitel podat návrh na zahájení alternativního řešení sporu podle zákona 391/2015 Z.z. o ARS. Cílem je smírné řešení sporu. Subjekty ARS jsou uvedeny v seznamu dostupném <web>zde</web>.",
+    "list12": "Účastník soutěže potvrzuje, že se seznámil se <web>Zásadami a pravidly ochrany osobních údajů Mosuda s.r.o.</web>, rozumí jim a souhlasí s těmito VPHS.",
+    "list13": "Tyto VPHS se řídí právním řádem Slovenské republiky a jsou uloženy v sídle pořadatele."
+  },
+  "notFoundPage": {
+    "title": "Stránka nenalezena",
+    "description": "Ajajaj trošku jsme se zatoulali",
+    "backHome": "Zpět na hlavní stránku"
+  }
+}

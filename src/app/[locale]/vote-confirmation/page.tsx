@@ -7,7 +7,8 @@ import { CheckCircle, XCircle } from "lucide-react";
 import Link from "next/link";
 import { routes } from "@/constants/routes";
 import { useTranslations } from "next-intl";
-import { CdnImage } from "@/components/CdnImage";
+import Image from "next/image";
+
 export default function VoteConfirmationPage() {
   const t = useTranslations("verifyVote");
   const searchParams = useSearchParams();
@@ -17,7 +18,7 @@ export default function VoteConfirmationPage() {
   if (status === "success") {
     return (
       <div className="container mx-auto max-w-md h-screen flex flex-col gap-4 items-center justify-center">
-        <CdnImage src="/logo.png" alt="Mosuda Logo" width={150} height={100} />
+        <Image src="/images/logo.png" alt="Mosuda Logo" width={150} height={100} />
         <Card className="w-[280px] sm:w-[400px] md:w-[500px]">
           <CardHeader className="text-center">
             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
@@ -38,7 +39,7 @@ export default function VoteConfirmationPage() {
 
   return (
     <div className="container mx-auto max-w-md h-screen flex flex-col gap-4 items-center justify-center">
-      <CdnImage src="/logo.png" alt="Mosuda Logo" width={150} height={100} />
+      <Image src="/images/logo.png" alt="Mosuda Logo" width={150} height={100} />
       <Card className="w-[280px] sm:w-[400px] md:w-[500px]">
         <CardHeader className="text-center">
           <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-red-100">
