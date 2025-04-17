@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CdnImage } from "../CdnImage";
+import Image from "next/image";
 
 export default function PartnersLogos() {
   return (
@@ -9,42 +9,42 @@ export default function PartnersLogos() {
         className="relative w-full aspect-[2/1] max-w-[200px] cursor-pointer hover:opacity-80 transition-opacity"
         target="_blank"
       >
-        <CdnImage src="/partners/neoglucan.png" alt="Neoglucan" fill className="object-contain" />
+        <Image src="/images/partners/neoglucan.png" alt="Neoglucan" fill className="object-contain" />
       </Link>
       <Link
         href="https://yliosgb.sk/"
         className="relative w-full aspect-[2/1] max-w-[200px] cursor-pointer hover:opacity-80 transition-opacity"
         target="_blank"
       >
-        <CdnImage src="/partners/logo_ylios.png" alt="YliosGB" fill className="object-contain" />
+        <Image src="/images/partners/logo_ylios.png" alt="YliosGB" fill className="object-contain" />
       </Link>
       <Link
         href="https://www.pelikan.sk/sk"
         className="relative w-full aspect-[2/1] max-w-[200px] cursor-pointer hover:opacity-80 transition-opacity"
         target="_blank"
       >
-        <CdnImage src="/partners/logo_pelikan.png" alt="pelikan" fill className="object-contain" />
+        <Image src="/images/partners/logo_pelikan.png" alt="pelikan" fill className="object-contain" />
       </Link>
       <Link
         href="https://www.topankovo.sk/"
         className="relative w-full aspect-[2/1] max-w-[200px] cursor-pointer hover:opacity-80 transition-opacity"
         target="_blank"
       >
-        <CdnImage src="/partners/logo_topankovo.png" alt="topakovo" fill className="object-contain" />
+        <Image src="/images/partners/logo_topankovo.png" alt="topakovo" fill className="object-contain" />
       </Link>
       <Link
         href="https://www.divique.com/"
         className="relative w-full aspect-[2/1] max-w-[200px] cursor-pointer hover:opacity-80 transition-opacity"
         target="_blank"
       >
-        <CdnImage src="/partners/logo_divique.png" alt="divique" fill className="object-contain" />
+        <Image src="/images/partners/logo_divique.png" alt="divique" fill className="object-contain" />
       </Link>
       <Link
         href="https://www.spirkomatus.cz/"
         className="relative w-full aspect-[2/1] max-w-[200px] cursor-pointer hover:opacity-80 transition-opacity"
         target="_blank"
       >
-        <CdnImage src="/partners/enspire-logo.png" alt="enspire" fill className="object-contain" />
+        <Image src="/images/partners/enspire-logo.png" alt="enspire" fill className="object-contain" />
       </Link>
     </div>
   );

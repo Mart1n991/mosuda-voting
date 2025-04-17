@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import { cn } from "@/lib/utils";
 import { Prize } from "./types";
 import { Badge } from "../ui/badge";
-import { CdnImage } from "../CdnImage";
+import Image from "next/image";
 
 type PrizeCardProps = Prize;
 
@@ -10,7 +10,7 @@ export function PrizeCard({ title, description, image, className, place }: Prize
   return (
     <Card className={cn("flex flex-col border-none shadow-lg", className)}>
       <div className="relative w-full h-[300px] border-b-4 border-mosuda-green-light">
-        <CdnImage src={image} alt={title} fill className="object-cover rounded-t-lg" />
+        <Image src={image} alt={title} fill className="object-cover rounded-t-lg" />
       </div>
       <CardHeader className="flex-1">
         <div>
