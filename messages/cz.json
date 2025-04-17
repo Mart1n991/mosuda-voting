@@ -177,5 +177,10 @@
     "list11": "Pokud mezi Mosudou a spotřebitelem vznikne spor, který se nepodaří vyřešit dohodou, může spotřebitel podat návrh na zahájení alternativního řešení sporu podle zákona 391/2015 Z.z. o ARS. Cílem je smírné řešení sporu. Subjekty ARS jsou uvedeny v seznamu dostupném <web>zde</web>.",
     "list12": "Účastník soutěže potvrzuje, že se seznámil se <web>Zásadami a pravidly ochrany osobních údajů Mosuda s.r.o.</web>, rozumí jim a souhlasí s těmito VPHS.",
     "list13": "Tyto VPHS se řídí právním řádem Slovenské republiky a jsou uloženy v sídle pořadatele."
+  },
+  "notFoundPage": {
+    "title": "Stránka nenalezena",
+    "description": "Ajajaj trošku jsme se zatoulali",
+    "backHome": "Zpět na hlavní stránku"
   }
 }
