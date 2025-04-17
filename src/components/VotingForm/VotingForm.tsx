@@ -20,8 +20,7 @@ const votingFormSchema = z.object({
   name: z.string().min(1, { message: "Meno je povinné pole" }),
   email: z.string().email({ message: "Nesprávny formát emailu" }),
   consentOne: z.boolean().refine((data) => data, { message: "Musíte súhlasiť s podmienkami" }),
-  consentTwo: z.boolean().refine((data) => data, { message: "Musíte súhlasiť s podmienkami" }),
-  consentThree: z.boolean(),
+  consentTwo: z.boolean(),
 });
 
 type FormValues = z.infer<typeof votingFormSchema>;
@@ -49,7 +48,6 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
       email: "",
       consentOne: false,
       consentTwo: false,
-      consentThree: false,
     },
   });
 
@@ -153,7 +151,17 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
                 </FormControl>
                 <FormLabel className="font-normal">
                   {t.rich("votingForm.consentOne", {
-                    link: (chunks) => (
+                    link1: (chunks) => (
+                      <Link
+                        href={routes.termsAndConditions}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-blue-500"
+                      >
+                        {chunks}
+                      </Link>
+                    ),
+                    link2: (chunks) => (
                       <Link
                         href={routes.privacyPolicy}
                         target="_blank"
@@ -183,7 +191,7 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
                   {t.rich("votingForm.consentTwo", {
                     link: (chunks) => (
                       <Link
-                        href={routes.termsAndConditions}
+                        href={routes.privacyPolicy}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="underline text-blue-500"
@@ -193,21 +201,6 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
                     ),
                   })}
                 </FormLabel>
-              </FormItem>
-              <FormMessage />
-            </>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="consentThree"
-          render={({ field }) => (
-            <>
-              <FormItem className="flex flex-row items-center space-x-2 space-y-0">
-                <FormControl>
-                  <Checkbox checked={field.value} onCheckedChange={field.onChange} />
-                </FormControl>
-                <FormLabel className="font-normal">{t("votingForm.consentThree")}</FormLabel>
               </FormItem>
               <FormMessage />
             </>
