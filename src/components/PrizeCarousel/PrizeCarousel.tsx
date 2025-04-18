@@ -28,7 +28,7 @@ export function PrizeCarousel({ prizes, className }: PrizeCarouselProps) {
     <Carousel className={cn("w-full max-w-lg", className)} opts={{ loop: true }} setApi={setCarouselApi}>
       <CarouselContent>
         {prizes.map((prize) => (
-          <CarouselItem key={prize.title}>
+          <CarouselItem key={prize.id}>
             <div className="p-1">
               <PrizeCard {...prize} />
             </div>

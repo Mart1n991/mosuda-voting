@@ -13,22 +13,42 @@ export default async function Voter() {
 
   const prizes = [
     {
-      title: t("prizes.firstPlace.title"),
-      description: t("prizes.firstPlace.description"),
+      id: "111-111",
+      title: t.rich("prizes.firstPlace.title", {
+        span: (chunks) => <span className="block text-mosuda-green-light text-md">{chunks}</span>,
+      }),
       image: "/images/placeholder-price-1.avif",
       place: t("prizes.firstPlace.place"),
     },
     {
+      id: "222-222",
       title: t("prizes.secondPlace.title"),
-      description: t("prizes.secondPlace.description"),
       image: "/images/placeholder-price-2.jpeg",
       place: t("prizes.secondPlace.place"),
     },
     {
-      title: t("prizes.thirdPlace.title"),
-      description: t("prizes.thirdPlace.description"),
+      id: "333-333",
+      title: t.rich("prizes.thirdPlace.title", {
+        span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
+      }),
       image: "/images/placeholder-price-3.webp",
       place: t("prizes.thirdPlace.place"),
+    },
+    {
+      id: "444-444",
+      title: t.rich("prizes.fourthPlace.title", {
+        span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
+      }),
+      image: "/images/placeholder-price-3.webp",
+      place: t("prizes.fourthPlace.place"),
+    },
+    {
+      id: "555-555",
+      title: t.rich("prizes.fifthPlace.title", {
+        span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
+      }),
+      image: "/images/placeholder-price-3.webp",
+      place: t("prizes.fifthPlace.place"),
     },
   ];
 

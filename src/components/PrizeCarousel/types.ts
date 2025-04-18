@@ -1,6 +1,9 @@
+import { ReactNode } from "react";
+
 export type Prize = {
-  title: string;
-  description: string;
+  id: string;
+  title: ReactNode | string;
+  description?: string;
   image: string;
   className?: string;
   isFirstPlace?: boolean;

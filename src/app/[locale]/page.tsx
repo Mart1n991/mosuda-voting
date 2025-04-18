@@ -12,20 +12,28 @@ export default async function Home() {
 
   const prizes = [
     {
-      title: t("prizes.firstPlace.title"),
+      id: "111-111",
+      title: t.rich("prizes.firstPlace.title", {
+        span: (chunks) => <span className="text-sm text-stone-400">{chunks}</span>,
+        span2: (chunks) => <span className="text-md text-mosuda-green-light">{chunks}</span>,
+      }),
       description: t("prizes.firstPlace.description"),
       image: "/images/placeholder-price-1.avif",
       place: t("prizes.firstPlace.place"),
     },
     {
-      title: t("prizes.secondPlace.title"),
-      description: t("prizes.secondPlace.description"),
+      id: "222-222",
+      title: t.rich("prizes.secondPlace.title", {
+        span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
+      }),
       image: "/images/placeholder-price-2.jpeg",
       place: t("prizes.secondPlace.place"),
     },
     {
-      title: t("prizes.thirdPlace.title"),
-      description: t("prizes.thirdPlace.description"),
+      id: "333-333",
+      title: t.rich("prizes.thirdPlace.title", {
+        span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
+      }),
       image: "/images/placeholder-price-3.webp",
       place: t("prizes.thirdPlace.place"),
     },

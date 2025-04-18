@@ -34,18 +34,16 @@
     "whatYouCanWinDescription": "Můžeš získat mediální pozornost, například rozhovor s Refresherem, xxx. Dále tě čeká dovolená v jednom z nejluxusnějších míst na světě – Dubaji. Chceme, aby si tvé tělo po tvrdé práci odpočinulo. A navíc ti vytvoříme profesionální vizitku – web a marketingovou strategii, která ti zaručeně přivede nové klienty. To vše je hlavní výhra.",
     "prizes": {
       "firstPlace": {
-        "title": "Dovolená v Dubaji",
-        "description": "All-inclusive dovolená na 14 dní",
+        "title": "Dovolená v Dubaji \n <span>a navíc také</span> \n <span2>Marketingovou kampaň na 3 měsíce</span2>",
+        "description": "Vítěz získá zájezd do Dubaje a navíc plně hrazenou marketingovou kampaň na 3 měsíce, která pomůže zvýšit povědomí a získat množství klientů",
         "place": "1. místo"
       },
       "secondPlace": {
-        "title": "Koloběžka",
-        "description": "Xiami koloběžka",
+        "title": "Poukázka Pelikán v hodnotě <span>500EUR</span>",
         "place": "2. místo"
       },
       "thirdPlace": {
-        "title": "Doplňky výživy",
-        "description": "Doplňky výživy v hodnotě 500 EUR",
+        "title": "Doplňky výživy GymBeam v hodnotě <span>500EUR</span>",
         "place": "3. místo"
       }
     },
@@ -127,19 +125,24 @@
     "vote": "Hlasovat",
     "prizes": {
       "firstPlace": {
-        "title": "Dovolená v Dubaji",
-        "description": "All-inclusive dovolená na 14 dní",
+        "title": "Víkendový wellness pobyt \n <span>v Hotelu Hills</span>",
         "place": "1. místo"
       },
       "secondPlace": {
-        "title": "Koloběžka",
-        "description": "Xiami koloběžka",
+        "title": "Elektrická koloběžka",
         "place": "2. místo"
       },
       "thirdPlace": {
-        "title": "Doplňky výživy",
-        "description": "Doplňky výživy v hodnotě 500 EUR",
+        "title": "Doplňky Divique a doplňky Enspire \n <span>na měsíc zdarma</span>",
         "place": "3. místo"
+      },
+      "fourthPlace": {
+        "title": "Poukázka Topánkovo v hodnotě <span>100 EUR</span>",
+        "place": "4. místo"
+      },
+      "fifthPlace": {
+        "title": "Poukázka Saxana v hodnotě <span>100 EUR</span>",
+        "place": "5. místo"
       }
     },
     "partners": {

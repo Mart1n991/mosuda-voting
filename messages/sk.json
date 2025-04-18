@@ -34,18 +34,16 @@
     "whatYouCanWinDescription": "V prvom rade môžeš vyhrať mediálnu pozornosť, ako napríklad rozhovor s refresherom, xxx. Ďalej si môžeš oddýchnnuť v jednom z najluxusnejších miest na svete, pretože na teba čaká dovolenka v Dubaji. Chceme, aby si tvoje telo po všetkej tej tvrdej práci oddýchlo. V neposlednom rade ti vytvoríme profesionálnu vizitku, najmä vlastný web a marketingovú stratégiu, ktorá ti zaručene prinesie kopec nových klientov. Toto všetko je hlavná výhra.",
     "prizes": {
       "firstPlace": {
-        "title": "Dovolenka v dubaji",
-        "description": "All-inclusive dovolenka na 14dní",
+        "title": "Dovolenka v dubaji \n <span>a navyše aj</span> \n <span2>Marketingovú kampaň na 3 mesiace</span2>",
+        "description": "Víťaz získa zájazd do Dubaja a navyše plne hradenú marketingovú kampaň na 3 mesiace, ktorá pomôže zvýšiť povedomie a získať množstvo klientov",
         "place": "1. miesto"
       },
       "secondPlace": {
-        "title": "Kolobežka",
-        "description": "Xiami kolobežka",
+        "title": "Poukážka Pelikán v hodnote <span>500EUR</span>",
         "place": "2. miesto"
       },
       "thirdPlace": {
-        "title": "Doplnky výživy",
-        "description": "Doplnky výživy v hodnote 500EUR",
+        "title": "Doplnky výživy GymBeam v hodnote <span>500EUR</span>",
         "place": "3. miesto"
       }
     },
@@ -126,19 +124,24 @@
     "vote": "Hlasovať",
     "prizes": {
       "firstPlace": {
-        "title": "Dovolenka v dubaji",
-        "description": "All-inclusive dovolenka na 14dní",
+        "title": "Víkendový wellness pobyt \n <span>v Hoteli Hills</span>",
         "place": "1. miesto"
       },
       "secondPlace": {
-        "title": "Kolobežka",
-        "description": "Xiami kolobežka",
+        "title": "Elektrická Kolobežka",
         "place": "2. miesto"
       },
       "thirdPlace": {
-        "title": "Doplnky výživy",
-        "description": "Doplnky výživy v hodnote 500EUR",
+        "title": "Doplnky Divique a doplnky Enspire \n <span>na mesiac zadarmo</span>",
         "place": "3. miesto"
+      },
+      "fourthPlace": {
+        "title": "Poukážka Topánkovo v hodnote <span>100 EUR</span>",
+        "place": "4.miesto"
+      },
+      "fifthPlace": {
+        "title": "Poukážka Saxana v hodnote <span>100 EUR</span>",
+        "place": "5.miesto"
       }
     },
     "partners": {

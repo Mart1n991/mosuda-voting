@@ -10,10 +10,10 @@ export function PrizeCard({ title, description, image, className, place }: Prize
   return (
     <Card className={cn("flex flex-col border-none shadow-lg", className)}>
       <div className="relative w-full h-[300px] border-b-4 border-mosuda-green-light">
-        <Image src={image} alt={title} fill className="object-cover rounded-t-lg" />
+        <Image src={image} alt={title as string} fill className="object-cover rounded-t-lg" />
       </div>
       <CardHeader className="flex-1">
-        <div>
+        <div className="mb-2">
           <Badge size="lg">{place}</Badge>
         </div>
         <CardTitle className="text-xl md:text-3xl font-bold">{title}</CardTitle>
