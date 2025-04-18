@@ -6,4 +6,5 @@ export const routes = {
   termsAndConditions: "/terms-and-conditions",
   coachDetail: (id: string) => `/coach-detail/${id}`,
   privacyPolicy: "https://www.mosuda.sk/zasady-ochrany-osobnych-udajov/",
+  mosudaWeb: "https://www.mosuda.sk",
 };

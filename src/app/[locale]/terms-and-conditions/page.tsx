@@ -16,7 +16,7 @@ export default async function TermsAndConditions() {
           <List number={1}>
             {t.rich("list1", {
               web: (chunks) => (
-                <a href="https://www.mosuda.sk" target="_blank" rel="noopener noreferrer" className="underline text-blue-500">
+                <a href={routes.mosudaWeb} target="_blank" rel="noopener noreferrer" className="underline text-blue-500">
                   {chunks}
                 </a>
               ),
@@ -32,15 +32,30 @@ export default async function TermsAndConditions() {
           <List number={4}>
             {t.rich("list4", {
               web: (chunks) => (
-                <a href="https://www.mosuda.sk" target="_blank" rel="noopener noreferrer" className="underline text-blue-500">
+                <a href={routes.mosudaWeb} target="_blank" rel="noopener noreferrer" className="underline text-blue-500">
                   {chunks}
                 </a>
               ),
             })}
           </List>
           <List number={5}>{t("list5")}</List>
-          <List number={6}>{t("list6")}</List>
-          <List number={7}>{t("list7")}</List>
+          <List number={6} className="whitespace-pre-line">
+            {t("list6")}
+          </List>
+          <List number={7} className="whitespace-pre-line">
+            {t.rich("list7", {
+              link1: (chunks) => (
+                <a href={routes.mosudaWeb} target="_blank" rel="noopener noreferrer" className="underline text-blue-500">
+                  {chunks}
+                </a>
+              ),
+              link2: (chunks) => (
+                <a href={routes.mosudaWeb} target="_blank" rel="noopener noreferrer" className="underline text-blue-500">
+                  {chunks}
+                </a>
+              ),
+            })}
+          </List>
           <List number={8}>{t("list8")}</List>
           <List number={9}>{t("list9")}</List>
           <List number={10}>{t("list10")}</List>
