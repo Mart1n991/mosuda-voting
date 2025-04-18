@@ -10,7 +10,8 @@ export const config = {
     // - /_next (Next.js internals)
     // - /_vercel (Vercel internals)
     // - /static (public files)
+    // - /monitoring (Sentry monitoring)
     // - .*\\..*$ (files with extensions)
-    "/((?!api|_next|_vercel|static|.*\\..*).*)",
+    "/((?!api|_next|_vercel|static|monitoring|.*\\..*).*)",
   ],
 };
