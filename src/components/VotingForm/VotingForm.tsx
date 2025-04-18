@@ -15,15 +15,9 @@ import { Checkbox } from "../ui/checkbox";
 import { useLocale } from "use-intl";
 import Link from "next/link";
 import { routes } from "@/constants/routes";
-// TODO: Translate error messages
-const votingFormSchema = z.object({
-  name: z.string().min(1, { message: "Meno je povinné pole" }),
-  email: z.string().email({ message: "Nesprávny formát emailu" }),
-  termsAndConditionsAgreement: z.boolean().refine((data) => data, { message: "Musíte súhlasiť s podmienkami" }),
-  marketingAgreement: z.boolean(),
-});
+import { createVotingFormSchema } from "./validationSchema";
 
-type FormValues = z.infer<typeof votingFormSchema>;
+type FormValues = z.infer<ReturnType<typeof createVotingFormSchema>>;
 
 type VotingFormProps = {
   coachId: string;
@@ -32,6 +26,8 @@ type VotingFormProps = {
 
 export const VotingForm = ({ coachId, className }: VotingFormProps) => {
   const t = useTranslations("coachListPage");
+
+  const votingFormSchema = createVotingFormSchema(t);
 
   const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
   const [customEmailError, setCustomEmailError] = useState<string | null>(null);
@@ -66,7 +62,7 @@ export const VotingForm = ({ coachId, className }: VotingFormProps) => {
       setIsSubmittingLoading(true);
 
       // 3. Validate email - temporary email, alias
-      const emailValidationError = await validateEmail(data.email);
+      const emailValidationError = await validateEmail(data.email, t);
       if (emailValidationError) {
         setCustomEmailError(emailValidationError);
         return;

@@ -74,7 +74,11 @@
       "marketingAgreement": "Súhlasím so zasielaním marketingových informácií od spoločnosti Mosuda s.r.o. na moju e-mailovú adresu a som oboznámený so <link>Zásadami a pravidlami spracovania osobných údajov</link>",
       "submit": "Hlasovať",
       "errors": {
-        "required": "{field} je povinné pole."
+        "name": "Krstné meno je povinné pole.",
+        "emailFormat": "Nesprávny formát emailu.",
+        "emailTemporary": "Nepoužívaj dočasný email!",
+        "emailAlias": "Nepoužívaj emailové aliasy!",
+        "termsAndConditionsAgreement": "Musíš súhlasiť s podmienkami."
       },
       "verificationLinkSend": {
         "title": "Ďakujeme za registráciu hlasu!",

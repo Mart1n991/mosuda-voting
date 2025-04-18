@@ -75,7 +75,11 @@
       "consentThree": "Souhlasím se zasíláním marketingových informací od společnosti Mosuda s.r.o. na mou e-mailovou adresu.",
       "submit": "Hlasovat",
       "errors": {
-        "required": "{field} je povinné pole."
+        "name": "Křestní jméno je povinné pole.",
+        "emailFormat": "Nesprávný formát emailu.",
+        "emailTemporary": "Nepoužívej dočasný email!",
+        "emailAlias": "Nepoužívej emailové aliasy!",
+        "termsAndConditionsAgreement": "Musíš souhlasit s podmínkami."
       },
       "verificationLinkSend": {
         "title": "Děkujeme za registraci hlasu!",
