@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer/Footer";
 
 export default async function CoachListPage() {
   const t = await getTranslations("coachListPage");
-  const pageSize = 12; // Number of coaches per page
+  const pageSize = 24; // Number of coaches per page
   const initialPage = 1;
 
   const { profiles: coachList, totalCount } = await getCoachList({
