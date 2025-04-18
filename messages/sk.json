@@ -165,6 +165,7 @@
     "verificationSuccessMessage": "Ďakujeme za tvoj hlas v súťaži o TOP trénera.",
     "verificationFailed": "Overenie hlasu zlyhalo",
     "verificationFailedMessage": "Váš hlas nemohol byť potvrdený.",
+    "alreadyVotedToday": "Tvoj hlas už bol dnes zaregistrovaný. Hlasovať znova môžeš nasledujúci deň.",
     "backToVoting": "Späť na zoznam súťažiacich",
     "automaticRedirect": "Ak nie ste automaticky presmerovaní, kliknite <a>sem</a>."
   },

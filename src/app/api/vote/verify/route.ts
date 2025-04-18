@@ -64,9 +64,7 @@ export async function GET(request: NextRequest) {
     if (response.status === 400) {
       return NextResponse.redirect(
         new URL(
-          `${baseUrl}/${request.nextUrl.locale}/vote-confirmation?status=error&message=${encodeURIComponent(
-            "Váš hlas už bol dnes zaregistrovaný. Hlasovať znova môžete nasledujúci deň."
-          )}`
+          `${baseUrl}/${request.nextUrl.locale}/vote-confirmation?status=error&message=${encodeURIComponent("alreadyVotedToday")}`
         )
       );
     }

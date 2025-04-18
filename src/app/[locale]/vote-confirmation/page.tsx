@@ -48,7 +48,7 @@ export default function VoteConfirmationPage() {
           <CardTitle>{t("verificationFailed")}</CardTitle>
         </CardHeader>
         <CardContent className="text-center">
-          <p className="mb-4">{message || t("verificationFailedMessage")}</p>
+          <p className="mb-4">{t(message) || t("verificationFailedMessage")}</p>
           <Button asChild>
             <Link href={routes.coaches}>{t("backToVoting")}</Link>
           </Button>
