@@ -1,7 +1,7 @@
 // Importovanie knižnice s dočasnými emailovými doménami
 import disposableDomains from "disposable-email-domains";
 
-// Kontrola cez MailCheck.ai (existujúci kód)
+// Control through MailCheck.ai (existujúci kód)
 const isTemporaryEmail = async (email: string) => {
   if (!email) return false;
 
@@ -25,7 +25,7 @@ const isTemporaryEmail = async (email: string) => {
   }
 };
 
-// Kontrola pomocou knižnice
+// User check control
 const isKnownDisposableDomain = (email: string): boolean => {
   if (!email || !email.includes("@")) return false;
 
@@ -41,9 +41,9 @@ const hasEmailAlias = (email: string): boolean => {
 
   const [localPart, domain] = email.toLowerCase().split("@");
 
-  // Gmail aliases (+ or dots)
+  // Gmail aliases (+ and - sign)
   if (domain === "gmail.com") {
-    if (localPart.includes("+") || localPart.includes(".")) {
+    if (localPart.includes("+")) {
       return true;
     }
   }
