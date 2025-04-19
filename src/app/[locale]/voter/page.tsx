@@ -55,7 +55,7 @@ export default async function Voter() {
   return (
     <>
       <Navbar />
-      <main className="bg-mosuda-green-light">
+      <main className="bg-gradient-to-br from-mosuda-green-light to-mosuda-green-dark">
         <div className="max-w-screen-xl xl:mx-auto py-5 xl:py-20 flex flex-col items-center">
           <section className="flex flex-col xl:flex-row items-center xl:items-start w-full px-4 sm:px-10 mb-10">
             <div className="flex-1 flex flex-col items-center xl:items-start">
@@ -64,6 +64,7 @@ export default async function Voter() {
                   region: (chunks) => <span className="underline decoration-white">{chunks}</span>,
                 })}
               </h1>
+              <p className="mt-2 text-stone-100">{t("date")}</p>
               <p className="max-w-[500px] text-stone-700 mt-6 text-center xl:text-left text-sm md:text-base">
                 {t("description")}
               </p>

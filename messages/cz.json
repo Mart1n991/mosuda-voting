@@ -17,6 +17,7 @@
   "homePage": {
     "heading": "Staň se TOP trenérem \n <region>Slovenska a Česka</region>",
     "description": "Zapoj se do soutěže o nejoblíbenějšího trenéra nebo trenérku a získej nejen prestiž, ale i odměny, které posunou tvou kariéru na vyšší úroveň.",
+    "date": "Soutěž probíhá od 22.04.2025 do 22.07.2025",
     "firstPlace": "1. místo",
     "secondPlace": "2. místo",
     "thirdPlace": "3. místo",
@@ -123,6 +124,7 @@
   "voter": {
     "heading": "Hlasuj za TOP trenéra \n <region>Slovenska a Česka</region>",
     "description": "Hlasuj pro svého oblíbeného osobního trenéra a zapoj se do losování o skvělé ceny. \n Najdi si svého oblíbeného trenéra a hlasuj pro něj nebo pro ni. Jakmile zaregistrujeme tvůj hlas, jsi automaticky zařazen/a do soutěže o mega ceny.",
+    "date": "Soutěž probíhá od 22.04.2025 do 22.07.2025",
     "howToVote": "Jak hlasovat?",
     "howToVoteDescription": "Klikni na tlačítko <vote>Hlasovat</vote> a dostaneš se do seznamu trenérů. Vyber si toho svého a hlasuj. Hlasování je jednoduché – stačí vyplnit pár údajů a tvůj hlas bude započítán. Automaticky jsi také zařazen/a do soutěže o výše uvedené ceny.",
     "vote": "Hlasovat",

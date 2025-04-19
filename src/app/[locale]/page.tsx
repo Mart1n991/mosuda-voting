@@ -52,6 +52,7 @@ export default async function Home() {
                 region: (chunks) => <span className="underline decoration-mosuda-green-light">{chunks}</span>,
               })}
             </h1>
+            <p className="mt-2 text-stone-500">{t("date")}</p>
             <p className="max-w-[500px] mt-6 text-center xl:text-left text-sm md:text-base">{t("description")}</p>
             <div className="flex gap-4 mt-10">
               <AppStoreButton href="https://apps.apple.com/sk/app/mosuda/id1662260317?l=sk" />
