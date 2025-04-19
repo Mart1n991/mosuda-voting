@@ -15,7 +15,7 @@ export function Accordion({ items, className }: AccordionProps) {
       {items.map((item) => (
         <AccordionItem key={item.title} value={item.title}>
           <AccordionTrigger className="font-bold text-mosuda-green-dark">{item.title}</AccordionTrigger>
-          <AccordionContent>{item.content}</AccordionContent>
+          <AccordionContent className="whitespace-pre-line">{item.content}</AccordionContent>
         </AccordionItem>
       ))}
     </ShadcnAccordion>

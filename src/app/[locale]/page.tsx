@@ -26,6 +26,7 @@ export default async function Home() {
       title: t.rich("prizes.secondPlace.title", {
         span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
       }),
+      description: t("prizes.secondPlace.description"),
       image: "/images/placeholder-price-2.jpeg",
       place: t("prizes.secondPlace.place"),
     },
@@ -34,6 +35,7 @@ export default async function Home() {
       title: t.rich("prizes.thirdPlace.title", {
         span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
       }),
+      description: t("prizes.thirdPlace.description"),
       image: "/images/placeholder-price-3.webp",
       place: t("prizes.thirdPlace.place"),
     },
@@ -50,6 +52,7 @@ export default async function Home() {
                 region: (chunks) => <span className="underline decoration-mosuda-green-light">{chunks}</span>,
               })}
             </h1>
+            <p className="mt-2 text-stone-500">{t("date")}</p>
             <p className="max-w-[500px] mt-6 text-center xl:text-left text-sm md:text-base">{t("description")}</p>
             <div className="flex gap-4 mt-10">
               <AppStoreButton href="https://apps.apple.com/sk/app/mosuda/id1662260317?l=sk" />

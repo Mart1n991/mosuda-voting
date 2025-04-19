@@ -11,12 +11,13 @@
     "voter": "Si hlasujúci?",
     "coach": "Si tréner?",
     "closeMenu": "Zavrieť menu",
-    "competitors": "Súťažiaci",
+    "competitors": "Hlasuj",
     "partners": "Partneri"
   },
   "homePage": {
     "heading": "Staň sa TOP trénerom \n <region>Slovenska a Česka</region>",
     "description": "Zapoj sa do súťaže o najobľúbenejšieho trénera alebo trénerku a získaj nielen prestíž, ale aj odmeny ktoré tvoju kariéru posunú na nový level.",
+    "date": "Súťaž trvá od 22.04.2025 do 22.07.2025",
     "firstPlace": "1. miesto",
     "secondPlace": "2. miesto",
     "thirdPlace": "3. miesto",
@@ -31,19 +32,21 @@
     "prize3Description": "Výhra pre víťaza súťaže o najlepšieho trénera",
     "whyParticipateDescription": "Pridaj sa do súťaže a získaj možnosť rapídneho rastu tvojej kariéry, zvýš si popularitu a takisto aj počet klientov! V neposlednom rade si vybuduješ silnú osobnú značku, ktorá je na nezaplatenie.",
     "howToParticipateDescription": "Stiahni si aplikáciu Mosuda, zaregistruj sa, vyplň svoj profil a pridaj sa do hlasovania. Je to naozaj takto jednoduché! Potom už len musíš zbierať hlasy.",
-    "whatYouCanWinDescription": "V prvom rade môžeš vyhrať mediálnu pozornosť, ako napríklad rozhovor s refresherom, xxx. Ďalej si môžeš oddýchnnuť v jednom z najluxusnejších miest na svete, pretože na teba čaká dovolenka v Dubaji. Chceme, aby si tvoje telo po všetkej tej tvrdej práci oddýchlo. V neposlednom rade ti vytvoríme profesionálnu vizitku, najmä vlastný web a marketingovú stratégiu, ktorá ti zaručene prinesie kopec nových klientov. Toto všetko je hlavná výhra.",
+    "whatYouCanWinDescription": "Vyhrávajú prví traja tréneri, ktorí získajú počas hlasovacieho obdobia najvyšší počet hlasov. Hlavná výhra je dovolenka v Dubaji a 3 mesačná marketingová kampaň úplne zadarmo! Chceme, aby si si po takej tvrdej práci aj oddýchol/oddýchla, takže ťa pošleme do jedného z najluxusnejších miest na svete. O zábavu bude určite postarané. Ako druhú cenu, ktorú získaš je 3 mesačná marketingová kampaň, ktorú ti plne hradí Mosuda. Jej cieľ je zvýšiť povedomie o tom, čo robíš, aké výsledky dosahujú tvoji klienti a ukázať ťa novým potenciálnym záujemcom o tvoje služby. \n\n Ak sa umiestniš na druhom mieste, získaš nákupný poukaz od spoločnosti Pelikan v hodnote 500 € na nákup leteniek do tvojej vysnívanej krajiny. Či už je to New York alebo Hong Kong, je úplne na tebe kam poletíš. \n\n Ak sa umiestniš na treťom mieste, vyhráš nákupný poukaz v hodnote 500 € od spoločnosti Gymbeam. Čo si budeme hovoriť, dosť sypačiek nie je nikdy dosť. Tento poukaz môžeš minúť na čokoľvek z online eshopu gymbeam.",
     "prizes": {
       "firstPlace": {
         "title": "Dovolenka v dubaji \n <span>a navyše aj</span> \n <span2>Marketingovú kampaň na 3 mesiace</span2>",
-        "description": "Víťaz získa zájazd do Dubaja a navyše plne hradenú marketingovú kampaň na 3 mesiace, ktorá pomôže zvýšiť povedomie a získať množstvo klientov",
+        "description": "Ak sa umiestniš na prvom mieste, vyhráš plne hradenú dovolenku v jednom z najluxusnejších miest na svete, v Dubaji. Chceme, aby si tvoje telo po tvrdej práci aj patrične oddýchlo. Ako bonus k dovolenke od nás získaš aj plne hradenú 3 mesačnú marketingovú kampaň úplne zadarmo. Vďaka nej si rozšíriš svoje portfólio klientov a zväčšíš svoju osobnú značku.",
         "place": "1. miesto"
       },
       "secondPlace": {
         "title": "Poukážka Pelikán v hodnote <span>500EUR</span>",
+        "description": "Ak sa ti podarí umiestniť sa na druhom mieste, získaš od nás parádnu poukážku na nákup leteniek od spoločnosti Pelikan v hodnote 500 €. Je už na tebe, či poletíš na letnú dovolenku do Talianska, alebo pôjdeš pozrieť vianočné trhy do New Yorku.",
         "place": "2. miesto"
       },
       "thirdPlace": {
         "title": "Doplnky výživy GymBeam v hodnote <span>500EUR</span>",
+        "description": "Ak budeš na treťom mieste, získaš poukaz na nákup od spoločnosti Gymbeam v hodnote 500 €. Uvedomujeme si, že sypačiek nie je nikdy dosť a preto môžeš tento poukaz uplatniť na čokoľvek z online eshopu gymbeam.",
         "place": "3. miesto"
       }
     },
@@ -60,7 +63,8 @@
       "moreInfoButton": "Viac informácií"
     },
     "coachList": {
-      "noCoachesFound": "Žiadni tréneri nenájdení"
+      "noCoachesFound": "Žiadni tréneri nenájdení",
+      "votingEndedTitle": "Hlasovanie bolo ukončené"
     },
     "votingDialog": {
       "votingFor": "Hlasuješ za"
@@ -119,6 +123,7 @@
   "voter": {
     "heading": "Hlasuj za TOP trénera \n <region>Slovenska a Česka</region>",
     "description": "Zahlasuj za svojho obľúbeného osobného trénera a zapoj sa do losovania o skvelé ceny. \n Nájdi si svojho obľúbeného trénera a zahlasuj za neho alebo ňu. Akonáhle zaregistrujeme tvoj hlas, si automaticky pridaný/á do súťaže o mega ceny.",
+    "date": "Súťaž trvá od 22.04.2025 do 22.07.2025",
     "howToVote": "Ako hlasovať?",
     "howToVoteDescription": "Klikni na tlačidlo <vote>Hlasovať</vote> a dostaneš sa do zoznamu trénerov. Vyber si toho svojho a zahlasuj. Hlasovanie je jednoduché, stačí iba vyplniť pár údajov a tvoj hlas bude započítaný. Automaticky si aj zaregistrovaný/á do súťaže o ceny vyššie.",
     "vote": "Hlasovať",

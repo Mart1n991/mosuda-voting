@@ -11,12 +11,13 @@
     "voter": "Jsi hlasující?",
     "coach": "Jsi trenér?",
     "closeMenu": "Zavřít menu",
-    "competitors": "Soutěžící",
+    "competitors": "Hlasuj",
     "partners": "Partneři"
   },
   "homePage": {
     "heading": "Staň se TOP trenérem \n <region>Slovenska a Česka</region>",
     "description": "Zapoj se do soutěže o nejoblíbenějšího trenéra nebo trenérku a získej nejen prestiž, ale i odměny, které posunou tvou kariéru na vyšší úroveň.",
+    "date": "Soutěž probíhá od 22.04.2025 do 22.07.2025",
     "firstPlace": "1. místo",
     "secondPlace": "2. místo",
     "thirdPlace": "3. místo",
@@ -31,19 +32,21 @@
     "prize3Description": "Výhra pro vítěze soutěže o nejlepšího trenéra",
     "whyParticipateDescription": "Připoj se k soutěži a získej šanci na rychlý růst kariéry, zvýš svou popularitu a počet klientů! A navíc si vybuduješ silnou osobní značku, která je k nezaplacení.",
     "howToParticipateDescription": "Stáhni si aplikaci Mosuda, zaregistruj se, vyplň svůj profil a přidej se k hlasování. Je to opravdu tak jednoduché! Pak už jen sbírej hlasy.",
-    "whatYouCanWinDescription": "Můžeš získat mediální pozornost, například rozhovor s Refresherem, xxx. Dále tě čeká dovolená v jednom z nejluxusnějších míst na světě – Dubaji. Chceme, aby si tvé tělo po tvrdé práci odpočinulo. A navíc ti vytvoříme profesionální vizitku – web a marketingovou strategii, která ti zaručeně přivede nové klienty. To vše je hlavní výhra.",
+    "whatYouCanWinDescription": "Vyhrávají první tři trenéři, kteří během hlasovacího období získají nejvyšší počet hlasů. Hlavní výhrou je dovolená v Dubaji a tří měsíční marketingová kampaň zcela zdarma! Chceme, aby sis po tak tvrdé práci také odpočinul/odpočinula, takže tě pošleme do jednoho z nejluxusnějších míst na světě. O zábavu bude rozhodně postaráno. Druhou výhrou, kterou získáš, je tří měsíční marketingová kampaň plně hrazená společností Mosuda. Jejím cílem je zvýšit povědomí o tom, co děláš, jaké výsledky dosahují tvoji klienti, a představit tě novým potenciálním zájemcům o tvé služby. \n\n Pokud se umístíš na druhém místě, získáš dárkový poukaz od společnosti Pelikan v hodnotě 500 € na nákup letenek do své vysněné země. Ať už je to New York nebo Hongkong, je jen na tobě, kam poletíš. \n\nPokud se umístíš na třetím místě, vyhraješ dárkový poukaz v hodnotě 500 € od společnosti Gymbeam. Řekněme si upřímně – doplňků není nikdy dost. Tento poukaz můžeš využít na cokoliv z online obchodu Gymbeam.",
     "prizes": {
       "firstPlace": {
         "title": "Dovolená v Dubaji \n <span>a navíc také</span> \n <span2>Marketingovou kampaň na 3 měsíce</span2>",
-        "description": "Vítěz získá zájezd do Dubaje a navíc plně hrazenou marketingovou kampaň na 3 měsíce, která pomůže zvýšit povědomí a získat množství klientů",
+        "description": "Pokud se umístíš na prvním místě, vyhraješ plně hrazenou dovolenou v jednom z nejluxusnějších měst na světě – v Dubaji. Chceme, aby si tvoje tělo po tvrdé práci pořádně odpočinulo. Jako bonus k dovolené od nás navíc získáš plně hrazenou tří měsíční marketingovou kampaň zcela zdarma. Díky ní si rozšíříš své portfolio klientů a posílíš svou osobní značku.",
         "place": "1. místo"
       },
       "secondPlace": {
         "title": "Poukázka Pelikán v hodnotě <span>500EUR</span>",
+        "description": "Pokud se ti podaří umístit na druhém místě, získáš od nás parádní poukaz na nákup letenek od společnosti Pelikan v hodnotě 500 €. Je jen na tobě, jestli poletíš na letní dovolenou do Itálie, nebo se vydáš na vánoční trhy do New Yorku.",
         "place": "2. místo"
       },
       "thirdPlace": {
         "title": "Doplňky výživy GymBeam v hodnotě <span>500EUR</span>",
+        "description": "Pokud skončíš na třetím místě, získáš dárkový poukaz na nákup od společnosti Gymbeam v hodnotě 500 €. Uvědomujeme si, že doplňků není nikdy dost, a proto můžeš tento poukaz využít na cokoliv z online obchodu Gymbeam.",
         "place": "3. místo"
       }
     },
@@ -60,7 +63,8 @@
       "moreInfoButton": "Více informací"
     },
     "coachList": {
-      "noCoachesFound": "Žádní trenéři nenalezeni"
+      "noCoachesFound": "Žádní trenéři nenalezeni",
+      "votingEndedTitle": "Hlasování bylo ukončené"
     },
     "votingDialog": {
       "votingFor": "Hlasuješ pro"
@@ -120,6 +124,7 @@
   "voter": {
     "heading": "Hlasuj za TOP trenéra \n <region>Slovenska a Česka</region>",
     "description": "Hlasuj pro svého oblíbeného osobního trenéra a zapoj se do losování o skvělé ceny. \n Najdi si svého oblíbeného trenéra a hlasuj pro něj nebo pro ni. Jakmile zaregistrujeme tvůj hlas, jsi automaticky zařazen/a do soutěže o mega ceny.",
+    "date": "Soutěž probíhá od 22.04.2025 do 22.07.2025",
     "howToVote": "Jak hlasovat?",
     "howToVoteDescription": "Klikni na tlačítko <vote>Hlasovat</vote> a dostaneš se do seznamu trenérů. Vyber si toho svého a hlasuj. Hlasování je jednoduché – stačí vyplnit pár údajů a tvůj hlas bude započítán. Automaticky jsi také zařazen/a do soutěže o výše uvedené ceny.",
     "vote": "Hlasovat",
