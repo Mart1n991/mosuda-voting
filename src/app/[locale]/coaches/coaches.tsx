@@ -10,6 +10,12 @@ import { fetchCoaches } from "./actions";
 import { SearchBar } from "@/components/Searchbar";
 import { useDebounce } from "@/hooks/useDebounce";
 import { Loader2 } from "lucide-react";
+import { redirect } from "next/navigation";
+import { routes } from "@/constants/routes";
+
+const VOTING_END_DATE = new Date("2025-07-22T23:59:00");
+const now = new Date();
+const votingEnded = now > VOTING_END_DATE;
 
 type CoachesProps = {
   initialCoachList: CoachProfile[];
@@ -101,6 +107,10 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }:
 
     fetchSearchResults();
   }, [debouncedSearch, pageSize]);
+
+  if (votingEnded) {
+    redirect(routes.votingEnded);
+  }
 
   return (
     <>

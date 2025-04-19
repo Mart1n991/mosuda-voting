@@ -62,7 +62,8 @@
       "moreInfoButton": "Více informací"
     },
     "coachList": {
-      "noCoachesFound": "Žádní trenéři nenalezeni"
+      "noCoachesFound": "Žádní trenéři nenalezeni",
+      "votingEndedTitle": "Hlasování bylo ukončené"
     },
     "votingDialog": {
       "votingFor": "Hlasuješ pro"
