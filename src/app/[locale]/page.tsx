@@ -26,6 +26,7 @@ export default async function Home() {
       title: t.rich("prizes.secondPlace.title", {
         span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
       }),
+      description: t("prizes.secondPlace.description"),
       image: "/images/placeholder-price-2.jpeg",
       place: t("prizes.secondPlace.place"),
     },
@@ -34,6 +35,7 @@ export default async function Home() {
       title: t.rich("prizes.thirdPlace.title", {
         span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
       }),
+      description: t("prizes.thirdPlace.description"),
       image: "/images/placeholder-price-3.webp",
       place: t("prizes.thirdPlace.place"),
     },
