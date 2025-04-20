@@ -14,7 +14,7 @@ export function Accordion({ items, className }: AccordionProps) {
     <ShadcnAccordion type="single" collapsible className={cn("w-full", className)}>
       {items.map((item) => (
         <AccordionItem key={item.title} value={item.title}>
-          <AccordionTrigger className="font-bold text-mosuda-green-dark">{item.title}</AccordionTrigger>
+          <AccordionTrigger className="font-bold">{item.title}</AccordionTrigger>
           <AccordionContent className="whitespace-pre-line">{item.content}</AccordionContent>
         </AccordionItem>
       ))}
