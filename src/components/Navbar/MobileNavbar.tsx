@@ -29,7 +29,9 @@ export const MobileNavbar = ({ className }: MobileNavbarProps) => {
     <div className={className}>
       <Sheet>
         <div className="flex justify-between items-center p-4">
-          <Image src="/images/logo.png" alt="logo" width={120} height={70} />
+          <Link href={routes.home} className="flex w-full justify-center">
+            <Image src="/images/logo.png" alt="logo" width={120} height={70} />
+          </Link>
           <SheetTrigger asChild>
             <IconMenuDeep className="size-5 cursor-pointer" />
           </SheetTrigger>
