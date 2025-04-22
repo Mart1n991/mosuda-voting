@@ -16,15 +16,15 @@ export default async function Voter() {
     {
       id: "111-111",
       title: t.rich("prizes.firstPlace.title", {
-        span: (chunks) => <span className="block text-mosuda-green-light text-md">{chunks}</span>,
+        span: (chunks) => <span className="min-[425px]:block text-mosuda-green-light text-md">{chunks}</span>,
       }),
-      image: "/images/placeholder-price-1.avif",
+      image: "/images/voter-prizes/hotel-hills.png",
       place: t("prizes.firstPlace.place"),
     },
     {
       id: "222-222",
       title: t("prizes.secondPlace.title"),
-      image: "/images/placeholder-price-2.jpeg",
+      image: "/images/voter-prizes/xiaomi.png",
       place: t("prizes.secondPlace.place"),
     },
     {
@@ -32,7 +32,7 @@ export default async function Voter() {
       title: t.rich("prizes.thirdPlace.title", {
         span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
       }),
-      image: "/images/placeholder-price-3.webp",
+      image: "/images/voter-prizes/divique.png",
       place: t("prizes.thirdPlace.place"),
     },
     {
@@ -40,7 +40,7 @@ export default async function Voter() {
       title: t.rich("prizes.fourthPlace.title", {
         span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
       }),
-      image: "/images/placeholder-price-3.webp",
+      image: "/images/voter-prizes/topankovo.png",
       place: t("prizes.fourthPlace.place"),
     },
     {
@@ -48,7 +48,7 @@ export default async function Voter() {
       title: t.rich("prizes.fifthPlace.title", {
         span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
       }),
-      image: "/images/placeholder-price-3.webp",
+      image: "/images/voter-prizes/saxana.png",
       place: t("prizes.fifthPlace.place"),
     },
   ];

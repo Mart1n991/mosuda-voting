@@ -45,8 +45,8 @@
         "place": "2. místo"
       },
       "thirdPlace": {
-        "title": "Doplňky výživy GymBeam v hodnotě <span>500EUR</span>",
-        "description": "Pokud skončíš na třetím místě, získáš dárkový poukaz na nákup od společnosti Gymbeam v hodnotě 500 EUR. Uvědomujeme si, že doplňků není nikdy dost, a proto můžeš tento poukaz využít na cokoliv z online obchodu Gymbeam.",
+        "title": "Doplňky Enspire \n <span>na měsícc zdarma</span>",
+        "description": "Pokud se umístíš na třetím místě, získáš doplňky od společnosti Enspire na celý měsíc úplně zdarma. Uvědomujeme si, že doplňků není nikdy dost, a proto nebudeš muset celý měsíc řešit výživové doplňky.",
         "place": "3. místo"
       }
     },
@@ -84,7 +84,7 @@
         "termsAndConditionsAgreement": "Musíš souhlasit s podmínkami."
       },
       "verificationLinkSend": {
-        "title": "Děkujeme za registraci hlasu!",
+        "title": "Už stačí jen potvrdit svůj hlas!",
         "description": "Na tvoji e-mailovou adresu byl odeslán ověřovací odkaz. Klikni na něj pro potvrzení svého hlasu.",
         "checkSpam": "Nezapomeň zkontrolovat i složku se spamem"
       }
@@ -142,7 +142,7 @@
         "place": "2. místo"
       },
       "thirdPlace": {
-        "title": "Doplňky Divique a doplňky Enspire \n <span>na měsíc zdarma</span>",
+        "title": "Doplňky Divique \n <span>na měsíc zdarma</span>",
         "place": "3. místo"
       },
       "fourthPlace": {
@@ -177,7 +177,8 @@
     "verificationFailedMessage": "Váš hlas nemohl být potvrzen.",
     "alreadyVotedToday": "Tvůj hlas už byl dnes zaregistrován. Hlasovat znovu můžeš následující den.",
     "backToVoting": "Zpět na seznam soutěžících",
-    "automaticRedirect": "Pokud nejste automaticky přesměrováni, klikněte <a>sem</a>."
+    "automaticRedirect": "Pokud nejste automaticky přesměrováni, klikněte <a>sem</a>.",
+    "cannotVoteForYourself": "Nemúžeš hlasovat sám za sebe!"
   },
   "termsAndConditions": {
     "title": "Všeobecné podmínky hlasování v soutěži „Trenér roku“ (dále jen „VPHS“)",
@@ -186,7 +187,7 @@
     "list3": "Z hlasování v Soutěži jsou vyloučeni: \n<section>- účastníci Soutěže</section>\n Pokud se výhercem věcné ceny stane taková osoba, výhra jí nebude předána. Osoby, které nesplňují podmínky hlasování nebo jednají v rozporu s VPHS, nebudou zařazeny do soutěže o ceny. Pokud se taková osoba přesto stane výhercem (např. na základě nepravdivých údajů), nárok na výhru zaniká. Pokud výhercem bude osoba mladší 18 let, musí po oznámení výhry doložit písemný souhlas zákonného zástupce, jinak o výhru přichází.",
     "list4": "Do hlasování bude zařazen každý, kdo během trvání Soutěže vyplní hlasovací formulář na webu <web>www.mosuda.sk</web>, udělí aktivně hlas soutěžícímu trenérovi, uvede své jméno, příjmení a e-mail, a bezvýhradně souhlasí s VPHS a zavazuje se je dodržovat. Každý účastník může hlasovat pouze jednou.",
     "list5": "Účastí v hlasování bere hlasující na vědomí, že pořadatel bude zpracovávat jeho osobní údaje (jméno, příjmení, e-mail) za účelem hlasování, ověření hlasu, účasti v soutěži a kontaktování v případě výhry. Také souhlasí se zveřejněním svého jména a příjmení na sociálních sítích pořadatele v případě výhry. Pokud se přihlásí k odběru newsletteru, budou tyto údaje zpracovány i za účelem zasílání obchodních sdělení od společnosti Mosuda s.r.o.",
-    "list6": "Výhrami v Soutěži jsou následující ceny: v rámci soutěže o nejlepšího trenéra vyhrají první tři trenéři, kteří během celého trvání soutěže získali největší počet platných hlasů. Výhra za první místo je plně hrazený zájezd do Dubaje a na 3 měsíce uhrazená PPC kampaň pro trenéra zdarma v hodnotě 300 EUR. Druhé místo získá výhru od společnosti Pelikan, a to poukaz na nákup letenek v hodnotě 500 EUR. Třetí místo získá výhru od společnosti Gymbeam, a to poukaz na nákup v hodnotě 500 EUR. Každý trenér může vyhrát pouze 1 výhru, takže celkem budou tři výherci. \n \n Hlasující mají také možnost vyhrát věcné ceny, a to náhodným losováním ze všech hlasujících, které se bude konat do 14 dnů od placeného ukončení soutěže. Náhodně bude vybráno 5 hlasujících, kteří získají ceny: první místo vyhraje víkendový pobyt v Hotelu Hills v Tatrách pro 2 osoby. Druhé místo vyhraje elektrickou koloběžku. Třetí místo vyhraje doplňky výživy od společnosti Divique a Enspire na 1 měsíc zdarma. Čtvrté místo vyhraje nákupní poukázku v hodnotě 100 EUR od společnosti Topánkovo. Páté místo vyhraje nákupní poukázku v hodnotě 100 EUR od společnosti Saxana. Každý výherce může vyhrát pouze 1 výhru, takže výherců bude z řad hlasujících celkem pět.",
+    "list6": "Výhrami v Soutěži jsou následující ceny: v rámci soutěže o nejlepšího trenéra vyhrají první tři trenéři, kteří během celého trvání soutěže získali největší počet platných hlasů. Výhra za první místo je plně hrazený zájezd do Dubaje a na 3 měsíce uhrazená PPC kampaň pro trenéra zdarma v hodnotě 300 EUR. Druhé místo získá výhru od společnosti Pelikan, a to poukaz na nákup letenek v hodnotě 500 EUR. Třetí místo získá doplňky stravy od společnosti Enspire na 1 měsíc zdarma. Každý trenér může vyhrát pouze 1 výhru, takže celkem budou tři výherci. \n \n Hlasující mají také možnost vyhrát věcné ceny, a to náhodným losováním ze všech hlasujících, které se bude konat do 14 dnů od placeného ukončení soutěže. Náhodně bude vybráno 5 hlasujících, kteří získají ceny: první místo vyhraje víkendový pobyt v Hotelu Hills v Tatrách pro 2 osoby. Druhé místo vyhraje elektrickou koloběžku. Třetí místo vyhraje doplňky výživy od společnosti Divique na 1 měsíc zdarma. Čtvrté místo vyhraje nákupní poukázku v hodnotě 100 EUR od společnosti Topánkovo. Páté místo vyhraje nákupní poukázku v hodnotě 100 EUR od společnosti Saxana. Každý výherce může vyhrát pouze 1 výhru, takže výherců bude z řad hlasujících celkem pět.",
     "list7": "Výherci soutěže se stanou první tři trenéři, kteří po uplynutí hlasování budou mít nejvíce platně udělených hlasů veřejnosti ze všech účastníků zapojených do Soutěže na webové stránce <link1>www.mosuda.sk</link1>. \n\n Výherci z řad hlasujících budou náhodně vylosováni, a to do 14 dnů od platného ukončení Soutěže na webové stránce <link2>www.mosuda.sk.</link2> \n\n Každý výherce bude informován o výhře prostřednictvím e-mailové adresy. Jméno a příjmení všech výherců bude také zveřejněno na sociálních sítích pořadatele a webu www.mosuda.sk. Výherce nemůže nárok na výhru převést na třetí osobu. Způsob převzetí nebo doručení výhry dohodne pořadatel s výhercem individuálně po oznámení výsledků soutěže. Výherce není povinen výhru přijmout. Pokud výherce výhru odmítne, do 48 hodin nebude reagovat na kontaktování pořadatele s oznámením o výhře, nebo neuvede pravdivé či úplné osobní údaje, jeho nárok na výhru zaniká a pořadatel si vyhrazuje právo vylosovat určit výherce z ostatních účastníků zapojených do Soutěže podle počtu platně udělených hlasů veřejnosti.",
     "list8": "Pořadatel nenese odpovědnost za rizika a závazky spojené s používáním výhry, které nebyly způsobeny jeho zaviněním. Nebezpečí škody na výhře přechází na výherce okamžikem doručení. Soutěžící nemá nárok požadovat jinou výhru. Pořadatel nenese odpovědnost za škody způsobené nesprávně poskytnutými údaji, ani za nedoručení výhry z důvodů na straně pošty nebo kurýra. Výhru nelze vymáhat soudní cestou ani ji nahradit peněžní částkou.",
     "list9": "Pořadatel si vyhrazuje právo soutěž kdykoli zrušit bez předchozího upozornění a bez udání důvodu. Tuto možnost uplatní zejména při technických nebo právních problémech (např. viry, manipulace, chyby systému). Pokud zrušení způsobí hlasující, může být požadována náhrada škody. Pořadatel je oprávněn změnit VPHS bez náhrady. Zkrácené verze mohou být uvedeny v propagačních materiálech, ale úplná verze pravidel je závazná. Pořadatel neručí za škody způsobené účastí nebo nedostupností serveru, kromě případů úmyslného nebo hrubého pochybení. Není odpovědný za technické poruchy (např. výpadky sítě, elektroniky).",

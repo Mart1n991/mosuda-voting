@@ -18,7 +18,7 @@ export default async function Home() {
         span2: (chunks) => <span className="text-md text-mosuda-green-light">{chunks}</span>,
       }),
       description: t("prizes.firstPlace.description"),
-      image: "/images/placeholder-price-1.avif",
+      image: "/images/coach-prizes/dubaj.png",
       place: t("prizes.firstPlace.place"),
     },
     {
@@ -27,7 +27,7 @@ export default async function Home() {
         span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
       }),
       description: t("prizes.secondPlace.description"),
-      image: "/images/placeholder-price-2.jpeg",
+      image: "/images/coach-prizes/pelikan.png",
       place: t("prizes.secondPlace.place"),
     },
     {
@@ -36,7 +36,7 @@ export default async function Home() {
         span: (chunks) => <span className="text-mosuda-green-light">{chunks}</span>,
       }),
       description: t("prizes.thirdPlace.description"),
-      image: "/images/placeholder-price-3.webp",
+      image: "/images/coach-prizes/enspire.png",
       place: t("prizes.thirdPlace.place"),
     },
   ];
