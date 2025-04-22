@@ -26,6 +26,7 @@ export default function PartnersLogos() {
       <ImageContainer href="https://www.divique.com/" src="/images/partners/logo_divique.png" />
       <ImageContainer href="https://www.spirkomatus.cz/" src="/images/partners/logo_enspire.png" />
       <ImageContainer href="https://www.hotelhills.sk/" src="/images/partners/logo_hills.png" />
+      <ImageContainer href="https://www.saxana.sk/" src="/images/partners/saxana.png" />
     </div>
   );
 }
