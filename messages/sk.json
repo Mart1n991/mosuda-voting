@@ -83,7 +83,7 @@
         "termsAndConditionsAgreement": "Musíš súhlasiť s podmienkami."
       },
       "verificationLinkSend": {
-        "title": "Ďakujeme za registráciu hlasu!",
+        "title": "Stačí už len potvrdiť svoj hlas!",
         "description": "Na tvoju emailovú adresu bol odoslaný verifikačný link. Prosím, klikni naň pre potvrdenie tvojho hlasu.",
         "checkSpam": "Nezabudni skontrolovať aj priečinok so spamom"
       }
@@ -176,7 +176,8 @@
     "verificationFailedMessage": "Váš hlas nemohol byť potvrdený.",
     "alreadyVotedToday": "Tvoj hlas už bol dnes zaregistrovaný. Hlasovať znova môžeš nasledujúci deň.",
     "backToVoting": "Späť na zoznam súťažiacich",
-    "automaticRedirect": "Ak nie ste automaticky presmerovaní, kliknite <a>sem</a>."
+    "automaticRedirect": "Ak nie ste automaticky presmerovaní, kliknite <a>sem</a>.",
+    "cannotVoteForYourself": "Nemôžeš hlasovať sám za seba!"
   },
   "termsAndConditions": {
     "title": "Všeobecné podmienky hlasovania v súťaži ”Tréner roka” (ďalej ako “VPHS”)",

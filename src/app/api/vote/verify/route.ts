@@ -62,6 +62,16 @@ export async function GET(request: NextRequest) {
 
     // When we find out that it's because of an already existing vote (check by message)
     if (response.status === 400) {
+      const errorText = await response.text();
+
+      if (errorText.includes("You cannot vote for yourself")) {
+        return NextResponse.redirect(
+          new URL(
+            `${baseUrl}/${request.nextUrl.locale}/vote-confirmation?status=error&message=${encodeURIComponent("cannotVoteForYourself")}`
+          )
+        );
+      }
+
       return NextResponse.redirect(
         new URL(
           `${baseUrl}/${request.nextUrl.locale}/vote-confirmation?status=error&message=${encodeURIComponent("alreadyVotedToday")}`
