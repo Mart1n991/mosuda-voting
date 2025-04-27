@@ -2,6 +2,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getMessages, getTranslations } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import "../globals.css";
 import { lexend } from "../fonts";
@@ -47,6 +48,11 @@ export default async function LocaleLayout({
         <RecaptchaProvider>
           <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
         </RecaptchaProvider>
+
+        {/* Google tag manager */}
+        {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID} />
+        )}
       </body>
     </html>
   );
