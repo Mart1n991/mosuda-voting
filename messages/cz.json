@@ -200,5 +200,20 @@
     "title": "Stránka nenalezena",
     "description": "Ajajaj trošku jsme se zatoulali",
     "backHome": "Zpět na hlavní stránku"
+  },
+  "maintenancePage": {
+    "title": "Omlouváme se",
+    "description": "Soutěž je dočasně pozastavena z technických důvodů a bude obnovena",
+    "description2": "Zadej svůj e-mail a jakmile bude soutěž spuštěna, budeme tě kontaktovat.",
+    "emailSubscribedTitle": "Super! Máme tvůj e-mail.",
+    "emailSubscribedDescription": "Jakmile bude soutěž spuštěna, budeme tě kontaktovat.",
+    "date": "31.5.2025",
+    "form": {
+      "email": "E-mail",
+      "submit": "Odeslat",
+      "errors": {
+        "emailFormat": "Neplatný formát e-mailu"
+      }
+    }
   }
 }

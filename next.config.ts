@@ -5,6 +5,9 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    MAINTENANCE_MODE: process.env.MAINTENANCE_MODE,
+  },
   turbopack: {
     rules: {},
   },

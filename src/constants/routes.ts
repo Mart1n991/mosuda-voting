@@ -8,4 +8,5 @@ export const routes = {
   privacyPolicy: "https://www.mosuda.sk/zasady-ochrany-osobnych-udajov/",
   mosudaWeb: "https://www.mosuda.sk",
   votingEnded: "/voting-ended",
+  maintenance: "/maintenance",
 };
