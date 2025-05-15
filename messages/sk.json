@@ -202,6 +202,17 @@
   },
   "maintenancePage": {
     "title": "Ospravedlňujeme sa",
-    "description": "Súťaž je dočasne pozastavená"
+    "description": "Súťaž je dočasne pozastavená z technických dôvodov a bude obnovená",
+    "description2": "Zadaj svoj email e hneď ako bude súťaž spustená budeme ťa kontaktovať.",
+    "emailSubscribedTitle": "Super! Máme tvoj email.",
+    "emailSubscribedDescription": "Hneď ako bude súťaž spustená budeme ťa kontaktovať.",
+    "date": "31.5.2025",
+    "form": {
+      "email": "Email",
+      "submit": "Odoslať",
+      "errors": {
+        "emailFormat": "Nesprávny formát emailu"
+      }
+    }
   }
 }
