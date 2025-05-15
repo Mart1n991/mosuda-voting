@@ -199,5 +199,9 @@
     "title": "Stránka nenájdená",
     "description": "Ajajaj trochu sme sa zatúlali",
     "backHome": "Späť na hlavnú stránku"
+  },
+  "maintenancePage": {
+    "title": "Ospravedlňujeme sa",
+    "description": "Súťaž je dočasne pozastavená"
   }
 }
