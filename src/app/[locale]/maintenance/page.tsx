@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { InfoForm } from "./InfoForm";
 import Image from "next/image";
 
 export default function MaintenancePage() {
@@ -14,10 +13,9 @@ export default function MaintenancePage() {
       </div>
       <h1 className="text-center text-2xl sm:text-4xl font-bold">{t("title")}</h1>
       <p className="text-center">{t("description")}</p>
-      <h3 className="text-center text-4xl font-bold">{t("date")}</h3>
-      <div className="mt-10 space-y-4">
+      {/* <div className="mt-10 space-y-4">
         <InfoForm className="w-full" />
-      </div>
+      </div> */}
     </main>
   );
 }
