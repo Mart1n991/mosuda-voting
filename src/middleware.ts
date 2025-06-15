@@ -9,10 +9,10 @@ export default function middleware(request: NextRequest) {
   const { pathname, hostname } = request.nextUrl;
 
   // Ak je aktivované režim údržby
-  if (maintenanceMode) {
-    // Presmerovať všetky požiadavky na stránku údržby
-    return NextResponse.redirect(new URL(`/${pathname.startsWith("/") ? "" : "/"}${routes.maintenance}`, request.url));
-  }
+  // if (maintenanceMode) {
+  //   // Presmerovať všetky požiadavky na stránku údržby
+  //   return NextResponse.redirect(new URL(`/${pathname.startsWith("/") ? "" : "/"}${routes.maintenance}`, request.url));
+  // }
 
   // Get locale from pathname - for example "sk" from "/sk/xyz"
   const locale = pathname.split("/")[1];
