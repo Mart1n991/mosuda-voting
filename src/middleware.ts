@@ -6,32 +6,24 @@ import { routes } from "./constants/routes";
 const maintenanceMode = process.env.MAINTENANCE_MODE === "true";
 
 export default function middleware(request: NextRequest) {
-  const { pathname, hostname } = request.nextUrl;
+  const { pathname } = request.nextUrl;
 
-  // Get locale from pathname - for example "sk" from "/sk/xyz"
+  // Získať locale z pathy
   const locale = pathname.split("/")[1];
 
-  if (maintenanceMode) {
-    // Presmerovať na správnu URL s doménou a locale
+  // Ak sme v maintenance móde a nie sme už na maintenance stránke
+  if (maintenanceMode && !pathname.includes("/maintenance")) {
     const url = request.nextUrl.clone();
-    url.hostname = "toptrener.mosuda.sk";
-    url.pathname = `/${locale}${routes.maintenance}`;
+
+    // Ak locale neexistuje, defaultuj na 'sk'
+    const finalLocale = locale || "sk";
+
+    url.pathname = `/${finalLocale}${routes.maintenance}`;
     return NextResponse.redirect(url);
   }
 
-  // Ak je požiadavka na hlavnú domén (toptrener.mosuda.sk)
-  if (hostname === "toptrener.mosuda.sk") {
-    // Presmerovať na stránku údržby, ak je aktivovaná
-    if (maintenanceMode) {
-      const url = request.nextUrl.clone();
-      url.hostname = "toptrener.mosuda.sk";
-      url.pathname = `/${routes.maintenance}`;
-      return NextResponse.redirect(url);
-    }
-  }
-
   if (locale === "") {
-    // Nechať next-intl pridať prefix (napríklad "/" -> "/sk")
+    // Nechať next-intl pridať prefix
     return createMiddleware(routing)(request);
   }
 
