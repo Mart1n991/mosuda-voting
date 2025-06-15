@@ -10,9 +10,7 @@ export default function middleware(request: NextRequest) {
 
   // Get locale from pathname - for example "sk" from "/sk/xyz"
   const locale = pathname.split("/")[1];
-  console.log("locale", locale);
-  console.log("hostname", hostname);
-  console.log("pathname", pathname);
+
   if (maintenanceMode) {
     // Presmerovať na správnu URL s doménou a locale
     const url = request.nextUrl.clone();
