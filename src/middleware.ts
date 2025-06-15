@@ -8,37 +8,33 @@ const maintenanceMode = process.env.MAINTENANCE_MODE === "true";
 export default function middleware(request: NextRequest) {
   const { pathname, hostname } = request.nextUrl;
 
-  // Ak je aktivované režim údržby
-  // if (maintenanceMode) {
-  //   // Presmerovať všetky požiadavky na stránku údržby
-  //   return NextResponse.redirect(new URL(`/${pathname.startsWith("/") ? "" : "/"}${routes.maintenance}`, request.url));
-  // }
-
   // Get locale from pathname - for example "sk" from "/sk/xyz"
   const locale = pathname.split("/")[1];
 
-  // Ak je požiadavka na hlavnú domén (toptrener.mosuda.sk)
-  if (hostname === "toptrener.mosuda.sk") {
-    // Presmerovať na hlavnú stránku alebo inú logiku
-    // Napríklad presmerovanie na domovskú stránku alebo stránku údržby
-    if (maintenanceMode) {
-      return NextResponse.redirect(new URL(`/${routes.maintenance}`, request.url));
-    }
+  if (maintenanceMode) {
+    // Presmerovať na správnu URL s doménou a locale
+    const url = request.nextUrl.clone();
+    url.hostname = "toptrener.mosuda.sk";
+    url.pathname = `/${locale}${routes.maintenance}`;
+    return NextResponse.redirect(url);
   }
 
-  const maintenancePath = `/${locale}${routes.maintenance}`;
+  // Ak je požiadavka na hlavnú domén (toptrener.mosuda.sk)
+  if (hostname === "toptrener.mosuda.sk") {
+    // Presmerovať na stránku údržby, ak je aktivovaná
+    if (maintenanceMode) {
+      const url = request.nextUrl.clone();
+      url.hostname = "toptrener.mosuda.sk";
+      url.pathname = `/${routes.maintenance}`;
+      return NextResponse.redirect(url);
+    }
+  }
 
   if (locale === "") {
     // Nechať next-intl pridať prefix (napríklad "/" -> "/sk")
     return createMiddleware(routing)(request);
   }
 
-  // Manage when on maintenance page it will NOT eredirect again
-  if (maintenanceMode && pathname !== maintenancePath) {
-    return NextResponse.redirect(new URL(maintenancePath, request.url));
-  }
-
-  // Continue in regular routing middleware
   return createMiddleware(routing)(request);
 }
 
