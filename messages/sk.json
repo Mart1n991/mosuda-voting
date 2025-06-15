@@ -199,5 +199,19 @@
     "title": "Stránka nenájdená",
     "description": "Ajajaj trochu sme sa zatúlali",
     "backHome": "Späť na hlavnú stránku"
+  },
+  "maintenancePage": {
+    "title": "Súťaž je dočasne pozastavená",
+    "description": "Súťaž je dočasne pozastavená z technických dôvodov a bude obnovená ihneď ako to bude možné.",
+    "description2": "Zadaj svoj email e hneď ako bude súťaž spustená budeme ťa kontaktovať.",
+    "emailSubscribedTitle": "Super! Máme tvoj email.",
+    "emailSubscribedDescription": "Hneď ako bude súťaž spustená budeme ťa kontaktovať.",
+    "form": {
+      "email": "Email",
+      "submit": "Odoslať",
+      "errors": {
+        "emailFormat": "Nesprávny formát emailu"
+      }
+    }
   }
 }
