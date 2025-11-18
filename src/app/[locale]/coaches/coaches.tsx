@@ -13,7 +13,7 @@ import { Loader2 } from "lucide-react";
 import { redirect } from "next/navigation";
 import { routes } from "@/constants/routes";
 
-const VOTING_END_DATE = new Date("2025-07-22T23:59:00");
+const VOTING_END_DATE = new Date("2026-02-28T23:59:00");
 const now = new Date();
 const votingEnded = now > VOTING_END_DATE;
 
@@ -24,7 +24,12 @@ type CoachesProps = {
   totalCount: number;
 };
 
-export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }: CoachesProps) => {
+export const Coaches = ({
+  initialCoachList,
+  pageSize,
+  initialPage,
+  totalCount,
+}: CoachesProps) => {
   const t = useTranslations("coachListPage");
   const [isVotingDialogOpen, setIsVotingDialogOpen] = useState(false);
   const [selectedCoach, setSelectedCoach] = useState<CoachProfile | null>(null);
@@ -48,7 +53,11 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }:
     setIsLoading(true);
     const nextPage = currentPage + 1;
     try {
-      const { data: response, error } = await fetchCoaches(pageSize, nextPage, debouncedSearch);
+      const { data: response, error } = await fetchCoaches(
+        pageSize,
+        nextPage,
+        debouncedSearch
+      );
       if (error) throw new Error(error);
       if (!response) throw new Error("No response from server");
 
@@ -90,7 +99,11 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }:
     const fetchSearchResults = async () => {
       setIsLoading(true);
       try {
-        const { data: response, error } = await fetchCoaches(pageSize, 1, debouncedSearch);
+        const { data: response, error } = await fetchCoaches(
+          pageSize,
+          1,
+          debouncedSearch
+        );
         if (error) throw new Error(error);
         if (!response) throw new Error("No response from server");
 
@@ -114,7 +127,12 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }:
 
   return (
     <>
-      <SearchBar placeholder={t("searchbar.placeholder")} className="mb-10" onSearch={setSearchQuery} isLoading={isLoading} />
+      <SearchBar
+        placeholder={t("searchbar.placeholder")}
+        className="mb-10"
+        onSearch={setSearchQuery}
+        isLoading={isLoading}
+      />
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
         {isLoading && !coachList.length ? (
           <div className="col-span-full flex justify-center items-center min-h-[200px]">
@@ -130,16 +148,27 @@ export const Coaches = ({ initialCoachList, pageSize, initialPage, totalCount }:
             />
           ))
         ) : (
-          <h1 className="col-span-full text-center">{t("coachList.noCoachesFound")}</h1>
+          <h1 className="col-span-full text-center">
+            {t("coachList.noCoachesFound")}
+          </h1>
         )}
         {selectedCoach && (
-          <VotingDialog open={isVotingDialogOpen} onOpenChange={setIsVotingDialogOpen} coachProfile={selectedCoach} />
+          <VotingDialog
+            open={isVotingDialogOpen}
+            onOpenChange={setIsVotingDialogOpen}
+            coachProfile={selectedCoach}
+          />
         )}
       </section>
 
       <div className="mt-10 flex flex-col items-center gap-4">
         {hasMore && (
-          <Button onClick={loadMore} disabled={isLoading} className="" variant="outline">
+          <Button
+            onClick={loadMore}
+            disabled={isLoading}
+            className=""
+            variant="outline"
+          >
             {isLoading ? t("pagination.loading") : t("pagination.loadMore")}
           </Button>
         )}
