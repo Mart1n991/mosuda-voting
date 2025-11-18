@@ -59,8 +59,10 @@
     "votes": "{count, plural, one {# hlas} few {# hlasy} other {# hlasů}}",
     "coachCard": {
       "numberOfVotes": "Počet hlasů",
+      "actualPlacement": "Aktuální umístění",
       "voteButton": "Hlasuj",
-      "moreInfoButton": "Více informací"
+      "moreInfoButton": "Více informací",
+      "place": "{place}. místo"
     },
     "coachList": {
       "noCoachesFound": "Žádní trenéři nenalezeni",

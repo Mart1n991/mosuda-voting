@@ -4,7 +4,7 @@ import { CoachCard } from "@/components/CoachCard";
 import { VotingDialog } from "@/components/VotingDialog";
 import { CoachProfile } from "@/types/CoachProfile";
 import { useTranslations } from "next-intl";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { fetchCoaches } from "./actions";
 import { SearchBar } from "@/components/Searchbar";
@@ -12,6 +12,7 @@ import { useDebounce } from "@/hooks/useDebounce";
 import { Loader2 } from "lucide-react";
 import { redirect } from "next/navigation";
 import { routes } from "@/constants/routes";
+import { getCoachPlacements } from "@/utils/getCoachPlacement";
 
 const VOTING_END_DATE = new Date("2026-02-28T23:59:00");
 const now = new Date();
@@ -125,6 +126,8 @@ export const Coaches = ({
     redirect(routes.votingEnded);
   }
 
+  const placements = useMemo(() => getCoachPlacements(coachList), [coachList]);
+
   return (
     <>
       <SearchBar
@@ -145,6 +148,7 @@ export const Coaches = ({
               coachProfile={coachProfile}
               isVotingDialogOpen={isVotingDialogOpen}
               setIsVotingDialogOpen={() => handleOpenVotingDialog(coachProfile)}
+              place={placements[coachProfile.id]}
             />
           ))
         ) : (
