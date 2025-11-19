@@ -219,7 +219,113 @@
     }
   },
   "increaseChancePage": {
-    "title": "Zvýš svoji <section>šanci na výhru</section>",
-    "subtitle": "Připravili jsme pro tebe seznam kroků, které ti pomohou získat \n více hlasů v soutěži o TOP trenéra."
+    "title": "Zvýš si <section>šanci na výhru</section>",
+    "subtitle": "Připravili jsme pro tebe seznam kroků, které ti pomohou získat \n více hlasů v soutěži o TOP trenéra.",
+    "step1": {
+      "title": "Aplikace Mosuda",
+      "subSteps": {
+        "first": "Stáhni si aplikaci Mosuda",
+        "second": "Zaregistruj se",
+        "third": "Zvol si profesionální a zapamatovatelné jméno"
+      }
+    },
+    "step2": {
+      "title": "Pečlivě vyplněný profil",
+      "subSteps": {
+        "first": "Vyplň svůj profil poutavě, autenticky, motivačně a ukaž svou jedinečnost",
+        "second": "Video zvyšuje důvěryhodnost profilu a šance na získání hlasů",
+        "third": "Doplň i lokalitu, kde působíš",
+        "fourth": "Doplň všechna důležitá data v profilu"
+      },
+      "badges": {
+        "prax": "praxe",
+        "specializations": "specializace",
+        "certifications": "certifikace",
+        "clients": "výsledky klientů",
+        "trainingStyle": "tréninkový styl",
+        "missonOrPhilosophy": "mise / filozofie",
+        "videoOfCoach": "Video o tobě",
+        "videoTrainingClients": "Video jak trénuješ klienty"
+      }
+    },
+    "step3": {
+      "title": "Kvalitní profilová fotka",
+      "subSteps": {
+        "first": "Sportovní oblečení působí důvěryhodně",
+        "second": "Příjemný úsměv zvyšuje šance na podporu"
+      },
+      "badges": {
+        "professional": "profesionální",
+        "sharp": "ostrá",
+        "light": "dobře osvětlená"
+      }
+    },
+    "step4": {
+      "title": "Získávání hlasů",
+      "subSteps": {
+        "first": {
+          "badge": "Oslov své nejbližší",
+          "one": "Pošli osobní zprávy kamarádům, rodině, kolegům a klientům",
+          "two": "Přidej přímý odkaz na hlasování",
+          "three": "Požádej je, aby odkaz šířili dál"
+        },
+        "second": {
+          "badge": "Sociální sítě",
+          "one": "Natoč video, kde představíš soutěž a poprosíš o podporu",
+          "two": "Přidej ho na Instagram, Facebook, TikTok jako Reels",
+          "three": {
+            "title": "Použij CTA - výzvu k akci napr.",
+            "badgeOne": "Hlasuj za mě tady",
+            "badgeTwo": "Každý hlas se počítá"
+          }
+        },
+        "third": {
+          "badge": "Zapoj komunitu",
+          "one": "Tvoji klienti",
+          "two": "Oslov členy fitness center, kde působíš",
+          "three": "Popros gym, jestli může dát plakát nebo QR kód na hlasování"
+        },
+        "fourth": {
+          "badge": "Spolupracuj s dalšími tvůrci",
+          "one": "Oslov mikroinfluencery a trenéry, které znáš",
+          "two": "Požádej je, aby sdíleli tvůj hlasovací link. Mysli na reciprocitu - ty jim pomůžeš jindy"
+        }
+      }
+    },
+    "step5": {
+      "title": "Pravidelnost",
+      "subSteps": {
+        "first": "Vytvoř 3 až 5 příspěvků během trvání soutěže",
+        "second": "Dělej pravidelné stories s připomínkami",
+        "third": "Sdílej pokroky a výsledky svých klientů"
+      }
+    },
+    "step6": {
+      "title": "Průběžná komunikace",
+      "badge": "Informuj své sledující",
+      "subSteps": {
+        "first": "Pravidelně informuj své sledující o průběžném stavu",
+        "second": "Poděkuj za každý milník (100, 200 hlasů ...)"
+      }
+    },
+    "step7": {
+      "title": "Před koncem soutěže",
+      "badge": "Poslední 2 dny rozhodují!",
+      "subSteps": {
+        "first": "Krátký livestream",
+        "second": "Finální velké video s výzvou",
+        "third": "Připomínky ve stories",
+        "fourth": "Osobní zprávy lidem, kteří ještě nehlasovali"
+      }
+    },
+    "step8": {
+      "title": "Po ukončení soutěže",
+      "badge": "Bez ohledu na výsledek",
+      "subSteps": {
+        "first": "Poděkuj všem",
+        "second": "Udělej krátké motivační shrnutí",
+        "third": "Získej nové klienty – konec soutěže bývá perfektní virální moment"
+      }
+    }
   }
 }

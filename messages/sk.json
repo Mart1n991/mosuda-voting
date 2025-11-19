@@ -223,7 +223,7 @@
     "step1": {
       "title": "Aplikácia Mosuda",
       "subSteps": {
-        "first": "Stiahni si aplikáciu Mosuda z App Store alebo Google Play",
+        "first": "Stiahni si aplikáciu Mosuda",
         "second": "Zaregistruj sa",
         "third": "Zvoľ si profesionálne a zapamätateľné meno"
       }
@@ -231,7 +231,7 @@
     "step2": {
       "title": "Starostlivo vyplnený profil",
       "subSteps": {
-        "first": "Vyplň svoj profil pútavo, ktorý je autentický, motivačný a ukazuje tvoju jedinečnosť",
+        "first": "Vyplň svoj profil pútavo, mal by byť autentický, motivačný a ukazovať tvoju jedinečnosť",
         "second": "Video zvyšuje dôveryhodnosť profilu a šance na získanie hlasov",
         "third": "Doplň aj svoju lokalitu kde pôsobíš",
         "fourth": "Doplň všetky dôležité údaje v profile"
@@ -263,7 +263,7 @@
       "title": "Získavanie hlasov",
       "subSteps": {
         "first": {
-          "badge": "Aktivuj svojich najbližších",
+          "badge": "Oslov tvojich najbližších",
           "one": "Pošli osobné správy kamarátom, rodine, kolegom a klientom",
           "two": "Pridaj priamy odkaz na hlasovanie",
           "three": "Požiadaj ich, aby odkaz šírili ďalej"
@@ -273,7 +273,7 @@
           "one": "Natoč video, kde predstavíš súťaž a poprosíš o podporu",
           "two": "Pridaj ho na Instagram, Facebook, TikTok ako Reels",
           "three": {
-            "title": "Použi CTA - výzvu k akcii",
+            "title": "Použi CTA - výzvu k akcii napr.",
             "badgeOne": "Hlasuj za mňa tu",
             "badgeTwo": "Každý hlas sa počíta"
           }
