@@ -1,12 +1,12 @@
 import { Navbar } from "@/components/Navbar";
-import { useTranslations } from "next-intl";
 import React from "react";
 import { stepList } from "./stepsList";
 import IncreaseChanceCard from "@/components/IncreaseChanceCard/IncreaseChanceCard";
 import { cn } from "@/lib/utils";
+import { getTranslations } from "next-intl/server";
 
-export default function IncreaseChancePage() {
-  const t = useTranslations("increaseChancePage");
+export default async function IncreaseChancePage() {
+  const t = await getTranslations("increaseChancePage");
 
   return (
     <>
