@@ -12,7 +12,8 @@
     "coach": "Jsi trenér?",
     "closeMenu": "Zavřít menu",
     "competitors": "Hlasuj",
-    "partners": "Partneři"
+    "partners": "Partneři",
+    "increaseChance": "Zvýš svoji šanci"
   },
   "homePage": {
     "heading": "Staň se TOP trenérem \n <region>Slovenska a Česka</region>",
@@ -216,5 +217,9 @@
         "emailFormat": "Neplatný formát e-mailu"
       }
     }
+  },
+  "increaseChancePage": {
+    "title": "Zvýš svoji <section>šanci na výhru</section>",
+    "subtitle": "Připravili jsme pro tebe seznam kroků, které ti pomohou získat \n více hlasů v soutěži o TOP trenéra."
   }
 }

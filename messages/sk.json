@@ -12,7 +12,8 @@
     "coach": "Si tréner?",
     "closeMenu": "Zavrieť menu",
     "competitors": "Hlasuj",
-    "partners": "Partneri"
+    "partners": "Partneri",
+    "increaseChance": "Zvýš svoju šancu"
   },
   "homePage": {
     "heading": "Staň sa TOP trénerom \n <region>Slovenska a Česka</region>",
@@ -213,6 +214,115 @@
       "submit": "Odoslať",
       "errors": {
         "emailFormat": "Nesprávny formát emailu"
+      }
+    }
+  },
+  "increaseChancePage": {
+    "title": "Zvýš svoju <section>šancu na výhru</section>",
+    "subtitle": "Pripravili sme pre teba zoznam krokov, ktoré ti pomôžu získať \n viac hlasov v súťaži o TOP trénera.",
+    "step1": {
+      "title": "Vytvorenie profilu v \n aplikácii Mosuda",
+      "subSteps": {
+        "first": "Stiahni si aplikáciu Mosuda z App Store alebo Google Play",
+        "second": "Zaregistruj sa",
+        "third": "Zvoľ si profesionálne a zapamätateľné meno"
+      }
+    },
+    "step2": {
+      "title": "Starostlivo vyplnený profil",
+      "subSteps": {
+        "first": "Doplň všetky dôležité údaje v profile",
+        "second": "Vyplň svoj profil pútavo, ktorý je autentický, motivačný a ukazuje tvoju jedinečnosť",
+        "third": "Video zvyšuje dôveryhodnosť profilu a šance na získanie hlasov",
+        "fourth": "Doplň aj svoju lokalitu kde pôsobíš"
+      },
+      "badges": {
+        "prax": "prax",
+        "specializations": "špecializácie",
+        "certifications": "certifikácie",
+        "clients": "výsledky klientov",
+        "trainingStyle": "tréningový štýl",
+        "missonOrPhilosophy": "misia / filozofia",
+        "videoOfCoach": "Video o tebe",
+        "videoTrainingClients": "Video ako trénuješ klientov"
+      }
+    },
+    "step3": {
+      "title": "Pridaj kvalitnú profilovú fotku",
+      "subSteps": {
+        "first": "Športové oblečenie pôsobí dôveryhodne",
+        "second": "Príjemný úsmev zvyšuje šance na podporu"
+      },
+      "badges": {
+        "professional": "profesionálna",
+        "sharp": "ostrá",
+        "light": "dobre osvetlená"
+      }
+    },
+    "step4": {
+      "title": "Získavanie hlasov",
+      "subSteps": {
+        "first": {
+          "badge": "Aktivuj svojich najbližších",
+          "one": "Pošli osobné správy kamarátom, rodine, kolegom a klientom",
+          "two": "Pridaj priamy odkaz na hlasovanie",
+          "three": "Požiadaj ich, aby odkaz šírili ďalej"
+        },
+        "second": {
+          "badge": "Sociálne siete",
+          "one": "Natoč video, kde predstavíš súťaž a poprosíš o podporu",
+          "two": "Pridaj ho na Instagram, Facebook, TikTok ako Reels",
+          "three": {
+            "title": "Použi CTA - výzvu k akcii",
+            "badgeOne": "Hlasuj za mňa tu",
+            "badgeTwo": "Každý hlas sa počíta"
+          }
+        },
+        "third": {
+          "badge": "Zapoj komunitu",
+          "one": "Tvoji klienti",
+          "two": "Oslov členov fitness centier, kde pôsobíš",
+          "three": "Popros gym, či môže dať plagát alebo QR kód na hlasovanie"
+        },
+        "fourth": {
+          "badge": "Spolupracuj s ďalšími tvorcami",
+          "one": "Oslov mikroinfluencerov a trénerov, ktorých poznáš",
+          "two": "Požiadaj ich, aby zdieľali tvoj hlasovací link. Mysli na reciprocitu - ty pomôžeš im inokedy"
+        }
+      }
+    },
+    "step5": {
+      "title": "Dodržuj pravidelnosť",
+      "subSteps": {
+        "first": "Vytvor 3 až 5 príspevkov počas trvania súťaže",
+        "second": "Rob pravidelné stories s pripomienkami",
+        "third": "Zdieľaj pokroky a výsledky svojich klientov"
+      }
+    },
+    "step6": {
+      "title": "Priebežná komunikácia",
+      "subSteps": {
+        "first": "Pravidelne aktualizuj svojich sledovateľov o priebežnom stave",
+        "second": "Poďakuj za každý míľnik (100, 200 hlasov ...)"
+      }
+    },
+    "step7": {
+      "title": "Finálny nápor pred koncom súťaže",
+      "badge": "Posledné 2 dni sú rozhodujúce!",
+      "subSteps": {
+        "first": "Krátky livestream",
+        "second": "Finálne veľké video s výzvou",
+        "third": "Pripomienky v stories",
+        "fourth": "Osobné správy ľuďom, ktorí ešte nehlasovali"
+      }
+    },
+    "step8": {
+      "title": "Po ukončení súťaže",
+      "badge": "Bez ohľadu na výsledok",
+      "subSteps": {
+        "first": "Poďakuj všetkým",
+        "second": "Urob krátke motivačné zhrnutie",
+        "third": "Získaj nových klientov – koniec súťaže býva perfektne virálny moment"
       }
     }
   }
