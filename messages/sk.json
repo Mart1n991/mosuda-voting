@@ -231,10 +231,10 @@
     "step2": {
       "title": "Starostlivo vyplnený profil",
       "subSteps": {
-        "first": "Doplň všetky dôležité údaje v profile",
-        "second": "Vyplň svoj profil pútavo, ktorý je autentický, motivačný a ukazuje tvoju jedinečnosť",
-        "third": "Video zvyšuje dôveryhodnosť profilu a šance na získanie hlasov",
-        "fourth": "Doplň aj svoju lokalitu kde pôsobíš"
+        "first": "Vyplň svoj profil pútavo, ktorý je autentický, motivačný a ukazuje tvoju jedinečnosť",
+        "second": "Video zvyšuje dôveryhodnosť profilu a šance na získanie hlasov",
+        "third": "Doplň aj svoju lokalitu kde pôsobíš",
+        "fourth": "Doplň všetky dôležité údaje v profile"
       },
       "badges": {
         "prax": "prax",

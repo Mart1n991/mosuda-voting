@@ -105,7 +105,7 @@ export default function IncreaseChanceCard({
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-mosuda-green-light text-lg font-semibold text-black">
             {stepItem.step}
           </div>
-          <p className="whitespace-pre-line text-md font-semibold text-zinc-900">
+          <p className="whitespace-pre-line text-lg font-semibold text-zinc-900">
             {t(stepItem.titleKey)}
           </p>
         </div>
