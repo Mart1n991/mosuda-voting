@@ -221,7 +221,7 @@
     "title": "Zvýš svoju <section>šancu na výhru</section>",
     "subtitle": "Pripravili sme pre teba zoznam krokov, ktoré ti pomôžu získať \n viac hlasov v súťaži o TOP trénera.",
     "step1": {
-      "title": "Vytvorenie profilu v \n aplikácii Mosuda",
+      "title": "Aplikácia Mosuda",
       "subSteps": {
         "first": "Stiahni si aplikáciu Mosuda z App Store alebo Google Play",
         "second": "Zaregistruj sa",
@@ -248,7 +248,7 @@
       }
     },
     "step3": {
-      "title": "Pridaj kvalitnú profilovú fotku",
+      "title": "Kvalitná profilová fotka",
       "subSteps": {
         "first": "Športové oblečenie pôsobí dôveryhodne",
         "second": "Príjemný úsmev zvyšuje šance na podporu"
@@ -292,7 +292,7 @@
       }
     },
     "step5": {
-      "title": "Dodržuj pravidelnosť",
+      "title": "Pravidelnosť",
       "subSteps": {
         "first": "Vytvor 3 až 5 príspevkov počas trvania súťaže",
         "second": "Rob pravidelné stories s pripomienkami",
@@ -308,7 +308,7 @@
       }
     },
     "step7": {
-      "title": "Finálny nápor pred koncom súťaže",
+      "title": "Pred koncom súťaže",
       "badge": "Posledné 2 dni sú rozhodujúce!",
       "subSteps": {
         "first": "Krátky livestream",
@@ -323,7 +323,7 @@
       "subSteps": {
         "first": "Poďakuj všetkým",
         "second": "Urob krátke motivačné zhrnutie",
-        "third": "Získaj nových klientov – koniec súťaže býva perfektne virálny moment"
+        "third": "Získaj nových klientov – koniec súťaže býva perfektný virálny moment"
       }
     }
   }

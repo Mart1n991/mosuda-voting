@@ -12,7 +12,9 @@ type TranslateFn = (key: string) => string;
 
 function Bullet() {
   return (
-    <div className="mt-1 size-3 justify-center rounded-sm bg-mosuda-green-light"></div>
+    <div>
+      <div className="mt-1 size-3 justify-center rounded-sm bg-mosuda-green-light"></div>
+    </div>
   );
 }
 
@@ -106,16 +108,18 @@ export default function IncreaseChanceCard({
   return (
     <article
       className={cn(
-        "flex h-full flex-col gap-5 rounded-3xl bg-[#39D2C0]/20 p-6 shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1",
+        "flex h-full flex-col gap-5 rounded-3xl bg-[#39D2C0]/20 p-4 md:p-6 shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1",
         classname
       )}
     >
       <header className="flex flex-col gap-3 mb-4">
         <div className="flex items-center gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-mosuda-green-light text-lg font-semibold text-black">
-            {stepItem.step}
+          <div>
+            <div className="flex size-[50px] items-center justify-center rounded-2xl bg-mosuda-green-light text-lg font-semibold text-black">
+              {stepItem.step}
+            </div>
           </div>
-          <p className="whitespace-pre-line text-lg font-semibold text-zinc-900">
+          <p className="whitespace-pre-line text-md md:text-lg font-semibold text-zinc-900">
             {t(stepItem.titleKey)}
           </p>
         </div>
