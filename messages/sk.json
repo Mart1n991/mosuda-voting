@@ -301,8 +301,9 @@
     },
     "step6": {
       "title": "Priebežná komunikácia",
+      "badge": "Informuj svojich sledovateľov",
       "subSteps": {
-        "first": "Pravidelne aktualizuj svojich sledovateľov o priebežnom stave",
+        "first": "Pravidelne informuj svojich sledovateľov o priebežnom stave",
         "second": "Poďakuj za každý míľnik (100, 200 hlasov ...)"
       }
     },

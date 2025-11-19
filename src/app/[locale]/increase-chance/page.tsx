@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import { stepList } from "./stepsList";
 import IncreaseChanceCard from "@/components/IncreaseChanceCard/IncreaseChanceCard";
+import { cn } from "@/lib/utils";
 
 export default function IncreaseChancePage() {
   const t = useTranslations("increaseChancePage");
@@ -21,9 +22,12 @@ export default function IncreaseChancePage() {
           })}
         </h1>
         <p className="whitespace-pre-line text-center pt-2">{t("subtitle")}</p>
-        <div className="grid">
+        <div className="grid grid-cols-3 gap-10 mt-10 mb-20">
           {stepList.map((stepItem) => (
-            <div key={stepItem.id} className="mt-6">
+            <div
+              key={stepItem.id}
+              className={cn("mt-6", stepItem.step === 4 && "col-span-2")}
+            >
               <IncreaseChanceCard stepItem={stepItem} />
             </div>
           ))}

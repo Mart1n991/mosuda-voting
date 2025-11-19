@@ -86,10 +86,7 @@ export const stepList: StepListItem[] = [
       {
         id: 2,
         badgeKey: "step4.subSteps.second.badge",
-        bulletKeys: [
-          "step4.subSteps.second.one",
-          "step4.subSteps.second.two",
-        ],
+        bulletKeys: ["step4.subSteps.second.one", "step4.subSteps.second.two"],
         cta: {
           titleKey: "step4.subSteps.second.three.title",
           badgeKeys: [
@@ -110,10 +107,7 @@ export const stepList: StepListItem[] = [
       {
         id: 4,
         badgeKey: "step4.subSteps.fourth.badge",
-        bulletKeys: [
-          "step4.subSteps.fourth.one",
-          "step4.subSteps.fourth.two",
-        ],
+        bulletKeys: ["step4.subSteps.fourth.one", "step4.subSteps.fourth.two"],
       },
     ],
   },
@@ -131,6 +125,7 @@ export const stepList: StepListItem[] = [
     id: 6,
     step: 6,
     titleKey: "step6.title",
+    badgeKey: "step6.badge",
     subSteps: [
       { id: 1, textKey: "step6.subSteps.first" },
       { id: 2, textKey: "step6.subSteps.second" },
