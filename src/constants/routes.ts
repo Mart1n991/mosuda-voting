@@ -9,4 +9,5 @@ export const routes = {
   mosudaWeb: "https://www.mosuda.sk",
   votingEnded: "/voting-ended",
   maintenance: "/maintenance",
+  increaseChance: "/increase-chance",
 };
