@@ -6,6 +6,7 @@ export type StepListBadge = {
 export type StepListSubStep = {
   id: number;
   textKey?: string;
+  buttons?: boolean;
   badgeKey?: string;
   bulletKeys?: string[];
   cta?: {
@@ -29,7 +30,7 @@ export const stepList: StepListItem[] = [
     step: 1,
     titleKey: "step1.title",
     subSteps: [
-      { id: 1, textKey: "step1.subSteps.first" },
+      { id: 1, textKey: "step1.subSteps.first", buttons: true },
       { id: 2, textKey: "step1.subSteps.second" },
       { id: 3, textKey: "step1.subSteps.third" },
     ],

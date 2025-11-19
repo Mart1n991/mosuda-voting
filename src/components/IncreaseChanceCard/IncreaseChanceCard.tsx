@@ -5,6 +5,8 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { AppStoreButton } from "../AppStoreButton";
+import { GooglePlayButton } from "../GooglePlayButton";
 
 type TranslateFn = (key: string) => string;
 
@@ -23,14 +25,22 @@ function SubstepRow({ subStep, translate }: SubstepRowProps) {
   if (!subStep.textKey) return null;
 
   return (
-    <div className="flex items-start gap-2 rounded-2xl">
-      <div>
-        <Bullet />
+    <>
+      <div className="flex items-start gap-2 rounded-2xl">
+        <div>
+          <Bullet />
+        </div>
+        <p className="whitespace-pre-line text-sm">
+          {translate(subStep.textKey)}
+        </p>
       </div>
-      <p className="whitespace-pre-line text-sm">
-        {translate(subStep.textKey)}
-      </p>
-    </div>
+      {subStep.buttons && (
+        <div className="flex gap-4 ml-[17px]">
+          <AppStoreButton href="https://apps.apple.com/sk/app/mosuda/id1662260317?l=sk" />
+          <GooglePlayButton href="https://play.google.com/store/apps/details?id=com.no_creativity_coach_of_people" />
+        </div>
+      )}
+    </>
   );
 }
 
