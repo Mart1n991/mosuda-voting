@@ -18,7 +18,7 @@
   "homePage": {
     "heading": "Staň sa TOP trénerom \n <region>Slovenska a Česka</region>",
     "description": "Zapoj sa do súťaže o najobľúbenejšieho trénera alebo trénerku a získaj nielen prestíž, ale aj odmeny ktoré tvoju kariéru posunú na nový level.",
-    "date": "Súťaž trvá od 22.04.2025 do 22.07.2025",
+    "date": "Súťaž trvá od 22.11.2025 do 22.02.2026",
     "firstPlace": "1. miesto",
     "secondPlace": "2. miesto",
     "thirdPlace": "3. miesto",
@@ -128,13 +128,13 @@
   "voter": {
     "heading": "Hlasuj za TOP trénera \n <region>Slovenska a Česka</region>",
     "description": "Chceš získať nadupané ceny od našich sponzorov? Pridaj sa do súťaže o Top trénera a zahlasuj za svojho favorita alebo favoritku! Je to jednoduché, stačí len kliknúť na tlačidlo hlasovať, vybrať si trénera alebo trénerku a dať mu alebo jej hlas. Akonáhle zahlasuješ, automaticky si zaradený/á do súťaže o skvelé ceny.",
-    "date": "Súťaž trvá od 22.04.2025 do 22.07.2025",
+    "date": "Súťaž trvá od 22.11.2025 do 22.02.2026",
     "howToVote": "Ako hlasovať?",
     "howToVoteDescription": "Stačí, že klikneš na tlačidlo “Hlasovať”, ktoré vidíš vyššie. Dostaneš sa stránku, kde nájdeš zoznam trénerov, za ktorých môžeš hlasovať. Vyber si favorita alebo favoritku, vyplň pár údajov, potvrď svoj hlas cez email a hotovo, máš zahlasované! Automaticky si zaradený/á do súťaže o skvelé ceny.",
     "whatIcanWin": "Čo môžem vyhrať?",
     "whatIcanWinDescription": "Celkovo máme 5 hlavných cien, z ktorých môžeš ktorúkoľvek vyhrať. Losovanie víťazov bude náhodné a víťazi budú kontaktovaní emailom. \n\n Prvé miesto vyhráva víkendový pobyt pre dve osoby v hoteli Hills v krásnych Tatrách. Druhé miesto od nás získa elektrickú kolobežku. Tretie miesto vyhráva doplnky výživy od spoločností Divique a Enspire na mesiac úplne zadarmo. Štvrté miesto vyhráva nákupnú poukážku v hodnote 100 EUR na nákup v obchode Topánkovo a piate miesto vyhráva nákupnú poukážku v hodnote 100 EUR na nákup v obchode Saxana.",
     "howAndWhenIfIWin": "Kedy a ako sa dozviem, či som vyhral/a?",
-    "howAndWhenIfIWinDescription": "Súťaž končí 22. 07. 2025. Ak sa ti podarí umiestniť na jednom z 5 miest, automaticky od nás vyhrávaš jednu z mega cien. Víťazov budeme kontaktovať hneď po skončení súťaže, najneskôr do 14 dní od jej skončenia.",
+    "howAndWhenIfIWinDescription": "Súťaž končí 22. 02. 2026. Ak sa ti podarí umiestniť na jednom z 5 miest, automaticky od nás vyhrávaš jednu z mega cien. Víťazov budeme kontaktovať hneď po skončení súťaže, najneskôr do 14 dní od jej skončenia.",
     "vote": "Hlasovať",
     "prizes": {
       "firstPlace": {
@@ -186,7 +186,7 @@
   },
   "termsAndConditions": {
     "title": "Všeobecné podmienky hlasovania v súťaži ”Tréner roka” (ďalej ako “VPHS”)",
-    "list1": "Spoločnosť Mosuda s.r.o., sídlo: Kruhová 416/65, Ľubica 059 71, IČO: 55 605 044, zapísaná v Obchodnom registri Okresného súdu Prešov, Oddiel: Sro, vložka č. 46269/P, prevádzkovateľ portálu <web>www.mosuda.sk</web> a aplikácie Mosuda (ďalej len „usporiadateľ“) organizuje v termíne od 22.04.2025 do 22.07.2025 súťaž s názvom <heading>Top tréner</heading> (ďalej ako „Súťaž“). Podmienky zapojenia sa do tejto Súťaže sú dostupné tu. VPHS upravujú oprávnenie verejnosti hlasovať v súťaži, spôsob hlasovania v tejto Súťaži, vyhodnotenie hlasovania a výber výhercov vecných cien spomedzi hlasujúcich.",
+    "list1": "Spoločnosť Mosuda s.r.o., sídlo: Kruhová 416/65, Ľubica 059 71, IČO: 55 605 044, zapísaná v Obchodnom registri Okresného súdu Prešov, Oddiel: Sro, vložka č. 46269/P, prevádzkovateľ portálu <web>www.mosuda.sk</web> a aplikácie Mosuda (ďalej len „usporiadateľ“) organizuje v termíne od 22.11.2025 do 22.02.2026 súťaž s názvom <heading>Top tréner</heading> (ďalej ako „Súťaž“). Podmienky zapojenia sa do tejto Súťaže sú dostupné tu. VPHS upravujú oprávnenie verejnosti hlasovať v súťaži, spôsob hlasovania v tejto Súťaži, vyhodnotenie hlasovania a výber výhercov vecných cien spomedzi hlasujúcich.",
     "list2": "Hlasujúcim môže byť iba fyzická osoba staršia ako 18 rokov, plne spôsobilá k právnym úkonom. Fyzická osoba mladšia ako 18 rokov alebo osoba, ktorej bola obmedzená spôsobilosť k právnym úkonom či bola spôsobilosti k právnym úkonom zbavená, môže byť hlasujúcim iba v zastúpení svojho zákonného zástupcu alebo iného oprávneného zástupcu. Hlasujúci musí mať adresu pre doručovanie na území Slovenskej republiky alebo Českej republiky a v čase konania hlasovania do súťaže musí splniť podmienky pre hlasovanie v Súťaži (ďalej ako „Hlasujúci”). ",
     "list3": "Z hlasovania v Súťaži sú vylúčení: \n<section>- účastníci Súťaže</section>\n V prípade, že sa výhercom vecnej ceny spomedzi Hlasujúcich stane takáto osoba, výhra sa takému výhercovi neodovzdá. Osoby nespĺňajúce podmienky hlasovania v Súťaži alebo konajúce v rozpore s VPHS, nebudú zaradené do súťaže Hlasujúcich v Súťaži o vecné ceny (ďalej ako “Hlasovacia súťaž”). Pokiaľ sa ukáže, že takáto osoba sa aj napriek uvedenému stala výhercom, napr. v dôsledku nepravdivých informácií, ktoré poskytla, nemá nárok na výhru a výhra sa neodovzdá. Ak je výhercom Hlasovacej súťaže fyzická osoba mladšia ako 18 rokov, po oboznámení s výhrou na požiadanie poskytne usporiadateľovi písomný súhlas svojho zákonného zástupcu s účasťou v súťažiach, v opačnom prípade stráca nárok na výhru.",
     "list4": "Do hlasovania v Súťaži sa zapojí každý, kto počas jej trvania vyplní hlasovací formulár na webe usporiadateľa <web>www.mosuda.sk</web> tým, že aktívne udelí hlas trénerovi, ktorý je účastníkom Súťaže, nechá nám svoje meno, priezvisko a e-mail, pričom Hlasujúci zároveň bezvýhradne súhlasí aj s VPHS a zaväzuje sa ich v plnom rozsahu dodržiavať. Účastník sa môže do hlasovania v Súťaži zapojiť len jedenkrát. ",
