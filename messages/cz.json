@@ -108,7 +108,9 @@
     "count_one": "{count} hlas",
     "count_two": "{count} hlasy",
     "count_other": "{count} hlasů",
-    "votes": "{count, selectordinal, one {# hlas} two {# hlasy} other {# hlasů}}"
+    "votes": "{count, selectordinal, one {# hlas} two {# hlasy} other {# hlasů}}",
+    "actualPlacement": "Aktuální umístění",
+    "place": "{place}. místo"
   },
   "common": {
     "errors": {

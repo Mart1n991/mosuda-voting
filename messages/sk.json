@@ -107,7 +107,9 @@
     "count_one": "{count} hlas",
     "count_two": "{count} hlasy",
     "count_other": "{count} hlasov",
-    "votes": "{count, selectordinal, one {# hlas} two {# hlasy} other {# hlasov}}"
+    "votes": "{count, selectordinal, one {# hlas} two {# hlasy} other {# hlasov}}",
+    "actualPlacement": "Aktuálne umiestnenie",
+    "place": "{place}. miesto"
   },
   "common": {
     "errors": {

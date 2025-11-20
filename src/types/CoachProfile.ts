@@ -15,4 +15,5 @@ export interface CoachProfile {
   headline: string;
   participatedInCompetition: boolean;
   voteCount: number;
+  ranking: number;
 }

@@ -24,7 +24,10 @@ export const CoachDetail = ({ coachDetail }: CoachDetailProps) => {
         <div className="h-[350px] sm:h-[500px] w-full md:w-auto md:flex-1 row-span-2 relative">
           <Image
             src={
-              coachDetail.imageUrl === "" || coachDetail.imageUrl === "undefined" ? "/images/icon_man.png" : coachDetail.imageUrl
+              coachDetail.imageUrl === "" ||
+              coachDetail.imageUrl === "undefined"
+                ? "/images/icon_man.png"
+                : coachDetail.imageUrl
             }
             alt={coachDetail.name}
             fill
@@ -33,7 +36,13 @@ export const CoachDetail = ({ coachDetail }: CoachDetailProps) => {
         </div>
         <div className="w-full md:w-auto md:flex-1 px-4 md:px-0">
           {/* Votes */}
-          <Badge size="lg">{t("votes", { count: coachDetail.voteCount })}</Badge>
+          {/* <Badge size="lg">{t("votes", { count: coachDetail.voteCount })}</Badge> */}
+          <div className="flex items-center gap-2">
+            <p className="text-xs">{t("actualPlacement")}</p>
+            <Badge className="bg-amber-400">
+              {t("place", { place: coachDetail.ranking })}
+            </Badge>
+          </div>
 
           {/* Name */}
           <div className="flex flex-col gap-4 mt-4 mb-10">
@@ -49,9 +58,15 @@ export const CoachDetail = ({ coachDetail }: CoachDetailProps) => {
         {/* Description */}
         {coachDetail.description.length > 0 && (
           <div className="flex-1 mb-10">
-            <p className="text-sm">{truncateText(coachDetail.description, showMore ? 100000 : 300)}</p>
+            <p className="text-sm">
+              {truncateText(coachDetail.description, showMore ? 100000 : 300)}
+            </p>
             {coachDetail.description.length > 300 && (
-              <Button variant="link" className="text-sm pl-0 " onClick={() => setShowMore(!showMore)}>
+              <Button
+                variant="link"
+                className="text-sm pl-0 "
+                onClick={() => setShowMore(!showMore)}
+              >
                 {showMore ? t("showLess") : t("showMore")}
               </Button>
             )}
