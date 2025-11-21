@@ -108,7 +108,7 @@ export default function IncreaseChanceCard({
   return (
     <article
       className={cn(
-        "flex h-full flex-col gap-5 rounded-3xl bg-[#39D2C0]/20 p-4 md:p-6 shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1",
+        "flex h-full flex-col gap-5 rounded-3xl bg-gray-200 p-4 md:p-6 shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1",
         classname
       )}
     >
