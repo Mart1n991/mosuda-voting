@@ -12,12 +12,13 @@
     "coach": "Jsi trenér?",
     "closeMenu": "Zavřít menu",
     "competitors": "Hlasuj",
-    "partners": "Partneři"
+    "partners": "Partneři",
+    "increaseChance": "Zvýš svoji šanci"
   },
   "homePage": {
     "heading": "Staň se TOP trenérem \n <region>Slovenska a Česka</region>",
     "description": "Zapoj se do soutěže o nejoblíbenějšího trenéra nebo trenérku a získej nejen prestiž, ale i odměny, které posunou tvou kariéru na vyšší úroveň.",
-    "date": "Soutěž probíhá od 22.04.2025 do 22.07.2025",
+    "date": "Soutěž probíhá od 22.11.2025 do 22.02.2026",
     "firstPlace": "1. místo",
     "secondPlace": "2. místo",
     "thirdPlace": "3. místo",
@@ -59,8 +60,10 @@
     "votes": "{count, plural, one {# hlas} few {# hlasy} other {# hlasů}}",
     "coachCard": {
       "numberOfVotes": "Počet hlasů",
+      "actualPlacement": "Aktuální umístění",
       "voteButton": "Hlasuj",
-      "moreInfoButton": "Více informací"
+      "moreInfoButton": "Více informací",
+      "place": "{place}. místo"
     },
     "coachList": {
       "noCoachesFound": "Žádní trenéři nenalezeni",
@@ -105,7 +108,9 @@
     "count_one": "{count} hlas",
     "count_two": "{count} hlasy",
     "count_other": "{count} hlasů",
-    "votes": "{count, selectordinal, one {# hlas} two {# hlasy} other {# hlasů}}"
+    "votes": "{count, selectordinal, one {# hlas} two {# hlasy} other {# hlasů}}",
+    "actualPlacement": "Aktuální umístění",
+    "place": "{place}. místo"
   },
   "common": {
     "errors": {
@@ -124,13 +129,13 @@
   "voter": {
     "heading": "Hlasuj za TOP trenéra \n <region>Slovenska a Česka</region>",
     "description": "Chceš získat parádní ceny od našich sponzorů? Přidej se do soutěže o Top trenéra a hlasuj pro svého favorita nebo favoritku! Je to jednoduché – stačí kliknout na tlačítko „Hlasovat“, vybrat si trenéra nebo trenérku a dát mu nebo jí svůj hlas. Jakmile zahlasuješ, automaticky se zapojíš do soutěže o skvělé ceny.",
-    "date": "Soutěž probíhá od 22.04.2025 do 22.07.2025",
+    "date": "Soutěž probíhá od 22.11.2025 do 22.02.2026",
     "howToVote": "Jak hlasovat?",
     "howToVoteDescription": "Stačí kliknout na tlačítko „Hlasovat“, které vidíš výše. Dostaneš se na stránku, kde najdeš seznam trenérů, za které můžeš hlasovat. Vyber si svého favorita nebo favoritku, vyplň pár údajů, potvrď svůj hlas přes e-mail a je to – máš odhlasováno! Automaticky jsi zařazen/a do soutěže o skvělé ceny.",
     "whatIcanWin": "Co mohu vyhrát?",
     "whatIcanWinDescription": "Celkem máme 5 hlavních cen, které můžeš vyhrát. Losování výherců proběhne náhodně a výherci budou kontaktováni e-mailem. \n\n První místo vyhrává víkendový pobyt pro dvě osoby v hotelu Hills v krásných Tatrách. Druhé místo od nás získá elektrickou koloběžku. Třetí místo vyhrává doplňky stravy od společností Divique a Enspire na měsíc zcela zdarma. Čtvrté místo vyhrává dárkový poukaz v hodnotě 100 EUR na nákup v obchodě Topánkovo a páté místo vyhrává dárkový poukaz v hodnotě 100 EUR na nákup v obchodě Saxana.",
     "howAndWhenIfIWin": "Kdy a jak se dozvím, že jsem vyhrál/a?",
-    "howAndWhenIfIWinDescription": "Soutěž končí 22. 07. 2025. Pokud se umístíš na jednom z 5 míst, automaticky od nás vyhráváš jednu z hlavních cen. Výherce budeme kontaktovat hned po skončení soutěže, nejpozději do 14 dnů od jejího ukončení.",
+    "howAndWhenIfIWinDescription": "Soutěž končí 22. 02. 2026. Pokud se umístíš na jednom z 5 míst, automaticky od nás vyhráváš jednu z hlavních cen. Výherce budeme kontaktovat hned po skončení soutěže, nejpozději do 14 dnů od jejího ukončení.",
     "vote": "Hlasovat",
     "prizes": {
       "firstPlace": {
@@ -182,7 +187,7 @@
   },
   "termsAndConditions": {
     "title": "Všeobecné podmínky hlasování v soutěži „Trenér roku“ (dále jen „VPHS“)",
-    "list1": "Společnost Mosuda s.r.o., sídlo: Kruhová 416/65, Ľubica 059 71, IČO: 55 605 044, zapsaná v Obchodním rejstříku Okresního soudu Prešov, Oddíl: Sro, vložka č. 46269/P, provozovatel portálu <web>www.mosuda.sk</web> a aplikace Mosuda (dále jen „pořadatel“) organizuje v termínu od 22.04.2025 do 22.07.2025. soutěž s názvem <heading>Top tréner</heading> (dále jen „Soutěž“). Podmínky zapojení do této Soutěže jsou dostupné zde. VPHS upravují oprávnění veřejnosti hlasovat v soutěži, způsob hlasování, vyhodnocení a výběr výherců věcných cen mezi hlasujícími.",
+    "list1": "Společnost Mosuda s.r.o., sídlo: Kruhová 416/65, Ľubica 059 71, IČO: 55 605 044, zapsaná v Obchodním rejstříku Okresního soudu Prešov, Oddíl: Sro, vložka č. 46269/P, provozovatel portálu <web>www.mosuda.sk</web> a aplikace Mosuda (dále jen „pořadatel“) organizuje v termínu od 22.11.2025 do 22.02.2026. soutěž s názvem <heading>Top tréner</heading> (dále jen „Soutěž“). Podmínky zapojení do této Soutěže jsou dostupné zde. VPHS upravují oprávnění veřejnosti hlasovat v soutěži, způsob hlasování, vyhodnocení a výběr výherců věcných cen mezi hlasujícími.",
     "list2": "Hlasujícím může být pouze fyzická osoba starší 18 let, plně způsobilá k právním úkonům. Osoba mladší 18 let nebo osoba, jejíž způsobilost k právním úkonům byla omezena či odebrána, může hlasovat pouze prostřednictvím svého zákonného zástupce nebo jiného oprávněného zástupce. Hlasující musí mít doručovací adresu na území Slovenské nebo České republiky a během trvání hlasování splňovat podmínky účasti v Soutěži.",
     "list3": "Z hlasování v Soutěži jsou vyloučeni: \n<section>- účastníci Soutěže</section>\n Pokud se výhercem věcné ceny stane taková osoba, výhra jí nebude předána. Osoby, které nesplňují podmínky hlasování nebo jednají v rozporu s VPHS, nebudou zařazeny do soutěže o ceny. Pokud se taková osoba přesto stane výhercem (např. na základě nepravdivých údajů), nárok na výhru zaniká. Pokud výhercem bude osoba mladší 18 let, musí po oznámení výhry doložit písemný souhlas zákonného zástupce, jinak o výhru přichází.",
     "list4": "Do hlasování bude zařazen každý, kdo během trvání Soutěže vyplní hlasovací formulář na webu <web>www.mosuda.sk</web>, udělí aktivně hlas soutěžícímu trenérovi, uvede své jméno, příjmení a e-mail, a bezvýhradně souhlasí s VPHS a zavazuje se je dodržovat. Každý účastník může hlasovat pouze jednou.",
@@ -212,6 +217,116 @@
       "submit": "Odeslat",
       "errors": {
         "emailFormat": "Neplatný formát e-mailu"
+      }
+    }
+  },
+  "increaseChancePage": {
+    "title": "Zvýš si <section>šanci na výhru</section>",
+    "subtitle": "Připravili jsme pro tebe seznam kroků, které ti pomohou získat \n více hlasů v soutěži o TOP trenéra.",
+    "step1": {
+      "title": "Aplikace Mosuda",
+      "subSteps": {
+        "first": "Stáhni si aplikaci Mosuda",
+        "second": "Zaregistruj se",
+        "third": "Zvol si profesionální a zapamatovatelné jméno"
+      }
+    },
+    "step2": {
+      "title": "Pečlivě vyplněný profil",
+      "subSteps": {
+        "first": "Vyplň svůj profil poutavě, autenticky, motivačně a ukaž svou jedinečnost",
+        "second": "Video zvyšuje důvěryhodnost profilu a šance na získání hlasů",
+        "third": "Doplň i lokalitu, kde působíš",
+        "fourth": "Doplň všechna důležitá data v profilu"
+      },
+      "badges": {
+        "prax": "praxe",
+        "specializations": "specializace",
+        "certifications": "certifikace",
+        "clients": "výsledky klientů",
+        "trainingStyle": "tréninkový styl",
+        "missonOrPhilosophy": "mise / filozofie",
+        "videoOfCoach": "Video o tobě",
+        "videoTrainingClients": "Video jak trénuješ klienty"
+      }
+    },
+    "step3": {
+      "title": "Kvalitní profilová fotka",
+      "subSteps": {
+        "first": "Sportovní oblečení působí důvěryhodně",
+        "second": "Příjemný úsměv zvyšuje šance na podporu"
+      },
+      "badges": {
+        "professional": "profesionální",
+        "sharp": "ostrá",
+        "light": "dobře osvětlená"
+      }
+    },
+    "step4": {
+      "title": "Získávání hlasů",
+      "subSteps": {
+        "first": {
+          "badge": "Oslov své nejbližší",
+          "one": "Pošli osobní zprávy kamarádům, rodině, kolegům a klientům",
+          "two": "Přidej přímý odkaz na hlasování",
+          "three": "Požádej je, aby odkaz šířili dál"
+        },
+        "second": {
+          "badge": "Sociální sítě",
+          "one": "Natoč video, kde představíš soutěž a poprosíš o podporu",
+          "two": "Přidej ho na Instagram, Facebook, TikTok jako Reels",
+          "three": {
+            "title": "Použij CTA - výzvu k akci napr.",
+            "badgeOne": "Hlasuj za mě tady",
+            "badgeTwo": "Každý hlas se počítá"
+          }
+        },
+        "third": {
+          "badge": "Zapoj komunitu",
+          "one": "Tvoji klienti",
+          "two": "Oslov členy fitness center, kde působíš",
+          "three": "Popros gym, jestli může dát plakát nebo QR kód na hlasování"
+        },
+        "fourth": {
+          "badge": "Spolupracuj s dalšími tvůrci",
+          "one": "Oslov mikroinfluencery a trenéry, které znáš",
+          "two": "Požádej je, aby sdíleli tvůj hlasovací link. Mysli na reciprocitu - ty jim pomůžeš jindy"
+        }
+      }
+    },
+    "step5": {
+      "title": "Pravidelnost",
+      "subSteps": {
+        "first": "Vytvoř 3 až 5 příspěvků během trvání soutěže",
+        "second": "Dělej pravidelné stories s připomínkami",
+        "third": "Sdílej pokroky a výsledky svých klientů"
+      }
+    },
+    "step6": {
+      "title": "Průběžná komunikace",
+      "badge": "Informuj své sledující",
+      "subSteps": {
+        "first": "Pravidelně informuj své sledující o průběžném stavu",
+        "second": "Poděkuj za každý milník (100, 200 hlasů ...)"
+      }
+    },
+    "step7": {
+      "title": "Před koncem soutěže",
+      "badge": "Poslední 2 dny rozhodují!",
+      "subSteps": {
+        "first": "Krátký livestream",
+        "second": "Finální velké video s výzvou",
+        "third": "Připomínky ve stories",
+        "fourth": "Osobní zprávy lidem, kteří ještě nehlasovali"
+      }
+    },
+    "step8": {
+      "title": "Po ukončení soutěže",
+      "badge": "Bez ohledu na výsledek",
+      "subSteps": {
+        "first": "Poděkuj všem",
+        "second": "Udělej krátké motivační shrnutí",
+        "third": "Získej nové klienty – konec soutěže bývá perfektní virální moment"
       }
     }
   }
