@@ -36,7 +36,7 @@ export const VotingDialog = ({
               {truncateText(coachProfile.name, 35)}
             </DialogTitle>
             <Badge size="lg" className="bg-amber-400">
-              {t("votes", { count: coachProfile.ranking })}
+              {t("place", { place: coachProfile.ranking })}
             </Badge>
           </div>
           <DialogDescription />
